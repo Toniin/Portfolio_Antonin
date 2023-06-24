@@ -3,7 +3,7 @@ import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: ["class", '[theme-color="dark"]'],
+  darkMode: ["class", '[theme="dark"]'],
   theme: {
     // BREAKPOINTS
     screens: {

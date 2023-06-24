@@ -36,6 +36,14 @@
   }
 }
 
+@layer components {
+  .fill-dark {
+    fill: #161616;
+  }
+
+  
+}
+
 @import "base/base.scss";
 
 @import "components/timeline";

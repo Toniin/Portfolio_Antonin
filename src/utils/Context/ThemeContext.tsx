@@ -19,10 +19,10 @@ export const ThemeContextProvider: ({
     localStorage.setItem("theme-color", currentTheme);
   };
 
-  // Set an attribute theme-color to body with value of theme
+  // Set an attribute theme to body with value of theme
   useEffect(() => {
     if (localTheme === "light" || localTheme === "dark") {
-      document.documentElement.setAttribute("theme-color", localTheme);
+      document.documentElement.setAttribute("theme", localTheme);
     } else {
       localStorage.setItem("theme-color", theme);
     }

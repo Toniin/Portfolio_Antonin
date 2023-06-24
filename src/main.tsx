@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout";
@@ -25,9 +26,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <>
+  <React.StrictMode>
     <ThemeContextProvider>
       <RouterProvider router={router} />
     </ThemeContextProvider>
-  </>
+  </React.StrictMode>
 );
