@@ -1,0 +1,47 @@
+@import "utils/variables";
+@import "utils/functions";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .primary-color {
+    color: #161616;
+  }
+  .secondary-color {
+    color: #fff;
+  }
+  .bg-light {
+    background-color: #fff;
+  }
+  .bg-dark {
+    background-color: #161616;
+  }
+
+  .stroke-light {
+    stroke: #fff;
+  }
+
+  .stroke-dark {
+    stroke: #161616;
+  }
+
+  .fill-light {
+    fill: #fff;
+  }
+
+  .fill-dark {
+    fill: #161616;
+  }
+}
+
+@import "base/base.scss";
+
+@import "components/timeline";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/about";
+@import "pages/project";

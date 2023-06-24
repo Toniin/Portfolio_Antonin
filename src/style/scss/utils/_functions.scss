@@ -1,0 +1,15 @@
+@function lightness-shift($colour) {
+  @if (lightness($colour) < 25%) {
+    @return lighten($colour, 90%);
+  } @else {
+    @return darken($colour, 90%);
+  }
+}
+
+@function backgroundInvert($background-color) {
+  @if ($background-color == map-get($background-colors, dark)) {
+    @return map-get($background-colors, light);
+  } @else {
+    @return map-get($background-colors, dark);
+  }
+}

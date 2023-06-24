@@ -1,0 +1,132 @@
+// ------------- //
+// TIMELINE DOWN //
+// ------------- //
+
+@mixin timeline-animation($timeline-active) {
+  @if $timeline-active == true {
+    animation: timeline-expansion 2.5s forwards;
+  } @else {
+    animation: timeline-reduction 2.5s forwards;
+  }
+}
+
+@keyframes timeline-expansion {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes timeline-reduction {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.timeline-main {
+  position: absolute;
+  top: 0;
+  left: -37.5%;
+
+  rect {
+    fill: map-get($branch-colors, first);
+    @include timeline-animation(false);
+
+    &.timeline-active {
+      @include timeline-animation(true);
+    }
+  }
+}
+
+// -------------- //
+// TIMELINE RIGHT //
+// -------------- //
+
+.timeline-right {
+  position: absolute;
+  text-align: end;
+  width: 35%;
+  border-top: none;
+  border-left: 5px solid map-get($branch-colors, second);
+  border-bottom: 5px solid map-get($branch-colors, second);
+  opacity: 1;
+  border-radius: 0 30px;
+  top: 5%;
+  left: 15%;
+}
+
+.timeline-right.active {
+  animation-duration: 1.5s;
+  animation-name: slideRight;
+}
+
+@keyframes slideRight {
+  from {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    width: 0;
+    opacity: 0.9;
+  }
+  to {
+    border-left: 5px solid map-get($branch-colors, second);
+    border-bottom: 5px solid map-get($branch-colors, second);
+    width: 35%;
+    opacity: 1;
+  }
+}
+
+.timeline-right:before {
+  position: absolute;
+  content: "";
+  border: 7px solid map-get($branch-colors, second);
+  transform-origin: center;
+  left: 0;
+  transform: translate(-65%, -30%);
+  border-radius: 50%;
+
+  animation-duration: 1s;
+  animation-name: borderRiseBefore;
+}
+
+.timeline-right:after {
+  position: absolute;
+  content: "";
+  border: 7px solid map-get($branch-colors, second);
+  transform-origin: center;
+  transform: translate(-25%, -30%);
+  border-radius: 50%;
+
+  animation-duration: 3s;
+  animation-name: borderRiseAfter;
+}
+
+@keyframes borderRiseBefore {
+  from {
+    border: 7px solid transparent;
+  }
+
+  to {
+    border: 7px solid map-get($branch-colors, second);
+  }
+}
+
+@keyframes borderRiseAfter {
+  from {
+    border: 7px solid transparent;
+  }
+
+  to {
+    border: 7px solid map-get($branch-colors, second);
+  }
+}
+
+.timeline-right > h2 {
+  position: relative;
+  padding-bottom: 10px;
+  left: 8%;
+}

@@ -1,0 +1,15 @@
+$primary-color: #161616;
+$secondary-color: #fff;
+
+$branch-colors: (
+  first:#3a83d3,
+  second:#c72a8c,
+  third:#5abf3d,
+);
+
+$background-colors: (
+  dark: #161616,
+  light: #fff,
+);
+
+$background-color: map-get($background-colors, dark)
