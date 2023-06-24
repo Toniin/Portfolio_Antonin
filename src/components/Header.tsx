@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import { useTheme } from "../utils/Hook/useTheme";
 import { FaSun, FaMoon } from "react-icons/fa6";
 
-export default function Header() {
+const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -27,7 +28,14 @@ export default function Header() {
             strokeWidth="7"
             className="stroke-dark dark:stroke-light"
           />
-          <circle cx="284" cy="76" r="18.5" stroke="black" strokeWidth="7" className="stroke-dark dark:stroke-light"/>
+          <circle
+            cx="284"
+            cy="76"
+            r="18.5"
+            stroke="black"
+            strokeWidth="7"
+            className="stroke-dark dark:stroke-light"
+          />
           <path
             d="M0.873029 148.498L85.1303 3.49667C85.517 2.83129 86.4788 2.83372 86.8621 3.50106L170.14 148.502C170.523 149.169 170.041 150 169.272 150H1.73765C0.966609 150 0.485644 149.164 0.873029 148.498Z"
             stroke="black"
@@ -67,4 +75,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;

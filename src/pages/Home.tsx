@@ -1,11 +1,14 @@
+import { FunctionComponent } from "react";
 import About from "../components/About";
 import { Project } from "../components/Project";
 
-export default function Home() {
+const Home: FunctionComponent = () => {
   return (
     <main>
       <About />
       <Project />
     </main>
   );
-}
+};
+
+export default Home;

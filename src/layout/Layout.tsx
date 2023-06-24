@@ -1,8 +1,9 @@
+import { FunctionComponent } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function Layout() {
+const Layout: FunctionComponent = () => {
   return (
     <>
       <Header />
@@ -10,4 +11,6 @@ export default function Layout() {
       <Footer />
     </>
   );
-}
+};
+
+export default Layout;

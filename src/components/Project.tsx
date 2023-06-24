@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { FunctionComponent, useEffect, useRef } from "react";
 
 const projects: Array<ProjectData> = [
   {
@@ -29,10 +29,13 @@ const projects: Array<ProjectData> = [
   },
 ];
 
-export const Project: () => JSX.Element = () => {
-  const projectSection: React.RefObject<HTMLElement> = useRef<HTMLElement>(null);
-  const timelineMain: React.RefObject<SVGRectElement> = useRef<SVGRectElement>(null);
-  const timelineRight: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
+export const Project: FunctionComponent = () => {
+  const projectSection: React.RefObject<HTMLElement> =
+    useRef<HTMLElement>(null);
+  const timelineMain: React.RefObject<SVGRectElement> =
+    useRef<SVGRectElement>(null);
+  const timelineRight: React.RefObject<HTMLDivElement> =
+    useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (projectSection.current != null) {
@@ -109,7 +112,7 @@ export const Project: () => JSX.Element = () => {
       </div>
     </section>
   );
-}
+};
 
 interface ProjectData {
   name: string;

@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function ErrorPage() {
+const ErrorPage: FunctionComponent = () => {
   return (
     <>
       <Header />
@@ -27,4 +28,6 @@ export default function ErrorPage() {
       <Footer />
     </>
   );
-}
+};
+
+export default ErrorPage;

@@ -9,7 +9,7 @@ export const ThemeContextProvider: ({
 }: ThemeContextProviderProps) => JSX.Element = ({ children }) => {
   const localTheme: string | null = localStorage.getItem("theme-color");
 
-  const [theme, setTheme]: [string, SetStateString] = useState(
+  const [theme, setTheme] = useState<string>(
     localTheme === "dark" ? localTheme : "light"
   );
 
@@ -43,5 +43,3 @@ type ThemeContextContentType = {
 type ThemeContextProviderProps = {
   children: React.ReactNode;
 };
-
-type SetStateString = React.Dispatch<React.SetStateAction<string>>
