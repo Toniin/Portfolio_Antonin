@@ -5,7 +5,7 @@ const About: FunctionComponent = () => {
     <section className="about flex items-center">
       <article className="about__content flex justify-center items-center flex-wrap">
         <img
-          className="about__content__image basis-1/4"
+          className="about__content__image md:basis-1/4 sm:basis-9/12"
           src="https://pwco.com.sg/wp-content/uploads/2020/05/Generic-Profile-Placeholder-v3-600x600.png"
           alt=""
         />

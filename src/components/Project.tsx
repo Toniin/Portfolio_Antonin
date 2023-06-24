@@ -31,11 +31,11 @@ const projects: Array<ProjectData> = [
 
 export const Project: FunctionComponent = () => {
   const projectSection: React.RefObject<HTMLElement> =
-    useRef<HTMLElement>(null);
+    useRef<HTMLElement|null>(null);
   const timelineMain: React.RefObject<SVGRectElement> =
-    useRef<SVGRectElement>(null);
+    useRef<SVGRectElement|null>(null);
   const timelineRight: React.RefObject<HTMLDivElement> =
-    useRef<HTMLDivElement>(null);
+    useRef<HTMLDivElement|null>(null);
 
   useEffect(() => {
     if (projectSection.current != null) {

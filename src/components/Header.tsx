@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import { useTheme } from "../utils/Hook/useTheme";
 import { FaSun, FaMoon } from "react-icons/fa6";
 
@@ -7,7 +8,7 @@ const Header: FunctionComponent = () => {
 
   return (
     <header className="header bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
-      <a href="" className="header__logo">
+      <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -49,17 +50,17 @@ const Header: FunctionComponent = () => {
             className="stroke-dark dark:stroke-light"
           />
         </svg>
-      </a>
+      </Link>
       <nav className="header__navbar">
         <ul className="header__navbar__links">
           <li>
-            <a href="/">Lien 1</a>
+            <Link to="/">Lien 1</Link>
           </li>
           <li>
-            <a href="/">Lien 2</a>
+            <Link to="/">Lien 2</Link>
           </li>
           <li>
-            <a href="/">Lien 3</a>
+            <Link to="/error">Lien 3</Link>
           </li>
         </ul>
         <button
