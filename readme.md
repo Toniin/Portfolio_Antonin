@@ -31,7 +31,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## À propos du projet
-
 Au sein du portfolio vous y trouverez:
 
 - Mes expériences de développeur 💻
