@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "postcss--watch": "postcss --watch --verbose ./src/style/scss/main.scss --output ./src/style/css/style-min.css"
+    "style": "postcss --watch --verbose ./src/style/scss/main.scss --output ./src/style/css/style-min.css"
   },
   "dependencies": {
     "react": "^18.2.0",

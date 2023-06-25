@@ -34,14 +34,14 @@
   .fill-dark {
     fill: #161616;
   }
-}
 
-@layer components {
-  .fill-dark {
-    fill: #161616;
+  .animate-dark {
+    animation: animate-dark 1.5s forwards ease-out;
   }
 
-  
+  .animate-light {
+    animation: animate-light 1.5s forwards ease-out;
+  }
 }
 
 @import "base/base.scss";

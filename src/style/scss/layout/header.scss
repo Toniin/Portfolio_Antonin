@@ -9,8 +9,6 @@
   z-index: 1;
   padding: 0 25px;
 
-  // background: $background-color;
-
   &__logo {
     display: flex;
     flex-direction: row;
@@ -21,24 +19,9 @@
     stroke-dasharray: 700px;
     stroke-dashoffset: 700px;
 
-    :first-child path {
-      animation: svg-logo 3s forwards;
-      // stroke: lightness-shift($background-color);
-    }
-
-    :last-child {
-      path {
-        animation: svg-logo 2s forwards;
-        // stroke: lightness-shift($background-color);
-      }
-
-      circle {
-        stroke-dasharray: 150px;
-        stroke-dashoffset: 150px;
-        animation: svg-logo 1s forwards;
-        animation-delay: 1.5s;
-        // stroke: lightness-shift($background-color);
-      }
+    circle {
+      stroke-dasharray: 150px;
+      stroke-dashoffset: 150px;
     }
   }
 
@@ -53,8 +36,28 @@
   }
 }
 
-@keyframes svg-logo {
-  to {
+@keyframes animate-dark {
+  75% {
+    fill: transparent;
+  }
+  90% {
     stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #161616;
+  }
+}
+
+@keyframes animate-light {
+  75% {
+    fill: transparent;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
   }
 }
