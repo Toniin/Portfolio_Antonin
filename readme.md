@@ -1,7 +1,4 @@
-<a name="readme-top"></a>
-
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/Toniin/Portfolio_Antonin">
     <img src="public/favicon-dark.svg" alt="Logo" width="80" height="80">
@@ -10,7 +7,6 @@
   <h3 align="center">Portfolio_Antonin</h3>
   <a href="https://www.antoninus.ch">Voir le portfolio</a>
 </div>
-
 <br>
 
 <!-- TABLE OF CONTENTS -->
@@ -32,8 +28,6 @@
   </ol>
 </details>
 
-<br>
-
 <!-- ABOUT THE PROJECT -->
 
 ## À propos du projet
@@ -41,8 +35,6 @@
 <br>
 
 Au sein du portfolio vous y trouverez:
-
-<br>
 
 - Mes expériences de développeur 💻
 
@@ -55,8 +47,6 @@ Au sein du portfolio vous y trouverez:
 <br>
 
 ### Technologies utilisées
-
-<br>
 
 #### Code :
 
@@ -74,8 +64,6 @@ Au sein du portfolio vous y trouverez:
 
 ### Installation
 
-<br>
-
 _Voici la procédure d'installation du projet localement._
 
 <br>
@@ -86,23 +74,17 @@ _Voici la procédure d'installation du projet localement._
    git clone https://github.com/Toniin/Portfolio_Antonin.git
    ```
 
-   <br>
-
 2. Installer les paquets NPM
 
    ```sh
    npm install
    ```
 
-   <br>
-
 3. Lancer le projet en local
 
    ```sh
    npm run dev
    ```
-
-   <br>
 
 4. Lancer le préprocesseur CSS
 
