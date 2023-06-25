@@ -32,8 +32,6 @@
 
 ## À propos du projet
 
-<br>
-
 Au sein du portfolio vous y trouverez:
 
 - Mes expériences de développeur 💻
@@ -65,8 +63,6 @@ Au sein du portfolio vous y trouverez:
 ### Installation
 
 _Voici la procédure d'installation du projet localement._
-
-<br>
 
 1. Cloner le repo.
 
