@@ -7,7 +7,7 @@ const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="header bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
+    <header className="header flex justify-between bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
       <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,12 +35,6 @@ const Header: FunctionComponent = () => {
             strokeWidth="5"
             className="stroke-dark dark:stroke-light animate-dark dark:animate-light"
           />
-          <path
-            d="M341.836 125.165C331.783 136.938 318.36 145.39 303.352 149.396C288.345 153.403 272.465 152.773 257.826 147.592C243.188 142.411 230.485 132.924 221.407 120.393C212.33 107.862 207.31 92.8823 207.014 77.4468C206.718 62.0113 211.161 46.8523 219.751 33.9873C228.342 21.1224 240.672 11.1615 255.102 5.43054C269.531 -0.300447 285.375 -1.5298 300.526 1.90609C315.676 5.34198 329.413 13.2802 339.91 24.6642L321.623 41.3062C314.529 33.6127 305.245 28.2479 295.006 25.9259C284.767 23.6039 274.06 24.4347 264.308 28.3078C254.556 32.1809 246.223 38.9126 240.417 47.607C234.612 56.3014 231.609 66.5462 231.809 76.9778C232.009 87.4094 235.402 97.5332 241.537 106.002C247.671 114.47 256.256 120.882 266.149 124.383C276.042 127.885 286.774 128.31 296.917 125.603C307.059 122.895 316.131 117.183 322.925 109.227L341.836 125.165Z"
-            stroke="black"
-            strokeWidth="5"
-            className="stroke-dark dark:stroke-light animate-dark dark:animate-light"
-          />
           <circle
             cx="284"
             cy="76"
@@ -51,7 +45,7 @@ const Header: FunctionComponent = () => {
           />
         </svg>
       </Link>
-      <nav className="header__navbar">
+      <nav className="header__navbar flex items-center">
         <ul className="header__navbar__links">
           <li>
             <Link to="/">Lien 1</Link>

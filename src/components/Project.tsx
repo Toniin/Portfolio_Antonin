@@ -29,7 +29,7 @@ const projects: Array<ProjectData> = [
   },
 ];
 
-export const Project: FunctionComponent = () => {
+const Project: FunctionComponent = () => {
   const projectSection: React.RefObject<HTMLElement> =
     useRef<HTMLElement|null>(null);
   const timelineMain: React.RefObject<SVGRectElement> =
@@ -113,6 +113,8 @@ export const Project: FunctionComponent = () => {
     </section>
   );
 };
+
+export default Project
 
 interface ProjectData {
   name: string;

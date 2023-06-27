@@ -1,0 +1,18 @@
+.topside {
+  padding-top: 100px;
+
+  &__content {
+    position: relative;
+    width: 100%;
+
+    &__image {
+      width: 250px;
+      height: 300px;
+      border-radius: 20px;
+    }
+
+    &__text {
+      padding: 20px;
+    }
+  }
+}
