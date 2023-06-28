@@ -11,12 +11,14 @@ const Header: FunctionComponent = () => {
       <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          role="img"
           width="100%"
           height="100%"
           viewBox="0 0 360 152"
           fill="none"
+          aria-describedby="logo-title"
         >
-          <title>Logo</title>
+          <title id="logo-title">Logo du portfolio de Antonin - Page d’accueil</title>
           <path
             d="M0.873029 148.498L85.1303 3.49667C85.517 2.83129 86.4788 2.83372 86.8621 3.50106L170.14 148.502C170.523 149.169 170.041 150 169.272 150H1.73765C0.966609 150 0.485644 149.164 0.873029 148.498Z"
             stroke="black"
@@ -45,7 +47,7 @@ const Header: FunctionComponent = () => {
           />
         </svg>
       </Link>
-      <nav className="header__navbar flex items-center">
+      <nav aria-label="header navigation" className="header__navbar flex items-center">
         <ul className="header__navbar__links">
           <li>
             <Link to="/">Lien 1</Link>
