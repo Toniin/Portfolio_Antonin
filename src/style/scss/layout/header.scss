@@ -29,29 +29,3 @@
     }
   }
 }
-
-@keyframes animate-dark {
-  75% {
-    stroke-dashoffset: 0;
-  }
-  80% {
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #161616;
-  }
-}
-
-@keyframes animate-light {
-  75% {
-    stroke-dashoffset: 0;
-  }
-  80% {
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: white;
-  }
-}

@@ -13,3 +13,85 @@
     @return map-get($background-colors, dark);
   }
 }
+
+// LOGO - LIGHT THEME
+@keyframes animate-path-light {
+  0% {
+    stroke-dashoffset: 700px;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #161616;
+  }
+}
+
+@keyframes animate-path-inside-light {
+  0% {
+    stroke-dashoffset: 700px;
+    fill: white;
+
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+@keyframes animate-circle-light {
+  0% {
+    stroke-dashoffset: 150px;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #161616;
+  }
+}
+
+// LOGO - DARK THEME
+@keyframes animate-path-dark {
+  0% {
+    stroke-dashoffset: 700px;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+@keyframes animate-path-inside-dark {
+  0% {
+    stroke-dashoffset: 700px;
+    fill: #161616;
+
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #161616;
+  }
+}
+
+@keyframes animate-circle-dark {
+  0% {
+    stroke-dashoffset: 150px;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}

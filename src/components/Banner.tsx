@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { FaRegFilePdf, FaDownload } from "react-icons/fa6";
 
 const Banner: FunctionComponent = () => {
   return (
@@ -17,8 +18,12 @@ const Banner: FunctionComponent = () => {
             praesentium aspernatur sequi quae dolor eveniet sapiente sint
             facilis eius commodi, necessitatibus laborum tempore sit architecto!
           </p>
-          <button className="border-yellow-500 dark:bg-dark dark:border-white mx-5 px-4 py-3 rounded-3xl border-2">
+          <button className="flex items-center gap-2 border-yellow-500 dark:bg-dark dark:border-white hover:bg-gray-500 hover:text-white mx-auto px-4 py-3 rounded-3xl border-2">
             Télécharger le CV
+            <div className="flex flex-col gap-2 p-2">
+              <FaRegFilePdf />
+              <FaDownload />
+            </div>
           </button>
         </div>
       </article>

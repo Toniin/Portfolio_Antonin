@@ -35,12 +35,28 @@
     fill: #161616;
   }
 
-  .animate-dark {
-    animation: animate-dark 1.5s forwards ease-out;
+  .animate-path-dark {
+    animation: animate-path-dark 1.3s forwards ease-in;
   }
 
-  .animate-light {
-    animation: animate-light 1.5s forwards ease-out;
+  .animate-path-light {
+    animation: animate-path-light 1.3s forwards ease-in;
+  }
+
+  .animate-path-inside-dark {
+    animation: animate-path-inside-dark 1.3s forwards ease-in;
+  }
+
+  .animate-path-inside-light {
+    animation: animate-path-inside-light 1.3s forwards ease-in;
+  }
+
+  .animate-circle-dark {
+    animation: animate-circle-dark 1.3s forwards ease-in;
+  }
+
+  .animate-circle-light {
+    animation: animate-circle-light 1.3s forwards ease-in;
   }
 }
 

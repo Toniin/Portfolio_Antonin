@@ -23,5 +23,11 @@ export default {
     //   serif: ["Merriweather", "serif"],
     // },
   },
-  plugins: [tailwindcssAspectRatio],
+  plugins: [
+    tailwindcssAspectRatio,
+    function ({ addVariant }) {
+      // addVariant("child", "& > *");
+      addVariant("hover>*", "&:hover > *");
+    },
+  ],
 };
