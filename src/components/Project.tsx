@@ -1,5 +1,6 @@
-import { FunctionComponent, useEffect, useRef } from "react";
+import { FunctionComponent, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const projects: Array<ProjectData> = [
   {
@@ -30,6 +31,8 @@ const projects: Array<ProjectData> = [
   },
 ];
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Project: FunctionComponent = () => {
   const projectSection: React.RefObject<HTMLElement> =
     useRef<HTMLElement | null>(null);
@@ -37,63 +40,22 @@ const Project: FunctionComponent = () => {
     useRef<SVGRectElement | null>(null);
   const timelineRight: React.RefObject<HTMLDivElement> =
     useRef<HTMLDivElement | null>(null);
-  const containerProjects: React.LegacyRef<HTMLDivElement> =
-    useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     if (projectSection.current != null) {
       const observer: IntersectionObserver = new IntersectionObserver(
         (entries) => {
-          if (
-            entries[0].isIntersecting &&
-            timelineMain.current != null &&
-            timelineRight.current != null
-          ) {
-            timelineMain.current.classList.add("timeline-active");
-            timelineRight.current.classList.add("active");
-
-            if (containerProjects.current !== null) {
-              const containerProjectsArray = [
-                ...containerProjects.current.children,
-              ];
-
-              containerProjectsArray.forEach((projectCard, index) => {
-                const containerWidth: number =
-                  containerProjects.current?.clientWidth || 0;
-
-                const projectCardsWidth: number =
-                  containerProjectsArray[index].clientWidth;
-
-                const projectsCardWidth: number =
-                  projectCardsWidth * containerProjectsArray.length;
-
-                const remainderWidth: number =
-                  (containerWidth - projectsCardWidth) / 2;
-
-                gsap.to(projectCard, {
-                  duration: 1.5,
-                  top: "50%",
-                  x: "50%",
-                  scale: 1,
-                  rotate: 0,
-                  left: projectCardsWidth * index + remainderWidth * index,
-                  ease: "power3.inOut",
-                  onComplete: () => {
-                    projectCard.children[1].classList.add(
-                      "project__detail--reveal"
-                    );
-                  },
-                });
-              });
+          if (entries[0].isIntersecting) {
+            if (timelineMain.current != null && timelineRight.current != null) {
+              timelineMain.current.classList.add("timeline-active");
+              timelineRight.current.classList.add("active");
             }
           }
 
-          if (
-            !entries[0].isIntersecting &&
-            timelineMain.current != null &&
-            timelineRight.current != null
-          ) {
-            timelineMain.current.classList.remove("timeline-active");
-            timelineRight.current.classList.remove("active");
+          if (!entries[0].isIntersecting) {
+            if (timelineMain.current != null && timelineRight.current != null) {
+              timelineMain.current.classList.remove("timeline-active");
+            }
           }
         },
         {
@@ -105,6 +67,47 @@ const Project: FunctionComponent = () => {
 
       return () => observer.disconnect();
     }
+  }, []);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      if (projectSection.current != null && self.selector) {
+        const projects = self.selector(".wrapper__project");
+        const containerWidth: number = projectSection.current.clientWidth;
+
+        projects.forEach((project: HTMLElement, index: number) => {
+          const projectCardsWidth: number = project.clientWidth;
+          const remainderWidth: number =
+            (containerWidth - projectCardsWidth * projects.length) / 2;
+
+          gsap
+            .timeline()
+            .to(project, {
+              scrollTrigger: {
+                trigger: project,
+                start: "bottom bottom",
+                end: "top 20%",
+                scrub: 1,
+              },
+              top: "50%",
+              x: "50%",
+              scale: 1,
+              rotate: 0,
+              left: projectCardsWidth * index + remainderWidth * index,
+              ease: "power3.inOut",
+            })
+            .to(project.children[1], {
+              scrollTrigger: {
+                trigger: project.children[1],
+                scrub: true,
+              },
+              top: "0",
+              scale: 1,
+            });
+        });
+      }
+    }, projectSection); // <- Scope!
+    return () => ctx.revert(); // <- Cleanup!
   }, []);
 
   return (
@@ -122,7 +125,7 @@ const Project: FunctionComponent = () => {
         <h2 className="text-2xl font-bold text-gray-900">PROJETS</h2>
       </div>
 
-      <div ref={containerProjects}>
+      <div>
         {projects.map((project, index) => (
           <div
             key={project.name}
@@ -133,7 +136,7 @@ const Project: FunctionComponent = () => {
               alt={project.imageAlt}
               className="h-full w-full object-cover object-center"
             />
-            <div className="project__detail">
+            <div className="wrapper__project__detail">
               <h3 className="mt-6 text-sm text-gray-500">
                 <a href={project.href}>
                   <span className="absolute inset-0" />

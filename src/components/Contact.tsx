@@ -26,21 +26,21 @@ const Contact: FunctionComponent = () => {
         <p className="flex items-center gap-2">
           <FaEnvelope />{" "}
           <span className="font-bold">antonin.chaudiere@hotmail.fr</span>
-          <button className="p-2 rounded bg-blue-400 hover:bg-blue-500 hover>*:fill-white" onClick={() => copyText(contact.email)}>
-            <FaRegPaste />
+          <button className="group p-2 rounded bg-blue-400 hover:bg-blue-500" onClick={() => copyText(contact.email)}>
+            <FaRegPaste className="group-hover:fill-white" />
           </button>
         </p>
         <p className="flex items-center gap-2">
           <FaPhoneFlip /> <span className="font-bold">0660361110</span>
-          <button className="p-2 rounded bg-blue-400 hover:bg-blue-500 hover>*:fill-white" onClick={() => copyText(contact.phone)}>
-            <FaRegPaste />
+          <button className="group p-2 rounded bg-blue-400 hover:bg-blue-500" onClick={() => copyText(contact.phone)}>
+            <FaRegPaste className="group-hover:fill-white" />
           </button>
         </p>
         <button className="flex items-center gap-2">
           Télécharger le CV
-          <div className="flex flex-col gap-2 p-2 rounded bg-blue-400 hover:bg-blue-500 hover>*:fill-white">
-            <FaRegFilePdf />
-            <FaDownload />
+          <div className="group flex flex-col gap-2 p-2 rounded bg-blue-400 hover:bg-blue-500">
+            <FaRegFilePdf className="group-hover:fill-white" />
+            <FaDownload className="group-hover:fill-white" />
           </div>
         </button>
       </div>

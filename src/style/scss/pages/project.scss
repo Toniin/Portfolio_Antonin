@@ -6,9 +6,9 @@
 
 .wrapper__project {
   width: 31%;
-  height: 300px;
+  aspect-ratio: 3/2;
   position: absolute;
-  top: 100%;
+  top: 10%;
   left: 50%;
 
   &:first-child {
@@ -24,8 +24,11 @@
     height: 100%;
   }
 
-  .project__detail {
-    opacity: 0;
+  &__detail {
+    position: relative;
+    z-index: -1;
+    top: -100%;
+    scale: 0;
   }
 }
 
@@ -41,17 +44,3 @@
   transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
 }
 
-.project__detail--reveal {
-  animation: revealProjectDetail 0.5s forwards;
-}
-
-@keyframes revealProjectDetail {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

@@ -1,0 +1,30 @@
+.skills {
+  position: relative;
+
+  &__timeline {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -37.5%;
+    transform-origin: left top;
+    transform: scaleY(0);
+
+    rect {
+      fill: map-get($branch-colors, first);
+    }
+
+    &--right {
+      position: absolute;
+      content: "";
+      top: -30%;
+      left: 12.5%;
+      transform-origin: left;
+      z-index: -1;
+      transform: scaleX(0);
+
+      rect {
+        fill: map-get($branch-colors, second);
+      }
+    }
+  }
+}
