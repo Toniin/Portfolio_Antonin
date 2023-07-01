@@ -1,0 +1,49 @@
+.about {
+  position: relative;
+
+  &__timeline {
+    position: absolute;
+    content: "";
+
+    &__main {
+      &--merge {
+        stroke: #3a83d3;
+        transform: scaleY(0);
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 100px;
+      }
+
+      &--checkout {
+        stroke: #c72a8c;
+        stroke-dasharray: 75px;
+        stroke-dashoffset: 75px;
+      }
+    }
+
+    &__secondary {
+      stroke: #c72a8c;
+      stroke-dasharray: 125px;
+      stroke-dashoffset: 125px;
+    }
+
+    &__dot {
+      fill: #c72a8c;
+
+      &--branch {
+        opacity: 0;
+      }
+
+      &--checkout {
+        opacity: 0;
+      }
+
+      &--merge {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__content {
+  padding-top: 15vh;
+  }
+}

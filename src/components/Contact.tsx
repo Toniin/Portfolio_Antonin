@@ -20,7 +20,7 @@ const Contact: FunctionComponent = () => {
   };
 
   return (
-    <section className="about flex flex-col items-center justify-center h-screen">
+    <section className="contact flex flex-col items-center justify-center h-screen">
       <h2 className="text-xl">Vous souhaitez me contacter ?</h2>
       <div className="flex justify-evenly items-center w-full py-10">
         <p className="flex items-center gap-2">

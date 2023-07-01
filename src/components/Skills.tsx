@@ -35,19 +35,16 @@ const Skills: FunctionComponent = () => {
             scale: 1,
             ease: "power3.inOut",
           })
-          .to(
-            timelineRight,
-            {
-              scrollTrigger: {
-                trigger: skillsSection.current,
-                start: "20% center",
-                end: "40% center",
-                scrub: 0.5,
-              },
-              scale: 1,
-              ease: "power3.inOut",
+          .to(timelineRight, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "20% center",
+              end: "40% center",
+              scrub: 0.5,
             },
-          );
+            scale: 1,
+            ease: "power3.inOut",
+          });
       }
     }, skillsSection); // <- Scope!
     return () => ctx.revert(); // <- Cleanup!
