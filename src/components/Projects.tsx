@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useRef, useLayoutEffect } from "react";
+import { FunctionComponent, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -36,38 +36,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects: FunctionComponent = () => {
   const projectsSection: React.RefObject<HTMLElement> =
     useRef<HTMLElement | null>(null);
-  const timelineMain: React.RefObject<SVGRectElement> =
-    useRef<SVGRectElement | null>(null);
-  const timelineRight: React.RefObject<HTMLDivElement> =
-    useRef<HTMLDivElement | null>(null);
-
-  // useEffect(() => {
-  //   if (projectSection.current != null) {
-  //     const observer: IntersectionObserver = new IntersectionObserver(
-  //       (entries) => {
-  //         if (entries[0].isIntersecting) {
-  //           if (timelineMain.current != null && timelineRight.current != null) {
-  //             timelineMain.current.classList.add("timeline-active");
-  //             timelineRight.current.classList.add("active");
-  //           }
-  //         }
-
-  //         if (!entries[0].isIntersecting) {
-  //           if (timelineMain.current != null && timelineRight.current != null) {
-  //             timelineMain.current.classList.remove("timeline-active");
-  //           }
-  //         }
-  //       },
-  //       {
-  //         threshold: 0.45,
-  //       }
-  //     );
-
-  //     observer.observe(projectSection.current);
-
-  //     return () => observer.disconnect();
-  //   }
-  // }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
