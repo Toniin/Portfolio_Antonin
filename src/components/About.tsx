@@ -132,18 +132,21 @@ const About: FunctionComponent = () => {
           cx="0"
           cy="10"
           r="2"
+          fill="transparent"
         />
         <circle
           className="about__timeline__dot about__timeline__dot--checkout"
           cx="50"
           cy="35"
           r="2"
+          fill="transparent"
         />
         <circle
           className="about__timeline__dot about__timeline__dot--merge"
           cx="0"
           cy="240"
           r="2"
+          fill="transparent"
         />
       </svg>
       <div className="about__content w-full h-screen flex flex-col items-center">

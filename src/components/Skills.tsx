@@ -20,29 +20,87 @@ const Skills: FunctionComponent = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       if (skillsSection.current != null && self.selector) {
-        const timelineDown = self.selector(".skills__timeline");
-        const timelineRight = self.selector(".skills__timeline--right");
+        const timelineMainMerge = self.selector(
+          ".skills__timeline__main--merge"
+        );
+
+        const timelineDotBranch = self.selector(
+          ".skills__timeline__dot--branch"
+        );
+
+        const timelineMainCheckout = self.selector(
+          ".skills__timeline__main--checkout"
+        );
+
+        const timelineDotCheckout = self.selector(
+          ".skills__timeline__dot--checkout"
+        );
+
+        const timelineSecondary = self.selector(".skills__timeline__secondary");
+
+        const timelineDotMerge = self.selector(".skills__timeline__dot--merge");
 
         gsap
           .timeline()
-          .to(timelineDown, {
+          .to(timelineMainMerge, {
             scrollTrigger: {
               trigger: skillsSection.current,
               start: "top bottom",
-              end: "bottom 20%",
-              scrub: 1,
-            },
-            scale: 1,
-            ease: "power3.inOut",
-          })
-          .to(timelineRight, {
-            scrollTrigger: {
-              trigger: skillsSection.current,
-              start: "20% center",
-              end: "40% center",
+              end: "80% 20%",
               scrub: 0.5,
             },
-            scale: 1,
+            scaleY: 1,
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDotBranch, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "15% center",
+              end: "20% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineMainCheckout, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "top 40%",
+              end: "center center",
+              scrub: 1,
+            },
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDotCheckout, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "33% center",
+              end: "38% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineSecondary, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "top top",
+              end: "85% center",
+              scrub: 0.5,
+            },
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDotMerge, {
+            scrollTrigger: {
+              trigger: skillsSection.current,
+              start: "83% 60%",
+              end: "90% 65%",
+              scrub: true,
+            },
+            opacity: 1,
             ease: "power3.inOut",
           });
       }
@@ -56,40 +114,73 @@ const Skills: FunctionComponent = () => {
       className="skills flex flex-col items-center h-screen"
     >
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         className="skills__timeline"
         width="100%"
         height="100%"
-        viewBox="0 0 1 150"
+        viewBox="0 0 100 250"
       >
-        <rect width="100%" height="100%" x="0" y="0" />
+        <path
+          className="skills__timeline__main skills__timeline__main--merge"
+          d="M0,0 L 0,250"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <path
+          className="skills__timeline__main skills__timeline__main--checkout"
+          d="M0,10 C 0,25 10,35 50,35"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <path
+          className="skills__timeline__secondary"
+          d="M50,35 L 50,210 C 50,220 50,230 0,240"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <circle
+          className="skills__timeline__dot skills__timeline__dot--branch"
+          cx="0"
+          cy="10"
+          r="2"
+          fill="transparent"
+        />
+        <circle
+          className="skills__timeline__dot skills__timeline__dot--checkout"
+          cx="50"
+          cy="35"
+          r="2"
+          fill="transparent"
+        />
+        <circle
+          className="skills__timeline__dot skills__timeline__dot--merge"
+          cx="0"
+          cy="240"
+          r="2"
+          fill="transparent"
+        />
       </svg>
-      <svg
-        className="skills__timeline--right"
-        width="100%"
-        height="100%"
-        viewBox="0 0 200 1"
-      >
-        <rect width="37.5%" height="100%" x="0" y="0" />
-      </svg>
-      <h2 className="text-xl">Compétences</h2>
-      <ul className="text-base py-10">
-        <li>
-          HTML <FaHtml5 />
-        </li>
-        <li>
-          CSS (Sass) <FaCss3 /> <FaCss3Alt />
-        </li>
-        <li>
-          React <FaReact />
-        </li>
-        <li>
-          Nodejs (API Rest) <FaNode />
-          <FaNodeJs />
-        </li>
-        <li>
-          Git <FaGit />
-        </li>
-      </ul>
+      <div className="skills__content w-full h-screen flex flex-col items-center">
+        <h2 className="text-xl">Compétences</h2>
+        <ul className="text-base py-10">
+          <li>
+            HTML <FaHtml5 />
+          </li>
+          <li>
+            CSS (Sass) <FaCss3 /> <FaCss3Alt />
+          </li>
+          <li>
+            React <FaReact />
+          </li>
+          <li>
+            Nodejs (API Rest) <FaNode />
+            <FaNodeJs />
+          </li>
+          <li>
+            Git <FaGit />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };

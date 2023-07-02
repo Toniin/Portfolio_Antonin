@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import Banner from '../components/Banner';
 import Skills from "../components/Skills";
 import About from "../components/About";
-import Project from "../components/Project";
+import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
 const Home: FunctionComponent = () => {
@@ -11,7 +11,7 @@ const Home: FunctionComponent = () => {
       <Banner />
       <Skills />
       <About />
-      <Project />
+      <Projects />
       <Contact />
     </main>
   );
