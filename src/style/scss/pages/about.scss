@@ -1,6 +1,8 @@
 .about {
   position: relative;
 
+  border: 2px solid red;
+
   &__timeline {
     position: absolute;
     content: "";
@@ -9,21 +11,21 @@
       &--merge {
         stroke: #3a83d3;
         transform: scaleY(0);
-        stroke-dasharray: 100px;
-        stroke-dashoffset: 100px;
+        stroke-dasharray: 250px;
+        stroke-dashoffset: 250px;
       }
 
       &--checkout {
         stroke: #c72a8c;
-        stroke-dasharray: 75px;
-        stroke-dashoffset: 75px;
+        stroke-dasharray: 65px;
+        stroke-dashoffset: 65px;
       }
     }
 
     &__secondary {
       stroke: #c72a8c;
-      stroke-dasharray: 125px;
-      stroke-dashoffset: 125px;
+      stroke-dasharray: 240px;
+      stroke-dashoffset: 240px;
     }
 
     &__dot {
@@ -44,6 +46,6 @@
   }
 
   &__content {
-  padding-top: 15vh;
+    padding-top: 9vh;
   }
 }

@@ -12,13 +12,21 @@ const About: FunctionComponent = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       if (aboutSection.current != null && self.selector) {
-        const timelineMainMerge = self.selector(".about__timeline__main--merge");
+        const timelineMainMerge = self.selector(
+          ".about__timeline__main--merge"
+        );
 
-        const timelineDotBranch = self.selector(".about__timeline__dot--branch");
+        const timelineDotBranch = self.selector(
+          ".about__timeline__dot--branch"
+        );
 
-        const timelineMainCheckout = self.selector(".about__timeline__main--checkout");
+        const timelineMainCheckout = self.selector(
+          ".about__timeline__main--checkout"
+        );
 
-        const timelineDotCheckout = self.selector(".about__timeline__dot--checkout");
+        const timelineDotCheckout = self.selector(
+          ".about__timeline__dot--checkout"
+        );
 
         const timelineSecondary = self.selector(".about__timeline__secondary");
 
@@ -86,59 +94,56 @@ const About: FunctionComponent = () => {
             },
             opacity: 1,
             ease: "power3.inOut",
-          })
+          });
       }
     }, aboutSection); // <- Scope!
     return () => ctx.revert(); // <- Cleanup!
   }, []);
 
   return (
-    <section
-      ref={aboutSection}
-      className="about items-center h-screen"
-    >
+    <section ref={aboutSection} className="about items-center h-screen">
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         className="about__timeline"
         width="100%"
         height="100%"
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 250"
       >
         <path
           className="about__timeline__main about__timeline__main--merge"
-          d="M5,0 L 5,100"
+          d="M0,0 L 0,250"
           fill="transparent"
-          strokeWidth="0.5"
+          strokeWidth="1"
         />
         <path
           className="about__timeline__main about__timeline__main--checkout"
-          d="M5,5 L 5,5 C 5,15 10,20 50,20"
+          d="M0,10 C 0,25 10,35 50,35"
           fill="transparent"
-          strokeWidth="0.5"
+          strokeWidth="1"
         />
         <path
           className="about__timeline__secondary"
-          d="M50,20 L 50,70 C 50,80 50,90 5,95"
+          d="M50,35 L 50,210 C 50,220 50,230 0,240"
           fill="transparent"
-          strokeWidth="0.5"
+          strokeWidth="1"
         />
         <circle
           className="about__timeline__dot about__timeline__dot--branch"
-          cx="5"
-          cy="5"
-          r="1"
+          cx="0"
+          cy="10"
+          r="2"
         />
         <circle
           className="about__timeline__dot about__timeline__dot--checkout"
           cx="50"
-          cy="20"
-          r="1"
+          cy="35"
+          r="2"
         />
         <circle
           className="about__timeline__dot about__timeline__dot--merge"
-          cx="5"
-          cy="95"
-          r="1"
+          cx="0"
+          cy="240"
+          r="2"
         />
       </svg>
       <div className="about__content w-full h-screen flex flex-col items-center">

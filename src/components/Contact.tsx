@@ -22,7 +22,7 @@ const Contact: FunctionComponent = () => {
   return (
     <section className="contact flex flex-col items-center justify-center h-screen">
       <h2 className="text-xl">Vous souhaitez me contacter ?</h2>
-      <div className="flex justify-evenly items-center w-full py-10">
+      <div className="flex justify-evenly items-center w-full py-10 flex-wrap">
         <p className="flex items-center gap-2">
           <FaEnvelope />{" "}
           <span className="font-bold">antonin.chaudiere@hotmail.fr</span>
