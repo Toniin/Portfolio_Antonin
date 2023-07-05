@@ -11,13 +11,13 @@ const Footer: FunctionComponent = () => {
           </h2>
           <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             <a href="https://github.com/Toniin" target="_blank">
-              <FaSquareGithub />
+              <FaSquareGithub fill="#000000" size="3em"/>
             </a>
             <a
               href="https://www.linkedin.com/in/antonin-chaudiere/"
               target="_blank"
             >
-              <FaLinkedin />
+              <FaLinkedin fill="#2b6599" size="3em"/>
             </a>
           </div>
         </div>
