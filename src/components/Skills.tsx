@@ -1,7 +1,6 @@
 import { FunctionComponent, useRef, useLayoutEffect } from "react";
 import {
   FaReact,
-  FaNodeJs,
   FaNode,
   FaHtml5,
   FaCss3Alt,
