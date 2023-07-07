@@ -1,11 +1,5 @@
 import { FunctionComponent, useRef, useLayoutEffect } from "react";
-import {
-  FaReact,
-  FaNode,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-} from "react-icons/fa6";
+import { FaReact, FaNode, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -160,21 +154,21 @@ const Skills: FunctionComponent = () => {
       </svg>
       <div className="skills__content w-full h-screen flex flex-col items-center">
         <h2 className="text-xl">Compétences</h2>
-        <ul className="flex flex-col items-center text-base py-10">
-          <li>
-            HTML <FaHtml5 fill="#e06e3b" size="3em"/>
+        <ul className="flex flex-col sm:flex-row justify-center items-center gap-5 py-10 flex-wrap">
+          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+            HTML <FaHtml5 fill="#e06e3b" size="3em" />
           </li>
-          <li>
-            CSS (Sass) <FaCss3Alt fill="#55a8da" size="3em"/>
+          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+            CSS (Sass) <FaCss3Alt fill="#55a8da" size="3em" />
           </li>
-          <li>
-            React <FaReact fill="#68d3fa" size="3em"/>
+          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+            React <FaReact fill="#68d3fa" size="3em" />
           </li>
-          <li>
-            Nodejs (API Rest) <FaNode fill="#649c4f" size="3em"/>
+          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+            Nodejs <FaNode fill="#649c4f" size="3em" />
           </li>
-          <li>
-            Git <FaGitAlt fill="#de5c41" size="3em"/>
+          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+            Git <FaGitAlt fill="#de5c41" size="3em" />
           </li>
         </ul>
       </div>
