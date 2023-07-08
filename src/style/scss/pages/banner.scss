@@ -1,5 +1,6 @@
 .banner {
-  padding-top: 100px;
+  position: relative;
+  // padding-top: 100px;
 
   &__content {
     position: relative;
@@ -15,4 +16,24 @@
       padding: 20px;
     }
   }
+
+  &__timeline {
+    z-index: -1;
+    position: absolute;
+
+    &__leaf {
+      stroke: #506c64;
+
+      &--fill {
+        fill: #506c64;
+        opacity: 0.9;
+      }
+    }
+
+    &__hyperspace {
+      stroke: #f3b13e;
+      animation: animate-hyperspace 2s infinite ease-in;
+    }
+  }
 }
+

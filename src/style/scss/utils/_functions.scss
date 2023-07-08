@@ -25,19 +25,19 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #161616;
+    fill: map-get($background-colors, dark);
   }
 }
 
 @keyframes animate-path-inside-light {
   0% {
     stroke-dashoffset: 700px;
-    fill: white;
+    fill: map-get($background-colors, light);
 
   }
   100% {
     stroke-dashoffset: 0;
-    fill: white;
+    fill: map-get($background-colors, light);
   }
 }
 
@@ -51,7 +51,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #161616;
+    fill: map-get($background-colors, dark);
   }
 }
 
@@ -66,19 +66,19 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: white;
+    fill:map-get($background-colors, light);
   }
 }
 
 @keyframes animate-path-inside-dark {
   0% {
     stroke-dashoffset: 700px;
-    fill: #161616;
+    fill: map-get($background-colors, dark);
 
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #161616;
+    fill: map-get($background-colors, dark);
   }
 }
 
@@ -92,6 +92,17 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: white;
+    fill: map-get($background-colors, light);
+  }
+}
+
+// TIMELINE BANNER - DARK THEME
+
+@keyframes animate-hyperspace {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
