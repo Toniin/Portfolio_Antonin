@@ -45,5 +45,20 @@
 
   &__content {
     padding-top: 9vh;
+
+    .tooltip {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1em;
+        height: 1em;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: #21496b;
+      }
+    }
   }
 }
