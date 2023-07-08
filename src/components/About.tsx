@@ -166,7 +166,7 @@ const About: FunctionComponent = () => {
             Formation développeur web (front-end, react)
           </span>
           <br />
-          Crealead
+          Coopernet
           <br />
           oct. 2019 - nov.2019 · 2 mois
           <br />
