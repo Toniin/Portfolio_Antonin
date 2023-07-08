@@ -1,15 +1,24 @@
-$primary-color: #161616;
-$secondary-color: #fff;
+$primary-color: #0a2647;
+$secondary-color: #FDFFFC;
 
 $branch-colors: (
-  first:#3a83d3,
-  second:#c72a8c,
-  third:#5abf3d,
+  first: #8C271E,
+  first--dark: #FDFFFC,
+  second: #c72a8c,
+  third: #5abf3d,
 );
 
 $background-colors: (
-  dark: #161616,
-  light: #fff,
+  dark: #0a2647,
+  light: #FDFFFC,
 );
 
-$background-color: map-get($background-colors, dark)
+$background-color: map-get($background-colors, dark);
+
+// GREEN : #506C64
+
+// BLANC : #FDFFFC
+
+// ROUGE : #8C271E
+
+// BLUE LIGHT : #4D9DE0

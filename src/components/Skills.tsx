@@ -113,39 +113,39 @@ const Skills: FunctionComponent = () => {
         viewBox="0 0 100 250"
       >
         <path
-          className="skills__timeline__main skills__timeline__main--merge"
+          className="skills__timeline__main skills__timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
           d="M0,0 L 0,250"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="skills__timeline__main skills__timeline__main--checkout"
+          className="skills__timeline__main skills__timeline__main--checkout stroke-branch-second-light"
           d="M0,10 C 0,25 10,35 50,35"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="skills__timeline__secondary"
+          className="skills__timeline__secondary stroke-branch-second-light"
           d="M50,35 L 50,210 C 50,220 50,230 0,240"
           fill="transparent"
           strokeWidth="1"
         />
         <circle
-          className="skills__timeline__dot skills__timeline__dot--branch"
+          className="skills__timeline__dot skills__timeline__dot--branch fill-branch-second-light"
           cx="0"
           cy="10"
           r="2"
           fill="transparent"
         />
         <circle
-          className="skills__timeline__dot skills__timeline__dot--checkout"
+          className="skills__timeline__dot skills__timeline__dot--checkout fill-branch-second-light"
           cx="50"
           cy="35"
           r="2"
           fill="transparent"
         />
         <circle
-          className="skills__timeline__dot skills__timeline__dot--merge"
+          className="skills__timeline__dot skills__timeline__dot--merge fill-branch-second-light"
           cx="0"
           cy="240"
           r="2"
@@ -155,19 +155,19 @@ const Skills: FunctionComponent = () => {
       <div className="skills__content w-full h-screen flex flex-col items-center">
         <h2 className="text-xl">Compétences</h2>
         <ul className="flex flex-col sm:flex-row justify-center items-center gap-5 py-10 flex-wrap">
-          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+          <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             HTML <FaHtml5 fill="#e06e3b" size="3em" />
           </li>
-          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+          <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             CSS (Sass) <FaCss3Alt fill="#55a8da" size="3em" />
           </li>
-          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+          <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             React <FaReact fill="#68d3fa" size="3em" />
           </li>
-          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+          <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             Nodejs <FaNode fill="#649c4f" size="3em" />
           </li>
-          <li className="flex sm:basis-1/4 items-center justify-center gap-2">
+          <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             Git <FaGitAlt fill="#de5c41" size="3em" />
           </li>
         </ul>

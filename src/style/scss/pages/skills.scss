@@ -7,28 +7,23 @@
 
     &__main {
       &--merge {
-        stroke: #3a83d3;
         transform: scaleY(0);
         stroke-dasharray: 250px;
         stroke-dashoffset: 250px;
       }
 
       &--checkout {
-        stroke: #c72a8c;
         stroke-dasharray: 65px;
         stroke-dashoffset: 65px;
       }
     }
 
     &__secondary {
-      stroke: #c72a8c;
       stroke-dasharray: 240px;
       stroke-dashoffset: 240px;
     }
 
     &__dot {
-      fill: #c72a8c;
-
       &--branch {
         opacity: 0;
       }

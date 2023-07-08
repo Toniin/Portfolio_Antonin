@@ -110,39 +110,39 @@ const About: FunctionComponent = () => {
         viewBox="0 0 100 250"
       >
         <path
-          className="about__timeline__main about__timeline__main--merge"
+          className="about__timeline__main about__timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
           d="M0,0 L 0,250"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="about__timeline__main about__timeline__main--checkout"
+          className="about__timeline__main about__timeline__main--checkout stroke-branch-second-light"
           d="M0,10 C 0,25 10,35 50,35"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="about__timeline__secondary"
+          className="about__timeline__secondary stroke-branch-second-light"
           d="M50,35 L 50,210 C 50,220 50,230 0,240"
           fill="transparent"
           strokeWidth="1"
         />
         <circle
-          className="about__timeline__dot about__timeline__dot--branch"
+          className="about__timeline__dot about__timeline__dot--branch fill-branch-second-light"
           cx="0"
           cy="10"
           r="2"
           fill="transparent"
         />
         <circle
-          className="about__timeline__dot about__timeline__dot--checkout"
+          className="about__timeline__dot about__timeline__dot--checkout fill-branch-second-light"
           cx="50"
           cy="35"
           r="2"
           fill="transparent"
         />
         <circle
-          className="about__timeline__dot about__timeline__dot--merge"
+          className="about__timeline__dot about__timeline__dot--merge fill-branch-second-light"
           cx="0"
           cy="240"
           r="2"

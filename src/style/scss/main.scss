@@ -7,32 +7,64 @@
 
 @layer base {
   .primary-color {
-    color: #161616;
+    color: $primary-color;
   }
   .secondary-color {
-    color: #fff;
+    color: $secondary-color;
   }
   .bg-light {
-    background-color: #fff;
+    background-color: map-get($background-colors, light);
   }
   .bg-dark {
-    background-color: #161616;
+    background-color: map-get($background-colors, dark);
   }
 
   .stroke-light {
-    stroke: #fff;
+    stroke: map-get($background-colors, light);
   }
 
   .stroke-dark {
-    stroke: #161616;
+    stroke: map-get($background-colors, dark);
   }
 
   .fill-light {
-    fill: #fff;
+    fill: map-get($background-colors, light);
   }
 
   .fill-dark {
-    fill: #161616;
+    fill: map-get($background-colors, dark);
+  }
+
+  .fill-branch-first-light {
+    fill: map-get($branch-colors, first);
+  }
+
+  .fill-branch-first-dark {
+    fill: map-get($branch-colors, first--dark);
+  }
+
+  .stroke-branch-first-light {
+    stroke: map-get($branch-colors, first);
+  }
+
+  .stroke-branch-first-dark {
+    stroke: map-get($branch-colors, first--dark);
+  }
+
+  .fill-branch-second-light {
+    fill: map-get($branch-colors, second);
+  }
+
+  .fill-branch-second-dark {
+    fill: map-get($branch-colors, second);
+  }
+
+  .stroke-branch-second-light {
+    stroke: map-get($branch-colors, second);
+  }
+
+  .stroke-branch-second-dark {
+    stroke: map-get($branch-colors, second);
   }
 
   .animate-path-dark {

@@ -21,6 +21,7 @@ const Footer: FunctionComponent = () => {
           <g
             transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
             className="fill-emerald-900"
+            style={{fill: "#506C64" }}
           >
             <path
               d="M4560 12779 c-83 -25 -213 -46 -365 -59 -257 -24 -319 -53 -387 -185
@@ -281,7 +282,7 @@ const Footer: FunctionComponent = () => {
       <h2 className="text-center text-lg font-semibold leading-8">
         Plus d'informations sur mes réseaux
       </h2>
-      <nav aria-label="footer navigation">
+      <nav className="flex justify-center gap-5 py-10" aria-label="footer navigation">
         <a href="https://github.com/Toniin" target="_blank">
           <FaSquareGithub fill="#000000" size="3em" />
         </a>

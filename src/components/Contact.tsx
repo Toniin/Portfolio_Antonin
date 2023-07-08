@@ -134,39 +134,39 @@ const Contact: FunctionComponent = () => {
         viewBox="0 0 100 250"
       >
         <path
-          className="contact__timeline__main contact__timeline__main--merge"
+          className="contact__timeline__main contact__timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
           d="M0,0 L 0,250"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="contact__timeline__main contact__timeline__main--checkout"
+          className="contact__timeline__main contact__timeline__main--checkout stroke-branch-second-light"
           d="M0,10 C 0,25 10,35 50,35"
           fill="transparent"
           strokeWidth="1"
         />
         <path
-          className="contact__timeline__secondary"
+          className="contact__timeline__secondary stroke-branch-second-light"
           d="M50,35 L 50,210 C 50,220 50,230 0,240"
           fill="transparent"
           strokeWidth="1"
         />
         <circle
-          className="contact__timeline__dot contact__timeline__dot--branch"
+          className="contact__timeline__dot contact__timeline__dot--branch fill-branch-second-light"
           cx="0"
           cy="10"
           r="2"
           fill="transparent"
         />
         <circle
-          className="contact__timeline__dot contact__timeline__dot--checkout"
+          className="contact__timeline__dot contact__timeline__dot--checkout fill-branch-second-light"
           cx="50"
           cy="35"
           r="2"
           fill="transparent"
         />
         <circle
-          className="contact__timeline__dot contact__timeline__dot--merge"
+          className="contact__timeline__dot contact__timeline__dot--merge fill-branch-second-light"
           cx="0"
           cy="240"
           r="2"
