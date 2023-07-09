@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import Banner from '../components/Banner';
+import Banner from "../components/Banner";
 import Skills from "../components/Skills";
 import About from "../components/About";
 import Projects from "../components/Projects";

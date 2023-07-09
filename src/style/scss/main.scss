@@ -13,10 +13,10 @@
     color: $secondary-color;
   }
   .bg-light {
-    background-color: map-get($background-colors, light);
+    background: map-get($background-colors, light);
   }
   .bg-dark {
-    background-color: map-get($background-colors, dark);
+    background: map-get($background-colors, dark);
   }
 
   .stroke-light {
@@ -92,7 +92,7 @@
   }
 }
 
-@import "base/base.scss";
+@import "base/base";
 
 @import "components/timeline";
 

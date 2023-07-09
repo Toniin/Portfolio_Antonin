@@ -33,7 +33,6 @@
   0% {
     stroke-dashoffset: 700px;
     fill: map-get($background-colors, light);
-
   }
   100% {
     stroke-dashoffset: 0;
@@ -66,7 +65,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill:map-get($background-colors, light);
+    fill: map-get($background-colors, light);
   }
 }
 
@@ -74,7 +73,6 @@
   0% {
     stroke-dashoffset: 700px;
     fill: map-get($background-colors, dark);
-
   }
   100% {
     stroke-dashoffset: 0;
@@ -98,11 +96,126 @@
 
 // TIMELINE BANNER - DARK THEME
 
-@keyframes animate-hyperspace {
+@keyframes animate-hyperspace-right__1 {
   0% {
-    opacity: 0;
+    opacity: 1;
+    transform: translate(0.5em) translateY(0);
   }
   100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-left__1 {
+  0% {
     opacity: 1;
+    transform: translate(-0.5em) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-right__2 {
+  0% {
+    opacity: 1;
+    transform: translate(0.3em) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-left__2 {
+  0% {
+    opacity: 1;
+    transform: translate(-0.3em) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-right__3 {
+  0% {
+    opacity: 1;
+    transform: translate(0.6em) translateY(-0.2em);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-left__3 {
+  0% {
+    opacity: 1;
+    transform: translate(-0.6em) translateY(-0.2em);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.2em);
+  }
+}
+
+@keyframes animate-hyperspace-right__4 {
+  0% {
+    opacity: 1;
+    transform: translate(0.6em) translateY(-0.3em);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.1em);
+  }
+}
+
+@keyframes animate-hyperspace-left__4 {
+  0% {
+    opacity: 1;
+    transform: translate(-0.6em) translateY(-0.3em);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.1em);
+  }
+}
+
+@keyframes animate-hyperspace-right__5 {
+  0% {
+    opacity: 1;
+    transform: translate(0.8em) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.3em);
+  }
+}
+
+@keyframes animate-hyperspace-left__5 {
+  0% {
+    opacity: 1;
+    transform: translate(-0.8em) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0) translateY(0.3em);
+  }
+}
+
+// STARS BEHIND - DARK THEME
+
+@keyframes animate-stars {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
   }
 }
