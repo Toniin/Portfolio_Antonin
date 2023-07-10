@@ -7,7 +7,7 @@ const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="header flex justify-between bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
+    <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
       <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,34 +49,24 @@ const Header: FunctionComponent = () => {
           />
         </svg>
       </Link>
-      <nav
+      
+      {/* <nav
         aria-label="header navigation"
         className="header__navbar flex items-center"
+      ></nav> */}
+
+      <button
+        className="header__button__toggle-theme rounded-lg"
+        onClick={() => {
+          toggleTheme();
+        }}
       >
-        <ul className="header__navbar__links">
-          <li>
-            <Link to="/">Lien 1</Link>
-          </li>
-          <li>
-            <Link to="/">Lien 2</Link>
-          </li>
-          <li>
-            <Link to="/error">Lien 3</Link>
-          </li>
-        </ul>
-        <button
-          className="bg-fill border-yellow-500 dark:bg-dark dark:border-white mx-5 px-4 py-3 rounded-3xl border-2"
-          onClick={() => {
-            toggleTheme();
-          }}
-        >
-          {theme === "light" ? (
-            <FaSun className="fill-yellow-500" />
-          ) : (
-            <FaMoon className="fill-light" />
-          )}
-        </button>
-      </nav>
+        {theme === "light" ? (
+          <FaSun className="fill-yellow-500" />
+        ) : (
+          <FaMoon className="fill-light" />
+        )}
+      </button>
     </header>
   );
 };

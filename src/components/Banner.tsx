@@ -17,8 +17,8 @@ const Banner: FunctionComponent = () => {
         <></>
       )}
 
-      <div className="banner__content flex flex-col">
-        <h1 className="banner__content__title text-center py-5 text-2xl">
+      <div className="banner__content flex flex-col items-center">
+        <h1 className="banner__content__title py-5 text-2xl">
           ANTONIN
         </h1>
         <p className="banner__content__text">
@@ -27,12 +27,12 @@ const Banner: FunctionComponent = () => {
           praesentium aspernatur sequi quae dolor eveniet sapiente sint facilis
           eius commodi, necessitatibus laborum tempore sit architecto!
         </p>
-        <button className="flex items-center gap-2 border-yellow-500 dark:bg-dark dark:border-white hover:bg-gray-500 hover:text-white mx-auto px-4 py-3 rounded-3xl border-2">
-          Télécharger le CV
-          <div className="flex flex-col gap-2 p-2">
+        <button className="banner__content__button flex rounded-lg">
+          <span className="flex items-center font-bold gap-4">
             <FaRegFilePdf />
+            Télécharger le CV
             <FaDownload />
-          </div>
+          </span>
         </button>
       </div>
       <svg
