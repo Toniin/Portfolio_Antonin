@@ -9,11 +9,12 @@ import {
 const Footer: FunctionComponent = () => {
   return (
     <footer className="flex flex-col py-5">
-      <div className="flex items-center">
+      <div className="flex flex-col md:flex-row items-center md:justify-center gap-5">
         <svg
+        className="w-2/5 md:w-1/5"
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
-          width="25%"
+          width="100%"
           height="100%"
           viewBox="0 0 1095.000000 1280.000000"
           preserveAspectRatio="xMidYMid meet"
@@ -21,7 +22,7 @@ const Footer: FunctionComponent = () => {
           <g
             transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
             className="fill-emerald-900"
-            style={{fill: "#506C64" }}
+            style={{ fill: "#506C64" }}
           >
             <path
               d="M4560 12779 c-83 -25 -213 -46 -365 -59 -257 -24 -319 -53 -387 -185
@@ -274,7 +275,9 @@ const Footer: FunctionComponent = () => {
         </svg>
         <p className="flex gap-2 text-center text-xl font-semibold">
           <FaQuoteLeft />
-          Toutes les <span className="underline underline-offset-4">branch main</span> à Rome
+          Toutes les{" "}
+          <span className="underline underline-offset-4">branch main</span> à
+          Rome
           <FaQuoteRight />
         </p>
       </div>
@@ -282,7 +285,10 @@ const Footer: FunctionComponent = () => {
       <h2 className="text-center text-lg font-semibold leading-8">
         Plus d'informations sur mes réseaux
       </h2>
-      <nav className="flex justify-center gap-5 py-10" aria-label="footer navigation">
+      <nav
+        className="flex justify-center gap-5 py-10"
+        aria-label="footer navigation"
+      >
         <a href="https://github.com/Toniin" target="_blank">
           <FaSquareGithub fill="#000000" size="3em" />
         </a>

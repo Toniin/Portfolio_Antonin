@@ -1,6 +1,7 @@
 import { FunctionComponent, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Timeline from "./Timeline";
 
 const projects: Array<ProjectData> = [
   {
@@ -35,97 +36,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects: FunctionComponent = () => {
   const projectsSection: React.RefObject<HTMLElement> =
-    useRef<HTMLElement | null>(null);
+    useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       if (projectsSection.current != null && self.selector) {
-        // PROJOECTS TIMELINE ANIMATION
-        const timelineMainMerge = self.selector(
-          ".projects__timeline__main--merge"
-        );
-
-        const timelineDotBranch = self.selector(
-          ".projects__timeline__dot--branch"
-        );
-
-        const timelineMainCheckout = self.selector(
-          ".projects__timeline__main--checkout"
-        );
-
-        const timelineDotCheckout = self.selector(
-          ".projects__timeline__dot--checkout"
-        );
-
-        const timelineSecondary = self.selector(".projects__timeline__secondary");
-
-        const timelineDotMerge = self.selector(".projects__timeline__dot--merge");
-
-        gsap
-          .timeline()
-          .to(timelineMainMerge, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "top bottom",
-              end: "80% 20%",
-              scrub: 0.5,
-            },
-            scaleY: 1,
-            strokeDashoffset: 0,
-            ease: "power3.inOut",
-          })
-          .to(timelineDotBranch, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "15% center",
-              end: "20% center",
-              scrub: true,
-            },
-            opacity: 1,
-            ease: "power3.inOut",
-          })
-          .to(timelineMainCheckout, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "top 40%",
-              end: "center center",
-              scrub: 1,
-            },
-            strokeDashoffset: 0,
-            ease: "power3.inOut",
-          })
-          .to(timelineDotCheckout, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "33% center",
-              end: "38% center",
-              scrub: true,
-            },
-            opacity: 1,
-            ease: "power3.inOut",
-          })
-          .to(timelineSecondary, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "top top",
-              end: "85% center",
-              scrub: 0.5,
-            },
-            strokeDashoffset: 0,
-            ease: "power3.inOut",
-          })
-          .to(timelineDotMerge, {
-            scrollTrigger: {
-              trigger: projectsSection.current,
-              start: "83% 60%",
-              end: "90% 65%",
-              scrub: true,
-            },
-            opacity: 1,
-            ease: "power3.inOut",
-          });
-
-        // PROJECTS CARDS ANIMATION
         const projects = self.selector(".wrapper__project");
         const containerWidth: number = projectsSection.current.clientWidth;
 
@@ -166,54 +81,7 @@ const Projects: FunctionComponent = () => {
 
   return (
     <section ref={projectsSection} className="projects">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="projects__timeline"
-        width="100%"
-        height="100%"
-        viewBox="0 0 100 250"
-      >
-        <path
-          className="projects__timeline__main projects__timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
-          d="M0,0 L 0,250"
-          fill="transparent"
-          strokeWidth="1"
-        />
-        <path
-          className="projects__timeline__main projects__timeline__main--checkout stroke-branch-second-light"
-          d="M0,10 C 0,25 10,35 50,35"
-          fill="transparent"
-          strokeWidth="1"
-        />
-        <path
-          className="projects__timeline__secondary stroke-branch-second-light"
-          d="M50,35 L 50,210 C 50,220 50,230 0,240"
-          fill="transparent"
-          strokeWidth="1"
-        />
-        <circle
-          className="projects__timeline__dot projects__timeline__dot--branch fill-branch-second-light"
-          cx="0"
-          cy="10"
-          r="2"
-          fill="transparent"
-        />
-        <circle
-          className="projects__timeline__dot projects__timeline__dot--checkout fill-branch-second-light"
-          cx="50"
-          cy="35"
-          r="2"
-          fill="transparent"
-        />
-        <circle
-          className="projects__timeline__dot projects__timeline__dot--merge fill-branch-second-light"
-          cx="0"
-          cy="240"
-          r="2"
-          fill="transparent"
-        />
-      </svg>
-
+      <Timeline />
       <div className="projects__content w-full h-screen flex flex-col items-center">
         <h2 className="text-xl">Projets</h2>
         {projects.map((project, index) => (

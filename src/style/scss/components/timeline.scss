@@ -1,132 +1,37 @@
-// ------------- //
-// TIMELINE DOWN //
-// ------------- //
-
-@mixin timeline-animation($timeline-active) {
-  @if $timeline-active == true {
-    animation: timeline-expansion 2.5s forwards;
-  } @else {
-    animation: timeline-reduction 2.5s forwards;
-  }
-}
-
-@keyframes timeline-expansion {
-  from {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes timeline-reduction {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-
-.timeline-main {
+.timeline {
   position: absolute;
-  top: 0;
-  left: -37.5%;
+  content: "";
+  z-index: -1;
 
-  rect {
-    fill: map-get($branch-colors, first);
-    @include timeline-animation(false);
+  &__main {
+    &--merge {
+      transform: scaleY(0);
+      stroke-dasharray: 300px;
+      stroke-dashoffset: 300px;
+    }
 
-    &.timeline-active {
-      @include timeline-animation(true);
+    &--checkout {
+      stroke-dasharray: 80px;
+      stroke-dashoffset: 80px;
     }
   }
-}
 
-// -------------- //
-// TIMELINE RIGHT //
-// -------------- //
-
-.timeline-right {
-  position: absolute;
-  text-align: end;
-  width: 35%;
-  border-top: none;
-  border-left: 5px solid map-get($branch-colors, second);
-  border-bottom: 5px solid map-get($branch-colors, second);
-  opacity: 1;
-  border-radius: 0 30px;
-  top: 5%;
-  left: 15%;
-}
-
-.timeline-right.active {
-  animation-duration: 1.5s;
-  animation-name: slideRight;
-}
-
-@keyframes slideRight {
-  from {
-    border-left: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    width: 0;
-    opacity: 0.9;
-  }
-  to {
-    border-left: 5px solid map-get($branch-colors, second);
-    border-bottom: 5px solid map-get($branch-colors, second);
-    width: 35%;
-    opacity: 1;
-  }
-}
-
-.timeline-right:before {
-  position: absolute;
-  content: "";
-  border: 7px solid map-get($branch-colors, second);
-  transform-origin: center;
-  left: 0;
-  transform: translate(-65%, -30%);
-  border-radius: 50%;
-
-  animation-duration: 1s;
-  animation-name: borderRiseBefore;
-}
-
-.timeline-right:after {
-  position: absolute;
-  content: "";
-  border: 7px solid map-get($branch-colors, second);
-  transform-origin: center;
-  transform: translate(-25%, -30%);
-  border-radius: 50%;
-
-  animation-duration: 3s;
-  animation-name: borderRiseAfter;
-}
-
-@keyframes borderRiseBefore {
-  from {
-    border: 7px solid transparent;
+  &__secondary {
+    stroke-dasharray: 270px;
+    stroke-dashoffset: 270px;
   }
 
-  to {
-    border: 7px solid map-get($branch-colors, second);
-  }
-}
+  &__dot {
+    &--branch {
+      opacity: 0;
+    }
 
-@keyframes borderRiseAfter {
-  from {
-    border: 7px solid transparent;
-  }
+    &--checkout {
+      opacity: 0;
+    }
 
-  to {
-    border: 7px solid map-get($branch-colors, second);
+    &--merge {
+      opacity: 0;
+    }
   }
-}
-
-.timeline-right > h2 {
-  position: relative;
-  padding-bottom: 10px;
-  left: 8%;
 }
