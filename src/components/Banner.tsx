@@ -34,7 +34,7 @@ const Banner: FunctionComponent = () => {
         </button>
         <ul className="flex justify-center gap-4">
           <li>
-            <SocialLink social="Github" />
+            <SocialLink />
           </li>
           <li>
             {/* <SocialLink social="Linkedin"/> */}

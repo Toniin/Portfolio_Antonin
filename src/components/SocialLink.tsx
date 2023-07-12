@@ -3,7 +3,8 @@ import {
   // FaLinkedin,
 } from "react-icons/fa6";
 
-const SocialLink: (props: SocialLinkProps) => JSX.Element = (props) => {
+const SocialLink = () => {
+  // const SocialLink: (props: SocialLinkProps) => JSX.Element = (props) => {
   // const { social } = props;
 
   // const test = "ok";
@@ -34,6 +35,6 @@ const SocialLink: (props: SocialLinkProps) => JSX.Element = (props) => {
 
 export default SocialLink;
 
-interface SocialLinkProps {
-  social: string;
-}
+// interface SocialLinkProps {
+//   social: string;
+// }
