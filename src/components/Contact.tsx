@@ -65,7 +65,7 @@ const Contact: FunctionComponent = () => {
         </ul>
         <p className="text-lg">Ou bien sur mes réseaux sociaux 👇</p>
         <div className="flex justify-center gap-4 mt-6">
-          <SocialLink social="Github" />
+          <SocialLink />
           {/* <SocialLink social="Linkedin"/> */}
           <a
             className="z-0 linkedin-color hover:linkedin-color--hover dark:linkedin-color--dark dark:hover:linkedin-color--dark--hover"
