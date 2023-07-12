@@ -5,6 +5,8 @@ import {
   FaRegFilePdf,
   FaDownload,
   FaRegPaste,
+  FaSquareGithub,
+  FaLinkedin,
 } from "react-icons/fa6";
 import Timeline from "./Timeline";
 
@@ -62,8 +64,24 @@ const Contact: FunctionComponent = () => {
           </li>
         </ul>
         <p className="text-lg">
-          Ou bien sur mes réseaux sociaux en bas de page 👇
+          Ou bien sur mes réseaux sociaux 👇
         </p>
+        <div className="flex justify-center gap-4 mt-6">
+          <a
+            className="social__link__github"
+            href="https://github.com/Toniin"
+            target="_blank"
+          >
+            <FaSquareGithub size="3em" />
+          </a>
+          <a
+            className="social__link__linkedin"
+            href="https://www.linkedin.com/in/antonin-chaudiere/"
+            target="_blank"
+          >
+            <FaLinkedin size="3em" />
+          </a>
+        </div>
       </div>
     </section>
   );

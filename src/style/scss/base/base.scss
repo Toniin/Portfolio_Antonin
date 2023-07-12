@@ -4,7 +4,35 @@ body {
 
   #root {
     position: relative;
-    max-width: 1440px;
+    max-width: 1120px;
     margin: auto;
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: 600;
+    }
+  }
+}
+
+.social__link {
+  &__github {
+    color: map-get($social-colors, github);
+    &:hover {
+      color: lighten(map-get($social-colors, github), 20%);
+    }
+  }
+
+  &__linkedin {
+    color: map-get($social-colors, linkedin);
+    &:hover {
+      color: lighten(map-get($social-colors, linkedin), 20%);
+    }
   }
 }

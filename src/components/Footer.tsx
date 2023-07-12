@@ -1,7 +1,5 @@
 import { FunctionComponent } from "react";
 import {
-  FaSquareGithub,
-  FaLinkedin,
   FaQuoteLeft,
   FaQuoteRight,
 } from "react-icons/fa6";
@@ -11,7 +9,7 @@ const Footer: FunctionComponent = () => {
     <footer className="flex flex-col py-5">
       <div className="flex flex-col md:flex-row items-center md:justify-center gap-5">
         <svg
-        className="w-2/5 md:w-1/5"
+          className="w-2/5 md:w-1/5"
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -281,24 +279,6 @@ const Footer: FunctionComponent = () => {
           <FaQuoteRight />
         </p>
       </div>
-
-      <h2 className="text-center text-lg font-semibold leading-8">
-        Plus d'informations sur mes réseaux
-      </h2>
-      <nav
-        className="flex justify-center gap-5 py-10"
-        aria-label="footer navigation"
-      >
-        <a href="https://github.com/Toniin" target="_blank">
-          <FaSquareGithub fill="#000000" size="3em" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/antonin-chaudiere/"
-          target="_blank"
-        >
-          <FaLinkedin fill="#2b6599" size="3em" />
-        </a>
-      </nav>
     </footer>
   );
 };

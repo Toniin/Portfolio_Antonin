@@ -1,5 +1,10 @@
 import { FunctionComponent } from "react";
-import { FaRegFilePdf, FaDownload } from "react-icons/fa6";
+import {
+  FaRegFilePdf,
+  FaDownload,
+  FaSquareGithub,
+  FaLinkedin,
+} from "react-icons/fa6";
 import { useTheme } from "../utils/Hook/useTheme";
 
 const Banner: FunctionComponent = () => {
@@ -17,16 +22,9 @@ const Banner: FunctionComponent = () => {
         <></>
       )}
 
-      <div className="banner__content flex flex-col items-center">
-        <h1 className="banner__content__title py-5 text-2xl">
-          ANTONIN
-        </h1>
-        <p className="banner__content__text">
-          Porro quidem dicta cumque beatae quis repellat, odit sed obcaecati.
-          Expedita. Ut quisquam consectetur laboriosam doloribus ullam
-          praesentium aspernatur sequi quae dolor eveniet sapiente sint facilis
-          eius commodi, necessitatibus laborum tempore sit architecto!
-        </p>
+      <div className="banner__content flex flex-col items-center gap-y-5">
+        <h1 className="text-5xl tracking-wider">ANTONIN</h1>
+        <p className="text-xl mb-5">Développeur web front-end. Autodidacte.</p>
         <button className="banner__content__button flex rounded-lg">
           <span className="flex items-center font-bold gap-4">
             <FaRegFilePdf />
@@ -34,6 +32,26 @@ const Banner: FunctionComponent = () => {
             <FaDownload />
           </span>
         </button>
+        <ul className="flex justify-center gap-4">
+          <li>
+            <a
+              className="social__link__github"
+              href="https://github.com/Toniin"
+              target="_blank"
+            >
+              <FaSquareGithub size="3em" />
+            </a>
+          </li>
+          <li>
+            <a
+              className="social__link__linkedin"
+              href="https://www.linkedin.com/in/antonin-chaudiere/"
+              target="_blank"
+            >
+              <FaLinkedin size="3em" />
+            </a>
+          </li>
+        </ul>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"

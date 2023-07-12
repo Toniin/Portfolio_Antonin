@@ -1,16 +1,21 @@
 $primary-color: #0a2647;
-$secondary-color: #FDFFFC;
+$secondary-color: #fdfffc;
 
 $branch-colors: (
-  first: #8C271E,
-  first--dark: #FDFFFC,
+  first: #8c271e,
+  first--dark: #fdfffc,
   second: #c72a8c,
   third: #5abf3d,
 );
 
 $background-colors: (
   dark: #101420,
-  light: #FDFFFC,
+  light: #fdfffc,
+);
+
+$social-colors: (
+  github: #000000,
+  linkedin: #2b6599,
 );
 
 $background-color: map-get($background-colors, dark);

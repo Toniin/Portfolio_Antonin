@@ -4,7 +4,7 @@
   &__content {
     padding-top: 9vh;
 
-    .tooltip {
+    &__xp {
       position: relative;
 
       &::before {
@@ -12,10 +12,11 @@
         content: "";
         width: 1em;
         height: 1em;
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%) rotate(45deg);
-        background-color: #21496b;
+        top: 0;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: map-get($branch-colors, second);
       }
     }
   }
