@@ -56,7 +56,7 @@ const Header: FunctionComponent = () => {
       ></nav> */}
 
       <button
-        className="header__button__toggle-theme rounded-lg"
+        className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
         onClick={() => {
           toggleTheme();
         }}

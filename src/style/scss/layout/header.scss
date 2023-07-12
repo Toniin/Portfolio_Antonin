@@ -21,13 +21,4 @@
       stroke-dashoffset: 150px;
     }
   }
-
-  &__button__toggle-theme {
-    padding: 0.75em;
-    background: #fdfffc;
-    box-shadow: 5px 5px 10px #dddfdd, -5px -5px 10px #ffffff;
-    &:hover {
-      box-shadow: inset 5px 5px 10px #dddfdd, inset -5px -5px 10px #ffffff;
-    }
-  }
 }

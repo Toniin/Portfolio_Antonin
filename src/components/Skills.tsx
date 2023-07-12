@@ -7,7 +7,7 @@ const Skills: FunctionComponent = () => {
     <section className="skills flex flex-col items-center h-screen">
       <Timeline />
       <div className="skills__content w-full h-screen flex flex-col items-center">
-        <h2 className="text-xl">Compétences</h2>
+        <h2 className="text-2xl">COMPÉTENCES</h2>
         <ul className="flex flex-col sm:flex-row justify-center items-center gap-5 py-10 flex-wrap">
           <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             HTML <FaHtml5 fill="#e06e3b" size="3em" />

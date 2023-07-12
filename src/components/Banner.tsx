@@ -2,10 +2,10 @@ import { FunctionComponent } from "react";
 import {
   FaRegFilePdf,
   FaDownload,
-  FaSquareGithub,
   FaLinkedin,
 } from "react-icons/fa6";
 import { useTheme } from "../utils/Hook/useTheme";
+import SocialLink from "./SocialLink";
 
 const Banner: FunctionComponent = () => {
   const { theme } = useTheme();
@@ -24,8 +24,8 @@ const Banner: FunctionComponent = () => {
 
       <div className="banner__content flex flex-col items-center gap-y-5">
         <h1 className="text-5xl tracking-wider">ANTONIN</h1>
-        <p className="text-xl mb-5">Développeur web front-end. Autodidacte.</p>
-        <button className="banner__content__button flex rounded-lg">
+        <p className="text-xl mb-5 text-center">Développeur web front-end. Autodidacte.</p>
+        <button className="neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg">
           <span className="flex items-center font-bold gap-4">
             <FaRegFilePdf />
             Télécharger le CV
@@ -34,17 +34,12 @@ const Banner: FunctionComponent = () => {
         </button>
         <ul className="flex justify-center gap-4">
           <li>
-            <a
-              className="social__link__github"
-              href="https://github.com/Toniin"
-              target="_blank"
-            >
-              <FaSquareGithub size="3em" />
-            </a>
+            <SocialLink social="Github" />
           </li>
           <li>
+            {/* <SocialLink social="Linkedin"/> */}
             <a
-              className="social__link__linkedin"
+              className="z-0 linkedin-color hover:linkedin-color--hover dark:linkedin-color--dark dark:hover:linkedin-color--dark--hover"
               href="https://www.linkedin.com/in/antonin-chaudiere/"
               target="_blank"
             >

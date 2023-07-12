@@ -4,7 +4,7 @@ import experiencesData from "../mockdata/experiencesData.json";
 
 const About: FunctionComponent = () => {
   const experiences: Array<ExperiencesData> = [...experiencesData];
-  
+
   return (
     <section className="about items-center h-screen">
       <Timeline />

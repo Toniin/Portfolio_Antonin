@@ -57,7 +57,7 @@ const Projects: FunctionComponent = () => {
     <section ref={projectsSection} className="projects">
       <Timeline />
       <div className="projects__content w-full h-screen flex flex-col items-center">
-        <h2 className="text-xl">Projets</h2>
+        <h2 className="text-2xl">PROJETS</h2>
         {projects.map((project, index) => (
           <div
             key={project.name}

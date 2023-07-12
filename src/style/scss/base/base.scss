@@ -20,19 +20,3 @@ body {
     }
   }
 }
-
-.social__link {
-  &__github {
-    color: map-get($social-colors, github);
-    &:hover {
-      color: lighten(map-get($social-colors, github), 20%);
-    }
-  }
-
-  &__linkedin {
-    color: map-get($social-colors, linkedin);
-    &:hover {
-      color: lighten(map-get($social-colors, linkedin), 20%);
-    }
-  }
-}

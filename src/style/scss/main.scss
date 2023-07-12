@@ -12,9 +12,43 @@
   .secondary-color {
     color: $secondary-color;
   }
+
+  .github-color {
+    color: map-get($social-colors, github);
+  }
+
+  .github-color--hover {
+    color: lighten(map-get($social-colors, github), 25%);
+  }
+
+  .github-color--dark {
+    color: lighten(map-get($social-colors, github), 100%);
+  }
+
+  .github-color--dark--hover {
+    color: lighten(map-get($social-colors, github), 80%);
+  }
+
+  .linkedin-color {
+    color: map-get($social-colors, linkedin);
+  }
+
+  .linkedin-color--hover {
+    color: lighten(map-get($social-colors, linkedin), 25%);
+  }
+
+  .linkedin-color--dark {
+    color: lighten(map-get($social-colors, linkedin), 15%);
+  }
+
+  .linkedin-color--dark--hover {
+    color: lighten(map-get($social-colors, linkedin), 5%);
+  }
+
   .bg-light {
     background: map-get($background-colors, light);
   }
+
   .bg-dark {
     background: map-get($background-colors, dark);
   }
@@ -89,6 +123,30 @@
 
   .animate-circle-light {
     animation: animate-circle-light 1.3s forwards ease-in;
+  }
+}
+
+@layer components {
+  .neomorphism--light {
+    background: map-get($background-colors, light);
+    box-shadow: 5px 5px 10px lighten(map-get($background-colors, dark), 80%),
+      -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    &:hover {
+      box-shadow: inset 5px 5px 10px
+          lighten(map-get($background-colors, dark), 80%),
+        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    }
+  }
+
+  .neomorphism--dark {
+    background: map-get($background-colors, dark);
+    box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
+      -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+    &:hover {
+      box-shadow: inset 5px 5px 10px
+          darken(map-get($background-colors, dark), 80%),
+        inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+    }
   }
 }
 

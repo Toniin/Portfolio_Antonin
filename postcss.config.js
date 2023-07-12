@@ -5,8 +5,8 @@ import cssnano from "cssnano"
 
 export default {
   plugins: [
-    tailwindcss,
     postcssSass,
+    tailwindcss,
     postcssPresetEnv({
       stage: 3,
       minimumVendorImplementations: 2,
