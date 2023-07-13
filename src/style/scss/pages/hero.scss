@@ -1,4 +1,4 @@
-.banner {
+.hero {
   position: relative;
 
   &__content {
@@ -19,7 +19,7 @@
     }
 
     &__hyperspace {
-      stroke: $secondary-color;
+      fill: $secondary-color;
 
       &__right {
         &__1 {
