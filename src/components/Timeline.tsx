@@ -197,29 +197,29 @@ const Timeline: FunctionComponent = () => {
         width="100%"
         height="100%"
         viewBox="0 0 150 150"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="none"
       >
         <path
           className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
-          d="M0,0 L 0,150"
+          d="M5,0 L 5,150"
           fill="transparent"
           strokeWidth="1"
         />
         <path
           className="timeline__main timeline__main--checkout stroke-branch-second-light"
-          d="M0,15 C 0,35 15,35 75,37"
+          d="M5,15 C 5,35 15,35 75,37"
           fill="transparent"
           strokeWidth="1"
         />
         <path
           className="timeline__secondary stroke-branch-second-light"
-          d="M75,37 L 75,120 C 75,130 50,135 0,140"
+          d="M75,37 L 75,120 C 75,130 50,135 5,140"
           fill="transparent"
           strokeWidth="1"
         />
         <circle
           className="timeline__dot timeline__dot--branch fill-branch-second-light"
-          cx="0"
+          cx="5"
           cy="15"
           r="1"
           fill="transparent"
@@ -233,7 +233,7 @@ const Timeline: FunctionComponent = () => {
         />
         <circle
           className="timeline__dot timeline__dot--merge fill-branch-second-light"
-          cx="0"
+          cx="5"
           cy="140"
           r="1"
           fill="transparent"
