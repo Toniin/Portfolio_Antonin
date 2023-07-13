@@ -90,7 +90,9 @@ const Timeline: FunctionComponent = () => {
 
   return (
     <div ref={timeline} className="timeline w-full h-full">
+      {/* X < sm(480) */}
       <svg
+      className="sm:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
@@ -134,6 +136,106 @@ const Timeline: FunctionComponent = () => {
           cx="10"
           cy="275"
           r="3"
+          fill="transparent"
+        />
+      </svg>
+
+      {/* sm(480) < X < md(768) */}
+      <svg
+      className="hidden sm:block md:hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 150 200"
+        preserveAspectRatio="none"
+      >
+        <path
+          className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
+          d="M5,0 L 5,200"
+          fill="transparent"
+          strokeWidth="1.5"
+        />
+        <path
+          className="timeline__main timeline__main--checkout stroke-branch-second-light"
+          d="M5,15 C 5,35 15,35 75,37"
+          fill="transparent"
+          strokeWidth="1.5"
+        />
+        <path
+          className="timeline__secondary stroke-branch-second-light"
+          d="M75,37 L 75,150 C 75,160 50,170 5,175"
+          fill="transparent"
+          strokeWidth="1.5"
+        />
+        <circle
+          className="timeline__dot timeline__dot--branch fill-branch-second-light"
+          cx="5"
+          cy="15"
+          r="2"
+          fill="transparent"
+        />
+        <circle
+          className="timeline__dot timeline__dot--checkout fill-branch-second-light"
+          cx="75"
+          cy="37"
+          r="2"
+          fill="transparent"
+        />
+        <circle
+          className="timeline__dot timeline__dot--merge fill-branch-second-light"
+          cx="5"
+          cy="175"
+          r="2"
+          fill="transparent"
+        />
+      </svg>
+
+      {/* md(768) < X */}
+      <svg
+      className="hidden md:block"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 150 150"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        <path
+          className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
+          d="M0,0 L 0,150"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <path
+          className="timeline__main timeline__main--checkout stroke-branch-second-light"
+          d="M0,15 C 0,35 15,35 75,37"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <path
+          className="timeline__secondary stroke-branch-second-light"
+          d="M75,37 L 75,120 C 75,130 50,135 0,140"
+          fill="transparent"
+          strokeWidth="1"
+        />
+        <circle
+          className="timeline__dot timeline__dot--branch fill-branch-second-light"
+          cx="0"
+          cy="15"
+          r="1"
+          fill="transparent"
+        />
+        <circle
+          className="timeline__dot timeline__dot--checkout fill-branch-second-light"
+          cx="75"
+          cy="37"
+          r="1"
+          fill="transparent"
+        />
+        <circle
+          className="timeline__dot timeline__dot--merge fill-branch-second-light"
+          cx="0"
+          cy="140"
+          r="1"
           fill="transparent"
         />
       </svg>
