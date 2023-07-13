@@ -5,7 +5,6 @@ import {
   FaRegFilePdf,
   FaDownload,
   FaRegPaste,
-  FaLinkedin,
 } from "react-icons/fa6";
 import Timeline from "./Timeline";
 import SocialLink from "./SocialLink";
@@ -66,14 +65,6 @@ const Contact: FunctionComponent = () => {
         <p className="text-lg">Ou bien sur mes réseaux sociaux 👇</p>
         <div className="flex justify-center gap-4 mt-6">
           <SocialLink />
-          {/* <SocialLink social="Linkedin"/> */}
-          <a
-            className="z-0 linkedin-color hover:linkedin-color--hover dark:linkedin-color--dark dark:hover:linkedin-color--dark--hover"
-            href="https://www.linkedin.com/in/antonin-chaudiere/"
-            target="_blank"
-          >
-            <FaLinkedin size="3em" />
-          </a>
         </div>
       </div>
     </section>

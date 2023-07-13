@@ -1,13 +1,9 @@
 import { FunctionComponent } from "react";
-import {
-  FaRegFilePdf,
-  FaDownload,
-  FaLinkedin,
-} from "react-icons/fa6";
+import { FaRegFilePdf, FaDownload } from "react-icons/fa6";
 import { useTheme } from "../utils/Hook/useTheme";
 import SocialLink from "./SocialLink";
 
-const Banner: FunctionComponent = () => {
+const Hero: FunctionComponent = () => {
   const { theme } = useTheme();
 
   return (
@@ -24,7 +20,9 @@ const Banner: FunctionComponent = () => {
 
       <div className="banner__content flex flex-col items-center gap-y-5">
         <h1 className="text-5xl tracking-wider">ANTONIN</h1>
-        <p className="text-xl mb-5 text-center">Développeur web front-end. Autodidacte.</p>
+        <p className="text-xl mb-5 text-center">
+          Développeur web front-end. Autodidacte.
+        </p>
         <button className="neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg">
           <span className="flex items-center font-bold gap-4">
             <FaRegFilePdf />
@@ -32,21 +30,9 @@ const Banner: FunctionComponent = () => {
             <FaDownload />
           </span>
         </button>
-        <ul className="flex justify-center gap-4">
-          <li>
-            <SocialLink />
-          </li>
-          <li>
-            {/* <SocialLink social="Linkedin"/> */}
-            <a
-              className="z-0 linkedin-color hover:linkedin-color--hover dark:linkedin-color--dark dark:hover:linkedin-color--dark--hover"
-              href="https://www.linkedin.com/in/antonin-chaudiere/"
-              target="_blank"
-            >
-              <FaLinkedin size="3em" />
-            </a>
-          </li>
-        </ul>
+        <div className="flex justify-center gap-4">
+          <SocialLink />
+        </div>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -178,4 +164,4 @@ const Banner: FunctionComponent = () => {
   );
 };
 
-export default Banner;
+export default Hero;

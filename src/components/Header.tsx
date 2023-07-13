@@ -48,8 +48,8 @@ const Header: FunctionComponent = () => {
             className="stroke-dark dark:stroke-light animate-circle-light dark:animate-circle-dark"
           />
         </svg>
-      </Link>
-      
+      </Link>      
+
       {/* <nav
         aria-label="header navigation"
         className="header__navbar flex items-center"
