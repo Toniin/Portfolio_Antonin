@@ -1,4 +1,4 @@
-import { FunctionComponent, useRef, useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 import Timeline from "./Timeline";
 import projectsData from "../mockdata/projectsData.json";
 
