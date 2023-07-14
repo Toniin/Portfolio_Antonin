@@ -60,7 +60,7 @@ const Projects: FunctionComponent = () => {
         <h2 className="text-2xl">PROJETS</h2>
         {projects.map((project, index) => (
           <div
-            key={project.name}
+            key={`${project.name} - ${index}}`}
             className={`wrapper__project wrapper__project__${index + 1}`}
           >
             <img

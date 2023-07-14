@@ -112,41 +112,41 @@ const Timeline: FunctionComponent = () => {
         >
           <path
             className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
-            d="M5,0 L 5,150"
+            d="M10,0 L 10,150"
             fill="transparent"
-            strokeWidth="1"
+            strokeWidth="0.75"
           />
           <path
             className="timeline__main timeline__main--checkout stroke-branch-second-light"
-            d="M5,15 C 5,35 15,35 75,37"
+            d="M10,15 C 10,35 15,35 75,37"
             fill="transparent"
-            strokeWidth="1"
+            strokeWidth="0.75"
           />
           <path
             className="timeline__secondary stroke-branch-second-light"
-            d="M75,37 L 75,120 C 75,130 50,135 5,140"
+            d="M75,37 L 75,120 C 75,130 50,135 10,140"
             fill="transparent"
-            strokeWidth="1"
+            strokeWidth="0.75"
           />
           <circle
             className="timeline__dot timeline__dot--branch fill-branch-second-light"
-            cx="5"
+            cx="10"
             cy="15"
-            r="1.5"
+            r="1.25"
             fill="transparent"
           />
           <circle
             className="timeline__dot timeline__dot--checkout fill-branch-second-light"
             cx="75"
             cy="37"
-            r="1.5"
+            r="1.25"
             fill="transparent"
           />
           <circle
             className="timeline__dot timeline__dot--merge fill-branch-second-light"
-            cx="5"
+            cx="10"
             cy="140"
-            r="1.5"
+            r="1.25"
             fill="transparent"
           />
         </svg>

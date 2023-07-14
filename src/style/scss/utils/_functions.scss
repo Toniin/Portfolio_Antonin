@@ -99,7 +99,7 @@
 @keyframes animate-hyperspace-right__1 {
   0% {
     opacity: 1;
-    transform: translate(0.5em) translateY(0);
+    transform: translate(0.3em) translateY(0);
   }
   100% {
     opacity: 0;
@@ -110,7 +110,7 @@
 @keyframes animate-hyperspace-left__1 {
   0% {
     opacity: 1;
-    transform: translate(-0.5em) translateY(0);
+    transform: translate(-0.3em) translateY(0);
   }
   100% {
     opacity: 0;
@@ -143,7 +143,7 @@
 @keyframes animate-hyperspace-right__3 {
   0% {
     opacity: 1;
-    transform: translate(0.6em) translateY(-0.2em);
+    transform: translate(0.5em) translateY(-0.2em);
   }
   100% {
     opacity: 0;
@@ -154,7 +154,7 @@
 @keyframes animate-hyperspace-left__3 {
   0% {
     opacity: 1;
-    transform: translate(-0.6em) translateY(-0.2em);
+    transform: translate(-0.5em) translateY(-0.2em);
   }
   100% {
     opacity: 0;
@@ -165,7 +165,7 @@
 @keyframes animate-hyperspace-right__4 {
   0% {
     opacity: 1;
-    transform: translate(0.6em) translateY(-0.3em);
+    transform: translate(0.55em) translateY(-0.3em);
   }
   100% {
     opacity: 0;
@@ -176,7 +176,7 @@
 @keyframes animate-hyperspace-left__4 {
   0% {
     opacity: 1;
-    transform: translate(-0.6em) translateY(-0.3em);
+    transform: translate(-0.55em) translateY(-0.3em);
   }
   100% {
     opacity: 0;
@@ -187,22 +187,22 @@
 @keyframes animate-hyperspace-right__5 {
   0% {
     opacity: 1;
-    transform: translate(0.8em) translateY(0);
+    transform: translate(0.55em) translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translate(0) translateY(0.3em);
+    transform: translate(0) translateY(0.6em);
   }
 }
 
 @keyframes animate-hyperspace-left__5 {
   0% {
     opacity: 1;
-    transform: translate(-0.8em) translateY(0);
+    transform: translate(-0.55em) translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translate(0) translateY(0.3em);
+    transform: translate(0) translateY(0.6em);
   }
 }
 

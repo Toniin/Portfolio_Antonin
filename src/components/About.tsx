@@ -2,16 +2,19 @@ import { FunctionComponent } from "react";
 import Timeline from "./Timeline";
 import experiencesData from "../mockdata/experiencesData.json";
 
-const About: FunctionComponent = () => {
-  const experiences: Array<ExperiencesData> = [...experiencesData];
+const experiences: Array<ExperiencesData> = [...experiencesData];
 
+const About: FunctionComponent = () => {
   return (
     <section className="about items-center h-screen">
       <Timeline />
       <div className="about__content w-full h-screen flex flex-col items-center">
         <h2 className="text-2xl">EXPÉRIENCES</h2>
-        {experiences.map((experience) => (
-          <article className="about__content__xp mt-6 p-5">
+        {experiences.map((experience, index) => (
+          <article
+            key={`${experience.name} - ${index}}`}
+            className="about__content__xp mt-6 p-5"
+          >
             <a href={experience.href} target="_blank">
               <h3 className="text-xl underline underline-offset-4">
                 {experience.name}
