@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent, useEffect, MouseEvent } from "react";
 import Timeline from "./Timeline";
 import projectsData from "../mockdata/projectsData.json";
 
@@ -9,21 +9,16 @@ const Projects: FunctionComponent = () => {
     const projectsCard = document.querySelectorAll(".projects__content__card");
 
     projectsCard.forEach((project: any) => {
-      project.addEventListener("mousemove", (event: any) => {
+      project.addEventListener("mousemove", (event: MouseEvent) => {
         const CardRect = project.getBoundingClientRect();
-
         const x = event.clientX - CardRect.x;
         const y = event.clientY - CardRect.y;
-
         const midCardWidth = CardRect.width / 2;
         const midCardHeight = CardRect.height / 2;
-
         const angleY = -(x - midCardWidth) / 10;
         const angleX = (y - midCardHeight) / 10;
-
         project.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(2)`;
       });
-
       project.addEventListener("mouseleave", () => {
         project.children[0].style.transform = `rotateX(0) rotateY(0)`;
       });
