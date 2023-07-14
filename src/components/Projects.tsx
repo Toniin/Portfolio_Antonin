@@ -2,7 +2,7 @@ import { FunctionComponent, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Timeline from "./Timeline";
-import projectsData from "../mockdata/projectsData.json"
+import projectsData from "../mockdata/projectsData.json";
 
 const projects: Array<ProjectData> = [...projectsData];
 
@@ -70,7 +70,7 @@ const Projects: FunctionComponent = () => {
             />
             <div className="wrapper__project__detail">
               <h3 className="mt-6 text-sm text-gray-500">
-                <a href={project.href}>
+                <a href={project.href} target="_blank">
                   <span className="absolute inset-0" />
                   {project.name}
                 </a>

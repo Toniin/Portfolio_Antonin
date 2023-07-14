@@ -1,23 +1,23 @@
 [
   {
-    "name": "Desk and Office",
-    "description": "Work from home accessories",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
-    "imageAlt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    "href": "#"
+    "name": "Racine Éclairée",
+    "description": "Blog sur le bien-être physique et mental.",
+    "imageSrc": "assets/projects/racine-eclairee.png",
+    "imageAlt": "Hero du blog Racine eclairée.",
+    "href": "https://racine-eclairee.netlify.app"
   },
   {
-    "name": "Self-Improvement",
-    "description": "Journals and note-taking",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
-    "imageAlt": "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    "href": "#"
+    "name": "Skribe",
+    "description": "Résumé des livres de non-fiction.",
+    "imageSrc": "assets/projects/skribe.png",
+    "imageAlt": "Hero du site de résumé de livre Skribe.",
+    "href": "https://skribe.fr"
   },
   {
-    "name": "Travel",
-    "description": "Daily commute essentials",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg",
-    "imageAlt": "Collection of four insulated travel bottles on wooden shelf.",
-    "href": "#"
+    "name": "Booki",
+    "description": "Site d'annonces de chambres/appartements pour la nuit.",
+    "imageSrc": "assets/projects/booki.png",
+    "imageAlt": "Hero du site d'annonces Booki",
+    "href": "https://toniin.github.io/OpenClassrooms-P2/"
   }
 ]
