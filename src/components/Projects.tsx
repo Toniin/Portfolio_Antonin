@@ -5,11 +5,13 @@ import projectsData from "../mockdata/projectsData.json";
 const projects: Array<ProjectData> = [...projectsData];
 
 const Projects: FunctionComponent = () => {
+  
   useEffect(() => {
     const projectsCard = document.querySelectorAll(".projects__content__card");
 
-    projectsCard.forEach((project) => {
-      project.addEventListener("mousemove", (event) => {
+    projectsCard.forEach((project: any) => {
+      
+      project.addEventListener("mousemove", (event: any) => {
         const CardRect = project.getBoundingClientRect();
 
         const x = event.clientX - CardRect.x;
