@@ -15,7 +15,7 @@
   },
   {
     "name": "Booki",
-    "description": "Site d'annonces de chambres/appartements pour la nuit.",
+    "description": "Site d'annonces de location courte durée.",
     "imageSrc": "assets/projects/booki.png",
     "imageAlt": "Hero du site d'annonces Booki",
     "href": "https://toniin.github.io/OpenClassrooms-P2/"
