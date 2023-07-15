@@ -1,8 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 
-export const ThemeContext: React.Context<ThemeContextContentType> = createContext(
-  {} as ThemeContextContentType
-);
+export const ThemeContext: React.Context<ThemeContextContentType> =
+  createContext({} as ThemeContextContentType);
 
 export const ThemeContextProvider: ({
   children,
@@ -10,7 +9,7 @@ export const ThemeContextProvider: ({
   const localTheme: string | null = localStorage.getItem("theme-color");
 
   const [theme, setTheme] = useState<string>(
-    localTheme === "dark" ? localTheme : "light"
+    localTheme === "light" ? localTheme : "dark"
   );
 
   const toggleTheme: () => void = () => {
@@ -25,6 +24,7 @@ export const ThemeContextProvider: ({
       document.documentElement.setAttribute("theme", localTheme);
     } else {
       localStorage.setItem("theme-color", theme);
+      document.documentElement.setAttribute("theme", theme);
     }
   }, [theme, localTheme]);
 

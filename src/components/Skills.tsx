@@ -7,6 +7,10 @@ const Skills: FunctionComponent = () => {
     <section className="skills flex flex-col items-center h-screen">
       <Timeline />
       <div className="skills__content w-full h-screen flex flex-col items-center">
+        {/* 
+          À FAIRE
+          Effet background opaque, voir image idée CV 
+        */}
         <h2 className="text-2xl">COMPÉTENCES</h2>
         <ul className="flex flex-col sm:flex-row justify-center items-center gap-5 py-10 flex-wrap">
           <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">

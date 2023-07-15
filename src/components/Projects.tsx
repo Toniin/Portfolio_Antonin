@@ -34,6 +34,11 @@ const Projects: FunctionComponent = () => {
       <div className="projects__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl">PROJETS</h2>
 
+        {/* 
+          À FAIRE
+          Si écran horizontal => flex-row (règle le soucis de déformation sur petit écran horizontal)
+          Sinon => flex-col items-center mt-24 gap-10 lg:flex-row lg:gap-6 lg:mt-48 mx-3
+        */}
         <div className="flex flex-col items-center mt-24 gap-10 lg:flex-row lg:gap-6 lg:mt-48 mx-3">
           {projects.map((project, index) => (
             <a
@@ -48,6 +53,10 @@ const Projects: FunctionComponent = () => {
                   alt={project.imageAlt}
                   className="w-full object-cover"
                 />
+                {/* 
+                  À FAIRE
+                  Mettre un box shadow au niveau texte (effet ombre) 
+                */}
                 <div className="p-2 bg-light dark:primary-color">
                   <h3 className="text-lg text-center">{project.name}</h3>
                   <p className="text-base font-semibold">

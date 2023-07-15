@@ -5,7 +5,7 @@ import { FaSun, FaMoon } from "react-icons/fa6";
 
 const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
-
+  
   return (
     <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
       <Link to="/" className="header__logo">

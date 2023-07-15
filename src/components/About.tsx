@@ -10,6 +10,10 @@ const About: FunctionComponent = () => {
       <Timeline />
       <div className="about__content w-full h-screen flex flex-col items-center">
         <h2 className="text-2xl">EXPÉRIENCES</h2>
+        {/* 
+          À FAIRE
+          Effet background opaque, voir image idée CV 
+        */}
         {experiences.map((experience, index) => (
           <article
             key={`${experience.name} - ${index}}`}
