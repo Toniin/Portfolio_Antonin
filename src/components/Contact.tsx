@@ -63,7 +63,7 @@ const Contact: FunctionComponent = () => {
           </li>
         </ul>
         <div className="glass dark:glass--dark mt-6 p-7">
-          <p className="text-lg">Ou bien sur mes réseaux sociaux 👇</p>
+          <p className="text-lg text-center">Ou bien sur mes réseaux sociaux 👇</p>
           <div className="flex justify-center gap-4 mt-6">
             <SocialLink />
           </div>

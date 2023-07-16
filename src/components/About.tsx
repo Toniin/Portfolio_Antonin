@@ -10,7 +10,7 @@ const About: FunctionComponent = () => {
       <Timeline />
       <div className="about__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl">EXPÉRIENCES</h2>
-        <div className="flex  flex-col mt-20 gap-7 mx-3">
+        <div className="flex flex-col mt-20 gap-7">
           {experiences.map((experience, index) => (
             <article
               key={`${experience.name} - ${index}}`}

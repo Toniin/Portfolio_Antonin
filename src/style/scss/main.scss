@@ -164,6 +164,13 @@
   }
 }
 
+@media (width < 500px) {
+  .glass {
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
 @import "base/base";
 
 @import "components/timeline";

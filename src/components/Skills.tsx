@@ -12,7 +12,7 @@ const Skills: FunctionComponent = () => {
           Effet background opaque, voir image idée CV 
         */}
         <h2 className="text-2xl">COMPÉTENCES</h2>
-        <ul className="flex flex-col sm:flex-row justify-center items-center gap-5 py-10 flex-wrap">
+        <ul className="flex flex-col sm:flex-row justify-center items-center mt-20 gap-5 py-10 flex-wrap">
           <li className="w-full flex sm:basis-1/4 sm:justify-center items-center justify-between gap-2">
             HTML <FaHtml5 fill="#e06e3b" size="3em" />
           </li>
