@@ -2,7 +2,7 @@
   position: relative;
 
   &__content {
-    padding-top: 16vh;
+    padding-top: 14vh;
 
     &__card {
       border-radius: 0.375rem;
@@ -18,5 +18,11 @@
         transition: all 0.15s ease-out;
       }
     }
+  }
+}
+
+@media (width > 976px) {
+  .projects__content {
+    padding-top: 18vh;
   }
 }

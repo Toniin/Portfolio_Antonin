@@ -7,7 +7,7 @@ const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
   
   return (
-    <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-250 ease-out">
+    <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-200 ease-out">
       <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"

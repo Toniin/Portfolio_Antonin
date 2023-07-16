@@ -4,14 +4,14 @@ const SocialLink = () => {
   return (
     <>
       <a
-        className="z-0 github-color hover:github-color--hover dark:github-color--dark dark:hover:github-color--dark--hover"
+        className="z-0 github-color dark:github-color--dark hover:scale-110 duration-300 ease-out"
         href="https://github.com/Toniin"
         target="_blank"
       >
         <FaSquareGithub size="3em" />
       </a>
       <a
-        className="z-0 linkedin-color hover:linkedin-color--hover dark:linkedin-color--dark dark:hover:linkedin-color--dark--hover"
+        className="z-0 linkedin-color dark:linkedin-color--dark hover:scale-110 duration-300 ease-out"
         href="https://www.linkedin.com/in/antonin-chaudiere/"
         target="_blank"
       >

@@ -6,33 +6,31 @@ const experiences: Array<ExperiencesData> = [...experiencesData];
 
 const About: FunctionComponent = () => {
   return (
-    <section className="about items-center h-screen">
+    <section className="about items-center min-h-screen">
       <Timeline />
-      <div className="about__content w-full h-screen flex flex-col items-center">
+      <div className="about__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl">EXPÉRIENCES</h2>
-        {/* 
-          À FAIRE
-          Effet background opaque, voir image idée CV 
-        */}
-        {experiences.map((experience, index) => (
-          <article
-            key={`${experience.name} - ${index}}`}
-            className="about__content__xp mt-6 p-5"
-          >
-            <a href={experience.href} target="_blank">
-              <h3 className="text-xl underline underline-offset-4">
-                {experience.name}
-              </h3>
-            </a>
-            <p className="text-lg py-2">
-              {experience.organisme}
-              <br />
-              {experience.date}
-              <br />
-              {experience.zone}
-            </p>
-          </article>
-        ))}
+        <div className="flex  flex-col mt-20 gap-7 mx-3">
+          {experiences.map((experience, index) => (
+            <article
+              key={`${experience.name} - ${index}}`}
+              className="about__content__xp glass dark:glass--dark mt-6 p-7"
+            >
+              <a href={experience.href} target="_blank">
+                <h3 className="text-xl underline underline-offset-4 hover:scale-105 duration-300 ease-out">
+                  {experience.name}
+                </h3>
+              </a>
+              <p className="text-lg py-2">
+                {experience.organisme}
+                <br />
+                {experience.date}
+                <br />
+                {experience.zone}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

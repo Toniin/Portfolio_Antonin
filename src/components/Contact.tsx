@@ -24,47 +24,49 @@ const Contact: FunctionComponent = () => {
   return (
     <section className="contact flex flex-col items-center h-screen">
       <Timeline />
-      <div className="contact__content w-full h-screen flex flex-col items-center">
+      <div className="contact__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl">Vous souhaitez me contacter ?</h2>
 
-        <ul className="flex w-full justify-evenly items-center gap-5 py-10 flex-wrap">
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-4 md:px-52 lg:px-0">
+        <ul className="flex w-full justify-evenly items-center flex-wrap mt-20 gap-5 lg:py-8">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
             <span className="flex items-center font-bold gap-4">
               <FaEnvelope size="1.5em" />
               {contact.email}
             </span>
             <button
-              className="neomorphism--light dark:neomorphism--dark flex flex-col gap-2 p-3 rounded-lg"
+              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
               onClick={() => copyText(contact.email)}
             >
-              <FaRegPaste />
+              <FaRegPaste size="1.25em"/>
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-4 md:px-52 lg:px-0">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
             <span className="flex items-center font-bold gap-4">
               <FaPhoneFlip size="1.5em" />
               {contact.phone}
             </span>
             <button
-              className="neomorphism--light dark:neomorphism--dark flex flex-col gap-2 p-3 rounded-lg"
+              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
               onClick={() => copyText(contact.phone)}
             >
-              <FaRegPaste />
+              <FaRegPaste size="1.25em"/>
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-4 md:px-52 lg:px-0">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
             <span className="flex items-center font-bold gap-4">
               <FaRegFilePdf size="1.5em" />
               Télécharger le CV
             </span>
-            <button className="neomorphism--light dark:neomorphism--dark flex flex-col gap-2 p-3 rounded-lg">
-              <FaDownload />
+            <button className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg">
+              <FaDownload size="1.25em"/>
             </button>
           </li>
         </ul>
-        <p className="text-lg">Ou bien sur mes réseaux sociaux 👇</p>
-        <div className="flex justify-center gap-4 mt-6">
-          <SocialLink />
+        <div className="glass dark:glass--dark mt-6 p-7">
+          <p className="text-lg">Ou bien sur mes réseaux sociaux 👇</p>
+          <div className="flex justify-center gap-4 mt-6">
+            <SocialLink />
+          </div>
         </div>
       </div>
     </section>

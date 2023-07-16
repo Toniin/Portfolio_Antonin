@@ -39,7 +39,7 @@ const Projects: FunctionComponent = () => {
           Si écran horizontal => flex-row (règle le soucis de déformation sur petit écran horizontal)
           Sinon => flex-col items-center mt-24 gap-10 lg:flex-row lg:gap-6 lg:mt-48 mx-3
         */}
-        <div className="flex flex-col items-center mt-24 gap-10 lg:flex-row lg:gap-6 lg:mt-48 mx-3">
+        <div className="flex flex-col items-center mt-20 gap-10 lg:flex-row lg:gap-6 lg:mt-32 mx-3">
           {projects.map((project, index) => (
             <a
               href={project.href}
