@@ -12,10 +12,10 @@
 
     &__leaf {
       stroke: #506c64;
+      filter: drop-shadow(0 0 0.05em lighten(#506c64, 5%));
 
       &--fill {
-        fill: #506c64;
-        opacity: 0.9;
+        fill: lighten(#506c64, 5%);
       }
     }
 

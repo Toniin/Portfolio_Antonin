@@ -61,7 +61,7 @@ const Hero: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="stroke-branch-first-light dark:stroke-branch-first-dark"
+            className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d="M10,120 L 10,150"
             fill="transparent"
             strokeWidth="0.75"
@@ -138,15 +138,15 @@ const Hero: FunctionComponent = () => {
             <>
               <g className="hero__timeline__leaf">
                 <path
-                  d="M10,140 C 10,135 15,136 16,127"
-                  fill="transparent"
-                  strokeWidth="0.6"
-                />
-                <path
                   className="hero__timeline__leaf--fill"
                   d="M14.6,132 C 16,131 10,128 17,122 C 17,122 22,125 14.6,132"
                   fill="transparent"
                   strokeWidth="0.1"
+                />
+                <path
+                  d="M10,140 C 10,135 15,136 16,127"
+                  fill="transparent"
+                  strokeWidth="0.6"
                 />
                 <circle
                   cx="10"
@@ -158,15 +158,15 @@ const Hero: FunctionComponent = () => {
               </g>
               <g className="hero__timeline__leaf">
                 <path
-                  d="M10,135 C 10,130 5,130 5,124"
-                  fill="transparent"
-                  strokeWidth="0.6"
-                />
-                <path
                   className="hero__timeline__leaf--fill"
                   d="M4.5,119 C 5,121 9,125 7,129 C 3,130 0,121 4.5,119"
                   fill="transparent"
                   strokeWidth="0.1"
+                />
+                <path
+                  d="M10,135 C 10,130 5,130 5,124"
+                  fill="transparent"
+                  strokeWidth="0.6"
                 />
                 <circle
                   cx="10"
@@ -190,7 +190,7 @@ const Hero: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="stroke-branch-first-light dark:stroke-branch-first-dark"
+            className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d="M10,120 L 10,150"
             fill="transparent"
             strokeWidth="1.5"
@@ -267,15 +267,15 @@ const Hero: FunctionComponent = () => {
             <>
               <g className="hero__timeline__leaf">
                 <path
-                  d="M10,140 C 10,135 15,135 17,127"
-                  fill="transparent"
-                  strokeWidth="1"
-                />
-                <path
                   className="hero__timeline__leaf--fill"
                   d="M15,132 C 16,132 10,127 20,122 C 20,122 24,125 15,132"
                   fill="transparent"
-                  strokeWidth="1.5"
+                  strokeWidth="0.2"
+                />
+                <path
+                  d="M10,140 C 10,135 15,135 17,127"
+                  fill="transparent"
+                  strokeWidth="1"
                 />
                 <circle
                   cx="10"
@@ -287,15 +287,15 @@ const Hero: FunctionComponent = () => {
               </g>
               <g className="hero__timeline__leaf">
                 <path
+                  className="hero__timeline__leaf--fill"
+                  d="M4.5,119 C 5,120 9,125 7,129 C 1.5,130 0,121 4.5,119"
+                  fill="transparent"
+                  strokeWidth="0.2"
+                />
+                <path
                   d="M10,135 C 10,130 5,130 5,124"
                   fill="transparent"
                   strokeWidth="1"
-                />
-                <path
-                  className="hero__timeline__leaf--fill"
-                  d="M4.5,119 C 5,120 9,125 7,129 C 1.5,130 0,121 5,119"
-                  fill="transparent"
-                  strokeWidth="1.5"
                 />
                 <circle
                   cx="10"

@@ -111,19 +111,19 @@ const Timeline: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
+            className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d="M10,0 L 10,150"
             fill="transparent"
             strokeWidth="0.75"
           />
           <path
-            className="timeline__main timeline__main--checkout stroke-branch-second-light"
+            className="timeline__main timeline__main--checkout stroke-branch-second-light shadow-branch-second-light--checkout dark:shadow-branch-second-dark--checkout"
             d="M10,15 C 10,35 15,35 75,37"
             fill="transparent"
             strokeWidth="0.75"
           />
           <path
-            className="timeline__secondary stroke-branch-second-light"
+            className="timeline__secondary stroke-branch-second-light shadow-branch-second-light dark:shadow-branch-second-dark"
             d="M75,37 L 75,120 C 75,130 50,135 10,140"
             fill="transparent"
             strokeWidth="0.75"
@@ -160,19 +160,19 @@ const Timeline: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark"
+            className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d="M10,0 L 10,300"
             fill="transparent"
             strokeWidth="1.5"
           />
           <path
-            className="timeline__main timeline__main--checkout stroke-branch-second-light"
+            className="timeline__main timeline__main--checkout stroke-branch-second-light shadow-branch-second-light--checkout dark:shadow-branch-second-dark--checkout"
             d="M10,25 C 10,45 15,50 75,50"
             fill="transparent"
             strokeWidth="1.5"
           />
           <path
-            className="timeline__secondary stroke-branch-second-light"
+            className="timeline__secondary stroke-branch-second-light shadow-branch-second-light dark:shadow-branch-second-dark"
             d="M75,50 L 75,235 C 75,250 50,265 10,275"
             fill="transparent"
             strokeWidth="1.5"

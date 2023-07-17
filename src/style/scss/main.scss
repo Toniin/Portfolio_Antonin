@@ -85,6 +85,18 @@
     stroke: map-get($branch-colors, first--dark);
   }
 
+  .shadow-branch-first-light {
+    filter: drop-shadow(
+      0.1em 0 0.05em lighten(map-get($branch-colors, first), 50%)
+    );
+  }
+
+  .shadow-branch-first-dark {
+    filter: drop-shadow(
+      0 0 0.05em lighten(map-get($background-colors, dark), 60%)
+    );
+  }
+
   .fill-branch-second-light {
     fill: map-get($branch-colors, second);
   }
@@ -99,6 +111,30 @@
 
   .stroke-branch-second-dark {
     stroke: map-get($branch-colors, second);
+  }
+
+  .shadow-branch-second-light--checkout {
+    filter: drop-shadow(
+      0 0.1em 0.05em lighten(map-get($branch-colors, second), 30%)
+    );
+  }
+
+  .shadow-branch-second-dark--checkout {
+    filter: drop-shadow(
+      0 0 0.05em lighten(map-get($branch-colors, second), 10%)
+    );
+  }
+
+  .shadow-branch-second-light {
+    filter: drop-shadow(
+      0 0 0.05em lighten(map-get($branch-colors, second), 30%)
+    );
+  }
+
+  .shadow-branch-second-dark {
+    filter: drop-shadow(
+      0 0 0.05em lighten(map-get($branch-colors, second), 10%)
+    );
   }
 
   .animate-path-dark {
