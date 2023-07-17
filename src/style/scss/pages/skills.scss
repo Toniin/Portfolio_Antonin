@@ -3,6 +3,18 @@
 
   &__content {
     padding-top: 9vh;
+
+    &__list::before {
+      position: absolute;
+      content: "";
+      width: 1em;
+      height: 1em;
+      top: 0;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: map-get($branch-colors, second);
+    }
   }
 }
 

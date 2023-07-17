@@ -1,4 +1,5 @@
 import { FunctionComponent, useEffect, MouseEvent } from "react";
+import { FaFileCode } from "react-icons/fa6";
 import Timeline from "./Timeline";
 import projectsData from "../mockdata/projectsData.json";
 
@@ -32,7 +33,7 @@ const Projects: FunctionComponent = () => {
     <section className="projects min-h-screen">
       <Timeline />
       <div className="projects__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl">PROJETS</h2>
+        <h2 className="text-2xl flex gap-4 items-center"><FaFileCode size="1.2em" />PROJETS</h2>
 
         {/* 
           À FAIRE

@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import {
+  FaComments,
   FaEnvelope,
   FaPhoneFlip,
   FaRegFilePdf,
@@ -25,45 +26,50 @@ const Contact: FunctionComponent = () => {
     <section className="contact flex flex-col items-center h-screen">
       <Timeline />
       <div className="contact__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl">Vous souhaitez me contacter ?</h2>
+        <h2 className="text-2xl flex gap-4 items-center">
+          <FaComments size="1.2em" />
+          CONTACT
+        </h2>
 
         <ul className="flex w-full justify-evenly items-center flex-wrap mt-20 gap-5 lg:py-8">
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
-            <span className="flex items-center font-bold gap-4">
-              <FaEnvelope size="1.5em" />
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+            <span className="flex items-center font-bold gap-2 pl-2">
+              <FaEnvelope size="1.2em" />
               {contact.email}
             </span>
             <button
               className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
               onClick={() => copyText(contact.email)}
             >
-              <FaRegPaste size="1.25em"/>
+              <FaRegPaste size="1.3em" />
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
-            <span className="flex items-center font-bold gap-4">
-              <FaPhoneFlip size="1.5em" />
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+            <span className="flex items-center font-bold gap-2 pl-2">
+              <FaPhoneFlip size="1.2em" />
               {contact.phone}
             </span>
             <button
               className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
               onClick={() => copyText(contact.phone)}
             >
-              <FaRegPaste size="1.25em"/>
+              <FaRegPaste size="1.3em" />
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 px-2 md:px-52 lg:px-0">
-            <span className="flex items-center font-bold gap-4">
-              <FaRegFilePdf size="1.5em" />
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+            <span className="flex items-center font-bold gap-2 pl-2">
+              <FaRegFilePdf size="1.2em" />
               Télécharger le CV
             </span>
             <button className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg">
-              <FaDownload size="1.25em"/>
+              <FaDownload size="1.3em" />
             </button>
           </li>
         </ul>
         <div className="glass dark:glass--dark mt-6 p-7">
-          <p className="text-lg text-center">Ou bien sur mes réseaux sociaux 👇</p>
+          <p className="text-lg text-center">
+            Ou bien sur mes réseaux sociaux 👇
+          </p>
           <div className="flex justify-center gap-4 mt-6">
             <SocialLink />
           </div>

@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { FaUserGraduate } from "react-icons/fa6";
 import Timeline from "./Timeline";
 import experiencesData from "../mockdata/experiencesData.json";
 
@@ -9,7 +10,10 @@ const About: FunctionComponent = () => {
     <section className="about items-center min-h-screen">
       <Timeline />
       <div className="about__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl">EXPÉRIENCES</h2>
+        <h2 className="text-2xl flex gap-4 items-center">
+          <FaUserGraduate size="1.2em" />
+          EXPÉRIENCES
+        </h2>
         <div className="flex flex-col mt-20 gap-7">
           {experiences.map((experience, index) => (
             <article
