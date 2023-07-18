@@ -23,7 +23,7 @@ const Contact: FunctionComponent = () => {
   };
 
   return (
-    <section className="contact flex flex-col items-center h-screen">
+    <section className="contact flex flex-col items-center min-h-screen">
       <Timeline />
       <div className="contact__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl flex gap-4 items-center">

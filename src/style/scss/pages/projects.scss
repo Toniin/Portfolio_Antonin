@@ -11,6 +11,23 @@
 
       &:hover {
         z-index: 2;
+
+        &::before {
+          z-index: 0;
+        }
+      }
+
+      &::before {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        width: 1em;
+        height: 1em;
+        top: 0;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: map-get($branch-colors, second);
       }
 
       &__content {

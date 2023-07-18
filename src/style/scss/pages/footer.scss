@@ -1,0 +1,10 @@
+.footer {
+  position: relative;
+  min-height: 50vh;
+
+  &__timeline {
+    position: absolute;
+    top: 0;
+    content: "";
+  }
+}
