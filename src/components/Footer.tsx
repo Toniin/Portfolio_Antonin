@@ -1,5 +1,9 @@
 import { FunctionComponent, useRef, useState, useLayoutEffect } from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer: FunctionComponent = () => {
   const footer: React.RefObject<HTMLDivElement> =
@@ -15,21 +19,51 @@ const Footer: FunctionComponent = () => {
       setHorizontal(false);
     }
 
-    if (window.innerWidth >= 400) {
-      setPosRoma(58);
+    switch (true) {
+      case window.innerWidth >= 400:
+        setPosRoma(58);
+        break;
+      case window.innerWidth >= 700:
+        setPosRoma(59);
+        break;
+      case window.innerWidth >= 800:
+        setPosRoma(61);
+        break;
+      case window.innerWidth >= 900:
+        setPosRoma(63);
+        break;
     }
 
-    if (window.innerWidth >= 700) {
-      setPosRoma(59);
-    }
+    const ctx = gsap.context((self) => {
+      if (self.selector) {
+        const timelineRoad = self.selector(".footer__timeline__road");
+        const timelineDot = self.selector(".footer__timeline__dot");
 
-    if (window.innerWidth >= 800) {
-      setPosRoma(61);
-    }
-
-    if (window.innerWidth >= 900) {
-      setPosRoma(63);
-    }
+        gsap
+          .timeline()
+          .to(timelineRoad, {
+            scrollTrigger: {
+              trigger: footer.current,
+              start: "top bottom",
+              end: "20% 50%",
+              scrub: 0.5,
+            },
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDot, {
+            scrollTrigger: {
+              trigger: footer.current,
+              start: "30% bottom",
+              end: "50% 55%",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          });
+      }
+    }, footer); // <- Scope!
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -48,13 +82,13 @@ const Footer: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+            className="footer__timeline__road stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,57 C 60,65 67,45 74,59"
             fill="transparent"
             strokeWidth="0.75"
           />
           <circle
-            className="fill-branch-second-light"
+            className="footer__timeline__dot fill-branch-second-light"
             cx="74"
             cy="59"
             r="0.75"
@@ -72,13 +106,13 @@ const Footer: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+            className="footer__timeline__road stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
             d={`M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,${posRoma}`}
             fill="transparent"
             strokeWidth="1.5"
           />
           <circle
-            className="fill-branch-second-light"
+            className="footer__timeline__dot fill-branch-second-light"
             cx="74"
             cy={`${posRoma}`}
             r="1"
