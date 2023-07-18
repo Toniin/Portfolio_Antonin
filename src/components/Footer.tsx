@@ -6,7 +6,7 @@ const Footer: FunctionComponent = () => {
     useRef() as React.MutableRefObject<HTMLDivElement>;
 
   const [horizontal, setHorizontal] = useState(false);
-  const [posRoma, setPosRoma] = useState(0);
+  const [posRoma, setPosRoma] = useState(55);
 
   useLayoutEffect(() => {
     if (window.innerWidth > window.innerHeight) {
@@ -15,22 +15,21 @@ const Footer: FunctionComponent = () => {
       setHorizontal(false);
     }
 
-    if (footer.current) {
-      setPosRoma(footer.current.clientHeight / 7.9);
+    if (window.innerWidth >= 400) {
+      setPosRoma(58);
     }
-    // console.log(window.innerWidth);
 
-    // for (let i = 0; i < window.innerWidth; i++) {
-    //   // setPosRoma((i / 100) * 3);
+    if (window.innerWidth >= 700) {
+      setPosRoma(59);
+    }
 
-    //   if (window.innerWidth * 2 > window.innerHeight) {
-    //     console.log("*2", i / 100);
-    //     setPosRoma((i / 100) * 2.5);
-    //   } else {
-    //     console.log((i / (100)+3));
-    //     setPosRoma((i / (100*3)));
-    //   }
-    // }
+    if (window.innerWidth >= 800) {
+      setPosRoma(61);
+    }
+
+    if (window.innerWidth >= 900) {
+      setPosRoma(63);
+    }
   }, []);
 
   return (
@@ -50,14 +49,14 @@ const Footer: FunctionComponent = () => {
         >
           <path
             className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
-            d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,57 C 60,65 67,45 74,61"
+            d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,57 C 60,65 67,45 74,59"
             fill="transparent"
             strokeWidth="0.75"
           />
           <circle
             className="fill-branch-second-light"
             cx="74"
-            cy="61"
+            cy="59"
             r="0.75"
             fill="transparent"
           />
@@ -74,46 +73,21 @@ const Footer: FunctionComponent = () => {
         >
           <path
             className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
-            // d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,57"
-            // d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,48"
-            // d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,45"
-            // d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,55"
             d={`M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,${posRoma}`}
-            // d={
-            //   window.innerWidth < 300
-            //     ? "M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,45"
-            //     : window.innerWidth < 400
-            //     ? "M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,48"
-            //     : window.innerWidth < 600
-            //     ? "M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,57"
-            //     : "M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,59"
-            // }
             fill="transparent"
             strokeWidth="1.5"
           />
           <circle
             className="fill-branch-second-light"
             cx="74"
-            // cy="57"
-            // cy="48"
-            // cy="45"
             cy={`${posRoma}`}
-            // cy={
-            //   window.innerWidth < 300
-            //     ? "45"
-            //     : window.innerWidth < 400
-            //     ? "48"
-            //     : window.innerWidth < 600
-            //     ? "57"
-            //     : "59"
-            // }
             r="1"
             fill="transparent"
           />
         </svg>
       )}
       <svg
-        className="w-2/5 md:w-1/5"
+        className="w-64"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"

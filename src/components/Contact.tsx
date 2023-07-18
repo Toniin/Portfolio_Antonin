@@ -31,10 +31,10 @@ const Contact: FunctionComponent = () => {
           CONTACT
         </h2>
 
-        <ul className="flex w-full justify-evenly items-center flex-wrap mt-20 gap-5 lg:py-8">
+        <ul className="flex w-full justify-evenly items-center flex-wrap mt-20 gap-5 lg:py-8 text-sm">
           <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
             <span className="flex items-center font-bold gap-2 pl-2">
-              <FaEnvelope size="1.2em" />
+              {window.innerWidth >= 360 && <FaEnvelope size="1.2em" />}
               {contact.email}
             </span>
             <button
@@ -46,7 +46,7 @@ const Contact: FunctionComponent = () => {
           </li>
           <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
             <span className="flex items-center font-bold gap-2 pl-2">
-              <FaPhoneFlip size="1.2em" />
+              {window.innerWidth >= 360 && <FaPhoneFlip size="1.2em" />}
               {contact.phone}
             </span>
             <button
@@ -58,7 +58,7 @@ const Contact: FunctionComponent = () => {
           </li>
           <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
             <span className="flex items-center font-bold gap-2 pl-2">
-              <FaRegFilePdf size="1.2em" />
+              {window.innerWidth >= 360 && <FaRegFilePdf size="1.2em" />}
               Télécharger le CV
             </span>
             <button className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg">
