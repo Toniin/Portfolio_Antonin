@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, MouseEvent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { FaFileCode } from "react-icons/fa6";
 import Timeline from "./Timeline";
 import projectsData from "../mockdata/projectsData.json";
@@ -9,22 +9,25 @@ const Projects: FunctionComponent = () => {
   useEffect(() => {
     const projectsCard = document.querySelectorAll(".projects__content__card");
 
-    projectsCard.forEach((project: any) => {
-      project.addEventListener("mousemove", (event: MouseEvent) => {
-        const CardRect = project.getBoundingClientRect();
-        const x = event.clientX - CardRect.x;
-        const y = event.clientY - CardRect.y;
+    projectsCard.forEach((projectLink) => {
+      const projectCard = projectLink.children[0] as HTMLElement
+      projectLink.addEventListener("mousemove", (event) => {
+        const mouseEvent = event as MouseEvent
+        
+        const CardRect = projectLink.getBoundingClientRect();
+        const x = mouseEvent.clientX - CardRect.x;
+        const y = mouseEvent.clientY - CardRect.y;
         const midCardWidth = CardRect.width / 2;
         const midCardHeight = CardRect.height / 2;
         const angleY = -(x - midCardWidth) / 10;
         const angleX = (y - midCardHeight) / 10;
-        project.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(2)`;
+        projectCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(2)`;
       });
-      project.addEventListener("mouseleave", () => {
-        project.children[0].style.transform = `rotateX(0) rotateY(0)`;
+      projectLink.addEventListener("mouseleave", () => {
+        projectCard.style.transform = `rotateX(0) rotateY(0)`;
       });
-      project.addEventListener("click", () => {
-        project.children[0].style.transform = `rotateX(0) rotateY(0)`;
+      projectLink.addEventListener("click", () => {
+        projectCard.style.transform = `rotateX(0) rotateY(0)`;
       });
     });
   }, []);
