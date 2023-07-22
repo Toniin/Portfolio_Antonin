@@ -3,11 +3,12 @@ import {
   FaComments,
   FaEnvelope,
   FaPhoneFlip,
-  FaRegFilePdf,
+    FaRegFilePdf,
   FaDownload,
   FaRegPaste,
 } from "react-icons/fa6";
 import Timeline from "./Timeline";
+import Timeline3Branchs from './Timeline3Branchs';
 import SocialLink from "./SocialLink";
 
 const Contact: FunctionComponent = () => {
@@ -24,7 +25,7 @@ const Contact: FunctionComponent = () => {
 
   return (
     <section className="contact flex flex-col items-center min-h-screen">
-      <Timeline />
+      {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
       <div className="contact__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl flex gap-4 items-center">
           <FaComments size="1.2em" />

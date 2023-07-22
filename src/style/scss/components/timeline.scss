@@ -3,6 +3,10 @@
   content: "";
   z-index: -1;
 
+  &__text {
+    font-size: 0.1em;
+  }
+
   &__main {
     &--merge {
       transform: scaleY(0);

@@ -91,7 +91,7 @@ const Footer: FunctionComponent = () => {
             className="footer__timeline__dot fill-branch-second-light"
             cx="74"
             cy="59"
-            r="0.75"
+            r="1"
             fill="transparent"
           />
         </svg>
@@ -115,7 +115,7 @@ const Footer: FunctionComponent = () => {
             className="footer__timeline__dot fill-branch-second-light"
             cx="74"
             cy={`${posRoma}`}
-            r="1"
+            r="1.5"
             fill="transparent"
           />
         </svg>

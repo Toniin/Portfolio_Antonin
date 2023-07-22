@@ -1,6 +1,7 @@
 import { FunctionComponent, useEffect } from "react";
 import { FaFileCode } from "react-icons/fa6";
 import Timeline from "./Timeline";
+import Timeline3Branchs from './Timeline3Branchs';
 import projectsData from "../mockdata/projectsData.json";
 
 const projects: Array<ProjectData> = [...projectsData];
@@ -10,10 +11,10 @@ const Projects: FunctionComponent = () => {
     const projectsCard = document.querySelectorAll(".projects__content__card");
 
     projectsCard.forEach((projectLink) => {
-      const projectCard = projectLink.children[0] as HTMLElement
+      const projectCard = projectLink.children[0] as HTMLElement;
       projectLink.addEventListener("mousemove", (event) => {
-        const mouseEvent = event as MouseEvent
-        
+        const mouseEvent = event as MouseEvent;
+
         const CardRect = projectLink.getBoundingClientRect();
         const x = mouseEvent.clientX - CardRect.x;
         const y = mouseEvent.clientY - CardRect.y;
@@ -34,9 +35,12 @@ const Projects: FunctionComponent = () => {
 
   return (
     <section className="projects min-h-screen">
-      <Timeline />
+      {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
       <div className="projects__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl flex gap-4 items-center"><FaFileCode size="1.2em" />PROJETS</h2>
+        <h2 className="text-2xl flex gap-4 items-center">
+          <FaFileCode size="1.2em" />
+          PROJETS
+        </h2>
 
         {/* 
           À FAIRE

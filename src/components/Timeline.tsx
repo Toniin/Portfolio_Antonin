@@ -24,7 +24,6 @@ const Timeline: FunctionComponent = () => {
     const ctx = gsap.context((self) => {
       if (self.selector) {
         const timelineMainMerge = self.selector(".timeline__main--merge");
-
         const timelineDotBranch = self.selector(".timeline__dot--branch");
         const timelineMainCheckout = self.selector(".timeline__main--checkout");
         const timelineDotCheckout = self.selector(".timeline__dot--checkout");
@@ -96,6 +95,7 @@ const Timeline: FunctionComponent = () => {
           });
       }
     }, timeline); // <- Scope!
+
     return () => ctx.revert(); // <- Cleanup!
   }, []);
 
@@ -149,6 +149,32 @@ const Timeline: FunctionComponent = () => {
             r="1.25"
             fill="transparent"
           />
+          {/* Add text : checkout */}
+          <g>
+            <path
+              id="main--checkout"
+              d="M10,14 C 12,35 15,35 75,37"
+              fill="transparent"
+            />
+            <text className="timeline__text fill-branch-second-light">
+              <textPath href="#main--checkout" startOffset="10%">
+                Checkout
+              </textPath>
+            </text>
+          </g>
+          {/* Add text : merge */}
+          <g>
+            <path
+              id="main--merge"
+              d="M10,139 C 10,139 50,134 75,129"
+              fill="transparent"
+            />
+            <text className="timeline__text fill-branch-second-light">
+              <textPath href="#main--merge" startOffset="5%">
+                Merge
+              </textPath>
+            </text>
+          </g>
         </svg>
       ) : (
         // VERTICAL SCREEN
