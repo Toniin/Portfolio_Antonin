@@ -44,8 +44,8 @@ const Footer: FunctionComponent = () => {
           .to(timelineRoad, {
             scrollTrigger: {
               trigger: footer.current,
-              start: "top bottom",
-              end: "20% 50%",
+              start: "top 75%",
+              end: "50% 75%",
               scrub: 0.5,
             },
             strokeDashoffset: 0,
@@ -71,8 +71,8 @@ const Footer: FunctionComponent = () => {
       ref={footer}
       className="footer flex flex-col justify-center items-center gap-5 py-10"
     >
-      {horizontal === true ? (
-        // HORIZONTAL SCREEN
+      {horizontal === true || window.innerWidth >= 975 ? (
+        // HORIZONTAL SCREEN || SCREEN >= 975px
         <svg
           className="footer__timeline"
           xmlns="http://www.w3.org/2000/svg"

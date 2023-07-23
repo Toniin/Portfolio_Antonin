@@ -50,8 +50,8 @@ const Hero: FunctionComponent = () => {
         </div>
       </div>
 
-      {horizontal === true ? (
-        // HORIZONTAL SCREEN
+      {horizontal === true || window.innerWidth >= 975 ? (
+        // HORIZONTAL SCREEN || SCREEN >= 975px
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="hero__timeline"

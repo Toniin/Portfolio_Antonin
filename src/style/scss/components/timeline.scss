@@ -26,10 +26,10 @@
   }
 
   &__dot {
-    &--branch {
-      opacity: 0;
-    }
+    opacity: 0;
+  }
 
+  &__text {
     &--checkout {
       opacity: 0;
     }

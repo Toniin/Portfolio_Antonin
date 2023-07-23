@@ -30,13 +30,41 @@ const Timeline: FunctionComponent = () => {
         const timelineSecondary = self.selector(".timeline__secondary");
         const timelineDotMerge = self.selector(".timeline__dot--merge");
 
+        if (horizontal === true || window.innerWidth >= 975) {
+          const timelineTextCheckout = self.selector(".timeline__text--checkout");
+          const timelineTextMerge = self.selector(".timeline__text--merge");
+
+          gsap
+          .timeline()
+          .to(timelineTextCheckout, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "10% center",
+              end: "14% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineTextMerge, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "45% center",
+              end: "49% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          });
+        }
+
         gsap
           .timeline()
           .to(timelineMainMerge, {
             scrollTrigger: {
               trigger: timeline.current,
               start: "top bottom",
-              end: "80% 20%",
+              end: "75% 35%",
               scrub: 0.5,
             },
             scaleY: 1,
@@ -46,8 +74,8 @@ const Timeline: FunctionComponent = () => {
           .to(timelineDotBranch, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "15% center",
-              end: "20% center",
+              start: "5% center",
+              end: "10% center",
               scrub: true,
             },
             opacity: 1,
@@ -56,8 +84,8 @@ const Timeline: FunctionComponent = () => {
           .to(timelineMainCheckout, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "top 40%",
-              end: "center center",
+              start: "9% 50%",
+              end: "15% center",
               scrub: 1,
             },
             strokeDashoffset: 0,
@@ -66,8 +94,8 @@ const Timeline: FunctionComponent = () => {
           .to(timelineDotCheckout, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "33% center",
-              end: "38% center",
+              start: "13% center",
+              end: "15% center",
               scrub: true,
             },
             opacity: 1,
@@ -76,7 +104,7 @@ const Timeline: FunctionComponent = () => {
           .to(timelineSecondary, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "top top",
+              start: "5% center",
               end: "85% center",
               scrub: 0.5,
             },
@@ -86,8 +114,8 @@ const Timeline: FunctionComponent = () => {
           .to(timelineDotMerge, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "83% 60%",
-              end: "90% 65%",
+              start: "46% center",
+              end: "48% center",
               scrub: true,
             },
             opacity: 1,
@@ -97,12 +125,12 @@ const Timeline: FunctionComponent = () => {
     }, timeline); // <- Scope!
 
     return () => ctx.revert(); // <- Cleanup!
-  }, []);
+  }, [horizontal]);
 
   return (
     <div ref={timeline} className="timeline w-full h-full">
-      {horizontal === true ? (
-        // HORIZONTAL SCREEN
+      {horizontal === true || window.innerWidth >= 975 ? (
+        // HORIZONTAL SCREEN || SCREEN >= 975px
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -150,27 +178,27 @@ const Timeline: FunctionComponent = () => {
             fill="transparent"
           />
           {/* Add text : checkout */}
-          <g>
+          <g className="timeline__text--checkout">
             <path
-              id="main--checkout"
+              id="text--checkout"
               d="M10,14 C 12,35 15,35 75,37"
               fill="transparent"
             />
             <text className="timeline__text fill-branch-second-light">
-              <textPath href="#main--checkout" startOffset="10%">
+              <textPath href="#text--checkout" startOffset="10%">
                 Checkout
               </textPath>
             </text>
           </g>
           {/* Add text : merge */}
-          <g>
+          <g className="timeline__text--merge">
             <path
-              id="main--merge"
+              id="text--merge"
               d="M10,139 C 10,139 50,134 75,129"
               fill="transparent"
             />
             <text className="timeline__text fill-branch-second-light">
-              <textPath href="#main--merge" startOffset="5%">
+              <textPath href="#text--merge" startOffset="5%">
                 Merge
               </textPath>
             </text>
