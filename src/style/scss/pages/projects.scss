@@ -13,6 +13,10 @@
         position: relative;
         transition: all 0.15s ease-out;
       }
+
+      &:hover {
+        z-index: 1;
+      }
     }
   }
 }

@@ -36,41 +36,6 @@ const Timeline: FunctionComponent = () => {
 
           gsap
           .timeline()
-          .to(timelineTextCheckout, {
-            scrollTrigger: {
-              trigger: timeline.current,
-              start: "10% center",
-              end: "14% center",
-              scrub: true,
-            },
-            opacity: 1,
-            ease: "power3.inOut",
-          })
-          .to(timelineTextMerge, {
-            scrollTrigger: {
-              trigger: timeline.current,
-              start: "45% center",
-              end: "49% center",
-              scrub: true,
-            },
-            opacity: 1,
-            ease: "power3.inOut",
-          });
-        }
-
-        gsap
-          .timeline()
-          .to(timelineMainMerge, {
-            scrollTrigger: {
-              trigger: timeline.current,
-              start: "top bottom",
-              end: "75% 35%",
-              scrub: 0.5,
-            },
-            scaleY: 1,
-            strokeDashoffset: 0,
-            ease: "power3.inOut",
-          })
           .to(timelineDotBranch, {
             scrollTrigger: {
               trigger: timeline.current,
@@ -101,6 +66,16 @@ const Timeline: FunctionComponent = () => {
             opacity: 1,
             ease: "power3.inOut",
           })
+          .to(timelineDotMerge, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "46% center",
+              end: "48% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
           .to(timelineSecondary, {
             scrollTrigger: {
               trigger: timeline.current,
@@ -111,16 +86,94 @@ const Timeline: FunctionComponent = () => {
             strokeDashoffset: 0,
             ease: "power3.inOut",
           })
-          .to(timelineDotMerge, {
+          .to(timelineTextCheckout, {
             scrollTrigger: {
               trigger: timeline.current,
-              start: "46% center",
-              end: "48% center",
+              start: "10% center",
+              end: "14% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineTextMerge, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "45% center",
+              end: "49% center",
               scrub: true,
             },
             opacity: 1,
             ease: "power3.inOut",
           });
+        } else {
+          gsap
+          .timeline()
+          .to(timelineDotBranch, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "12% center",
+              end: "14% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineMainCheckout, {
+            scrollTrigger: {
+              trigger: timeline.current,
+            start: "10% center",
+              end: "25% center",
+              scrub: 1,
+            },
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDotCheckout, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "21% center",
+              end: "23% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          })
+          .to(timelineSecondary, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "15% center",
+              end: "65% center",
+              scrub: 0.5,
+            },
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
+          .to(timelineDotMerge, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "52% center",
+              end: "54% center",
+              scrub: true,
+            },
+            opacity: 1,
+            ease: "power3.inOut",
+          });
+        }
+
+        gsap
+          .timeline()
+          .to(timelineMainMerge, {
+            scrollTrigger: {
+              trigger: timeline.current,
+              start: "top bottom",
+              end: "75% 35%",
+              scrub: 0.5,
+            },
+            scaleY: 1,
+            strokeDashoffset: 0,
+            ease: "power3.inOut",
+          })
       }
     }, timeline); // <- Scope!
 
