@@ -32,11 +32,11 @@
 @keyframes animate-path-inside-light {
   0% {
     stroke-dashoffset: 700px;
-    fill: map-get($background-colors, light);
+    fill: #0ea5e9;
   }
   100% {
     stroke-dashoffset: 0;
-    fill: map-get($background-colors, light);
+    fill: #0ea5e9;
   }
 }
 

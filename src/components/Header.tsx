@@ -7,7 +7,8 @@ const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
   
   return (
-    <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-200 ease-out">
+    // <header className="header flex justify-between items-center bg-light primary-color dark:bg-dark dark:secondary-color transition duration-200 ease-out">
+    <header className="header flex justify-between items-center primary-color dark:secondary-color transition duration-200 ease-out">
       <Link to="/" className="header__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@ const Header: FunctionComponent = () => {
       ></nav> */}
 
       <button
-        className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
+        className="hero__neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
         onClick={() => {
           toggleTheme();
         }}
