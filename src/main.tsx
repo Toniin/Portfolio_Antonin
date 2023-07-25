@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout";
+import ProjectDetails from "./pages/ProjectDetails";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import { ThemeContextProvider } from "./utils/Context/ThemeContext";
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "project/:idUrlProject",
+        element: <ProjectDetails />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { FunctionComponent, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaFileCode } from "react-icons/fa6";
 import Timeline from "./Timeline";
 import Timeline3Branchs from "./Timeline3Branchs";
@@ -43,9 +44,8 @@ const Projects: FunctionComponent = () => {
         </h2>
         <div className="flex flex-col items-center mt-20 gap-10 lg:flex-row lg:gap-6 lg:mt-32 mx-3">
           {projects.map((project, index) => (
-            <a
-              href={project.href}
-              target="_blank"
+            <Link
+              to={`project/${index + 1}`}
               key={`${project.name} - ${index}}`}
               className="projects__content__card max-w-sm w-9/12 lg:w-1/3 neomorphism--light dark:neomorphism--dark"
             >
@@ -62,7 +62,7 @@ const Projects: FunctionComponent = () => {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
