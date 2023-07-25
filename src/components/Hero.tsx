@@ -73,8 +73,8 @@ const Hero: FunctionComponent = () => {
       )}
       <section ref={heroTimeline} className="hero flex items-center h-screen">
         <div className="hero__content flex flex-col items-center justify-center gap-y-5">
-          <h1 className="text-5xl tracking-wider">ANTONIN</h1>
-          <p className="text-xl mb-5 text-center">
+          <h1 className="text-5xl tracking-wider secondary-color">ANTONIN</h1>
+          <p className="text-xl mb-5 text-center secondary-color">
             Développeur web front-end. Autodidacte.
           </p>
           <button className="hero__neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg">

@@ -1,21 +1,21 @@
-import { FaSquareGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 const SocialLink = () => {
   return (
     <>
       <a
-        className="z-0 github-color dark:github-color--dark hover:scale-110 duration-300 ease-out"
+        className="social social__git__bg z-0 duration-300 ease-out p-2 rounded-lg social-git__neomorphism--light"
         href="https://github.com/Toniin"
         target="_blank"
       >
-        <FaSquareGithub size="3em" />
+        <FaGithub className="social__git" size="2em" />
       </a>
       <a
-        className="z-0 linkedin-color dark:linkedin-color--dark hover:scale-110 duration-300 ease-out"
+        className="social social__linkedin__bg z-0 duration-300 ease-out p-2 rounded-lg social-linkedin__neomorphism--light"
         href="https://www.linkedin.com/in/antonin-chaudiere/"
         target="_blank"
       >
-        <FaLinkedin size="3em" />
+        <FaLinkedinIn className="social__linkedin" size="2em" />
       </a>
     </>
   );

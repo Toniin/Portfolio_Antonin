@@ -1,0 +1,21 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__git {
+    color: $secondary-color;
+
+    &__bg {
+      background: map-get($social-colors, github);
+    }
+  }
+  
+  &__linkedin {
+    color: $secondary-color;
+
+    &__bg {
+      background: map-get($social-colors, linkedin);
+    }
+  }
+}
