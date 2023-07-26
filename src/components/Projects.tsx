@@ -51,9 +51,9 @@ const Projects: FunctionComponent = () => {
             >
               <div className="projects__content__card__content w-full h-full overflow-hidden rounded-md">
                 <img
-                  src={project.imageSrc}
-                  alt={project.imageAlt}
-                  className="w-full object-cover"
+                  src={project.images[0].src}
+                  alt={project.images[0].alt}
+                  className="w-full aspect-video object-cover"
                 />
                 <div className="p-2 bg-light dark:primary-color shadow-inner">
                   <h3 className="text-lg text-center">{project.name}</h3>
@@ -75,7 +75,18 @@ export default Projects;
 interface ProjectData {
   name: string;
   description: string;
-  imageSrc: string;
-  imageAlt: string;
+  images: Array<images>;
+  technologies: Array<technologies>;
   href: string;
+  git: string
+}
+
+interface images {
+  src: string;
+  alt: string;
+}
+
+interface technologies {
+  name: string;
+  description: string;
 }

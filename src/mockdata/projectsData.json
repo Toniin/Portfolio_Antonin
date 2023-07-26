@@ -2,22 +2,91 @@
   {
     "name": "Racine Éclairée",
     "description": "Blog sur le bien-être physique et mental.",
-    "imageSrc": "assets/projects/racine-eclairee.png",
-    "imageAlt": "Hero du blog Racine eclairée.",
-    "href": "https://racine-eclairee.netlify.app"
+    "images": [
+      {
+        "src": "/assets/projects/racine-eclairee/hero_racine-eclairee.png",
+        "alt": "Hero du blog Racine eclairée."
+      },
+      {
+        "src": "/assets/projects/racine-eclairee/posts_racine-eclairee.png",
+        "alt": "Liste d'articles du blog Racine eclairée."
+      },
+      {
+        "src": "/assets/projects/racine-eclairee/post_racine-eclairee.png",
+        "alt": "Article du blog Racine eclairée."
+      },
+      {
+        "src": "/assets/projects/racine-eclairee/comment_racine-eclairee.png",
+        "alt": "Commentaire en bas d'un article du blog Racine eclairée."
+      }
+    ],
+    "technologies": [
+      {
+        "name": "SCSS",
+        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+      },
+      {
+        "name": "React",
+        "description": "Pour la construction des composants de page | librairie javascript"
+      },
+      {
+        "name": "Gatsbyjs",
+        "description": "Ajoute des fonctionnalités à React | librarie React"
+      },
+      {
+        "name": "Git",
+        "description": "Pour héberger le code sur GitHub"
+      },
+      {
+        "name": "Contentful",
+        "description": "CMS pour rédiger les articles"
+      },
+      {
+        "name": "AWS",
+        "description": "Base de donnée amazon pour stocker les commentaires"
+      },
+      {
+        "name": "MailChimp",
+        "description": "Pour gérer les mails, la newsletter"
+      }
+    ],
+    "href": "https://racine-eclairee.netlify.app",
+    "git": "https://github.com/Toniin/Racine-Eclairee"
   },
   {
     "name": "Skribe",
     "description": "Résumé des livres de non-fiction.",
-    "imageSrc": "assets/projects/skribe.png",
-    "imageAlt": "Hero du site de résumé de livre Skribe.",
-    "href": "https://skribe.fr"
+    "images": [
+      {
+        "src": "/assets/projects/skribe/skribe.png",
+        "alt": "Hero du site de résumé de livre Skribe."
+      }
+    ],
+    "technologies": [
+      {
+        "name": "SCSS",
+        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+      }
+    ],
+    "href": "https://skribe.fr",
+    "git": "https://github.com/Toniin/skribe"
   },
   {
     "name": "Booki",
     "description": "Site d'annonces de location courte durée.",
-    "imageSrc": "assets/projects/booki.png",
-    "imageAlt": "Hero du site d'annonces Booki",
-    "href": "https://toniin.github.io/OpenClassrooms-P2/"
+    "images": [
+      {
+        "src": "/assets/projects/booki/booki.png",
+        "alt": "Hero du site d'annonces Booki"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "SCSS",
+        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+      }
+    ],
+    "href": "https://toniin.github.io/OpenClassrooms-P2/",
+    "git": "https://github.com/Toniin/OpenClassrooms-P2"
   }
 ]

@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-// import { useParams } from "react-router-dom";
+import { FunctionComponent, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useTheme } from "../utils/Hook/useTheme";
 import projectsData from "../mockdata/projectsData.json";
 
@@ -7,8 +7,38 @@ const projects: Array<ProjectData> = [...projectsData];
 
 const ProjectDetails: FunctionComponent = () => {
   const { theme } = useTheme();
-  // const { idUrlProject} = useParams();
-  
+  const { idUrlProject } = useParams<{ idUrlProject: string }>();
+
+  const indexProject = parseInt(idUrlProject as string);
+  const project = projects[indexProject - 1];
+
+  useEffect(() => {
+    const projectImages = document.querySelectorAll(
+      ".project__page__content__image"
+    );
+
+    projectImages.forEach((projectImage) => {
+      const projectCard = projectImage.children[0] as HTMLElement;
+      projectImage.addEventListener("mousemove", (event) => {
+        const mouseEvent = event as MouseEvent;
+
+        const CardRect = projectImage.getBoundingClientRect();
+        const x = mouseEvent.clientX - CardRect.x;
+        const y = mouseEvent.clientY - CardRect.y;
+        const middleCardWidth = CardRect.width / 2;
+        const middleCardHeight = CardRect.height / 2;
+        const angleY = -(x - middleCardWidth) / 10;
+        const angleX = (y - middleCardHeight) / 10;
+        projectCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.5)`;
+      });
+      projectImage.addEventListener("mouseleave", () => {
+        projectCard.style.transform = `rotateX(0) rotateY(0)`;
+      });
+      projectImage.addEventListener("click", () => {
+        projectCard.style.transform = `rotateX(0) rotateY(0)`;
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -60,30 +90,51 @@ const ProjectDetails: FunctionComponent = () => {
           </div>
         </div>
       )}
-      <main className="project__page flex flex-col items-center">
+      <main className="project__page flex flex-col items-center justify-between">
         <h1 className="text-4xl tracking-wider secondary-color">
-          {projects[0].name}
+          {project.name}
         </h1>
+        <h2>{project.description}</h2>
         <div className="project__page__content flex">
-          <div className="basis-1/2">
-            <p>Description du projet</p>
-            <ul className="flex">
-              <li>Techo 1</li>
-              <li>Techno 2</li>
+          <div className="basis-1/2 flex flex-col justify-center px-2">
+            <ul className="flex justify-evenly gap-4 flex-wrap">
+              {project.technologies.map((technologie) => (
+                <li
+                  key={`${project.name} | ${technologie.name}`}
+                  className="basis-2/5 grow border-t-2"
+                >
+                  <h3 className="py-2">{technologie.name}</h3>
+                  <p>{technologie.description}</p>
+                </li>
+              ))}
             </ul>
-            <a
-              href={`https://racine-eclairee.netlify.app`}
-              target="_blank"
-              className="hero__neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
-            >
-              Voir le projet
-            </a>
+            <div className="flex justify-evenly py-5">
+              <a
+                href={project.git}
+                target="_blank"
+                className="w-fit neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
+              >
+                Voir le projet github
+              </a>
+              <a
+                href={project.href}
+                target="_blank"
+                className="w-fit neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
+              >
+                Voir le projet
+              </a>
+            </div>
           </div>
-          <div className="basis-1/2">
-            <ul className="flex">
-              <li>Photo 1</li>
-              <li>Photo 2</li>
-            </ul>
+          <div className="basis-1/2 flex flex-row items-center gap-x-2 flex-wrap px-2">
+            {project.images.map((image) => (
+              <div key={`${project.name} | ${image.alt}`} className="basis-2/5 project__page__content__image neomorphism--light dark:neomorphism--dark">
+                <img
+                  className="w-full aspect-video rounded-lg"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -96,7 +147,18 @@ export default ProjectDetails;
 interface ProjectData {
   name: string;
   description: string;
-  imageSrc: string;
-  imageAlt: string;
+  images: Array<images>;
+  technologies: Array<technologies>;
   href: string;
+  git: string;
+}
+
+interface images {
+  src: string;
+  alt: string;
+}
+
+interface technologies {
+  name: string;
+  description: string;
 }
