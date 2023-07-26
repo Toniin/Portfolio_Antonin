@@ -383,14 +383,14 @@ const Footer: FunctionComponent = () => {
           />
         </g>
       </svg>
-      <span className="flex gap-2 justify-center items-center text-lg sm:text-xl glass dark:glass--dark mt-6 p-4">
+      <div className="flex gap-2 justify-center items-center text-lg sm:text-xl glass dark:glass--dark mt-6 p-4">
         <FaQuoteLeft />
-        <p>
+        <blockquote>
           Toutes les <span className="italic font-semibold">branch main</span> à
           Rome
-        </p>
+        </blockquote>
         <FaQuoteRight />
-      </span>
+      </div>
     </footer>
   );
 };

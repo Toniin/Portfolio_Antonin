@@ -51,7 +51,7 @@
       }
     ],
     "href": "https://racine-eclairee.netlify.app",
-    "git": "https://github.com/Toniin/Racine-Eclairee"
+    "git": "private"
   },
   {
     "name": "Skribe",
@@ -69,7 +69,7 @@
       }
     ],
     "href": "https://skribe.fr",
-    "git": "https://github.com/Toniin/skribe"
+    "git": "private"
   },
   {
     "name": "Booki",

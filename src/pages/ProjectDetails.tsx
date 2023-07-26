@@ -112,13 +112,13 @@ const ProjectDetails: FunctionComponent = () => {
               ))}
             </ul>
             <div className="flex justify-evenly py-5">
-              <a
+              {project.git === "private" ? <></> : <a
                 href={project.git}
                 target="_blank"
                 className="w-fit neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
               >
                 Voir le projet github
-              </a>
+              </a>}
               <a
                 href={project.href}
                 target="_blank"
