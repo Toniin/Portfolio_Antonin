@@ -95,6 +95,9 @@ const ProjectDetails: FunctionComponent = () => {
           {project.name}
         </h1>
         <h2>{project.description}</h2>
+        {/* FAIRE : FIL D'ARIANNE => ACCUEIL / NOM DU PROJET */}
+
+        {/* Les problématiques rencontrées sur chaque projet et les outils pour les surmonter */}
         <div className="project__page__content flex">
           <div className="basis-1/2 flex flex-col justify-center px-2">
             <ul className="flex justify-evenly gap-4 flex-wrap">
@@ -127,7 +130,10 @@ const ProjectDetails: FunctionComponent = () => {
           </div>
           <div className="basis-1/2 flex flex-row items-center gap-x-2 flex-wrap px-2">
             {project.images.map((image) => (
-              <div key={`${project.name} | ${image.alt}`} className="basis-2/5 project__page__content__image neomorphism--light dark:neomorphism--dark">
+              <div
+                key={`${project.name} | ${image.alt}`}
+                className="basis-2/5 project__page__content__image neomorphism--light dark:neomorphism--dark"
+              >
                 <img
                   className="w-full aspect-video rounded-lg"
                   src={image.src}
@@ -147,18 +153,18 @@ export default ProjectDetails;
 interface ProjectData {
   name: string;
   description: string;
-  images: Array<images>;
-  technologies: Array<technologies>;
+  images: Array<projectImages>;
+  technologies: Array<projectTechnologies>;
   href: string;
   git: string;
 }
 
-interface images {
+interface projectImages {
   src: string;
   alt: string;
 }
 
-interface technologies {
+interface projectTechnologies {
   name: string;
   description: string;
 }

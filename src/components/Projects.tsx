@@ -75,18 +75,18 @@ export default Projects;
 interface ProjectData {
   name: string;
   description: string;
-  images: Array<images>;
-  technologies: Array<technologies>;
+  images: Array<projectImages>;
+  technologies: Array<projectTechnologies>;
   href: string;
   git: string
 }
 
-interface images {
+interface projectImages {
   src: string;
   alt: string;
 }
 
-interface technologies {
+interface projectTechnologies {
   name: string;
   description: string;
 }
