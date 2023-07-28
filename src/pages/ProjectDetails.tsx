@@ -93,15 +93,28 @@ const ProjectDetails: FunctionComponent = () => {
         </div>
       )}
       <main className="project__page flex flex-col items-center justify-between">
-        <h1 className="text-4xl tracking-wider secondary-color">
-          {project.name}
-        </h1>
-        <h2 className="mt-2 mb-20">{project.description}</h2>
+        <div className="flex flex-col items-center gap-2 mb-24">
+          <h1 className="text-4xl tracking-wider secondary-color">
+            {project.name}
+          </h1>
+          <h2>{project.description}</h2>
+        </div>
 
         <BreadCrumb actualPath={project.name} />
 
-        {/* Les problématiques rencontrées sur chaque projet et les outils pour les surmonter */}
-        <div className="project__page__content flex items-start mt-24">
+        <div className="mt-10 w-full flex flex-col gap-2">
+          <h3 className="underline underline-offset-4">PROBLÉMATIQUE :</h3>
+          {project.name === "Racine Éclairée" && (
+            <p>
+              Blog où les utilisateurs peuvent lire les{" "}
+              <strong>articles</strong>, écrire des{" "}
+              <strong>commentaires</strong> et{" "}
+              <strong>contacter le support</strong>.
+            </p>
+          )}
+        </div>
+
+        <div className="project__page__content flex items-start mt-16">
           <div className="basis-1/2 flex flex-col px-2">
             <ul className="flex justify-evenly gap-4 flex-wrap">
               {project.technologies.map((technologie) => (

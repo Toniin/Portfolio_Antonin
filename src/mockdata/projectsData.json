@@ -22,10 +22,6 @@
     ],
     "technologies": [
       {
-        "name": "SCSS",
-        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
-      },
-      {
         "name": "React",
         "description": "Pour la construction des composants de page | librairie javascript"
       },
@@ -34,8 +30,8 @@
         "description": "Ajoute des fonctionnalités à React | librarie React"
       },
       {
-        "name": "Git",
-        "description": "Pour héberger le code sur GitHub"
+        "name": "SCSS",
+        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
       },
       {
         "name": "Contentful",
@@ -48,6 +44,10 @@
       {
         "name": "MailChimp",
         "description": "Pour gérer les mails, la newsletter"
+      },
+      {
+        "name": "Git",
+        "description": "Pour héberger le code sur GitHub"
       }
     ],
     "href": "https://racine-eclairee.netlify.app",
