@@ -35,7 +35,7 @@ const Projects: FunctionComponent = () => {
   }, []);
 
   return (
-    <section className="projects min-h-screen">
+    <section id="projects" className="projects min-h-screen">
       {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
       <div className="projects__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl flex gap-4 items-center">
@@ -45,15 +45,15 @@ const Projects: FunctionComponent = () => {
         <div className="flex flex-col items-center mt-20 gap-10 lg:flex-row lg:gap-6 lg:mt-32 mx-3">
           {projects.map((project, index) => (
             <Link
-              to={`project/${index + 1}`}
+              to={`projects/${index + 1}`}
               key={`${project.name} - ${index}}`}
               className="projects__content__card max-w-sm w-9/12 lg:w-1/3 neomorphism--light dark:neomorphism--dark"
             >
               <div className="projects__content__card__content w-full h-full overflow-hidden rounded-md">
                 <img
+                  className="w-full aspect-video object-cover"
                   src={project.images[0].src}
                   alt={project.images[0].alt}
-                  className="w-full aspect-video object-cover"
                 />
                 <div className="p-2 bg-light dark:primary-color shadow-inner">
                   <h3 className="text-lg text-center">{project.name}</h3>
@@ -78,7 +78,7 @@ interface ProjectData {
   images: Array<projectImages>;
   technologies: Array<projectTechnologies>;
   href: string;
-  git: string
+  git: string;
 }
 
 interface projectImages {

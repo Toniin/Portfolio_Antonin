@@ -1,0 +1,38 @@
+.breadcrumb {
+  li {
+    filter: drop-shadow(
+      -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
+    );
+
+    &:last-child > div {
+      filter: none;
+      box-shadow: inset 5px 5px 10px
+          lighten(map-get($background-colors, dark), 80%),
+        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    }
+
+    &:hover > a {
+      box-shadow: inset 5px 5px 10px
+          lighten(map-get($background-colors, dark), 80%),
+        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    }
+  }
+
+  &__home {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    padding: 0.5em 1.5em 0.5em 0.75em;
+    border-radius: 0.5em 0 0 0.5em;
+  }
+
+  &__projects {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%);
+    padding: 0.5em 1.5em;
+  }
+
+  &__actual-path {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+    padding: 0.5em 0.75em 0.5em 1.5em;
+
+    border-radius: 0 0.5em 0.5em 0;
+  }
+}

@@ -2,6 +2,8 @@ import { FunctionComponent, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTheme } from "../utils/Hook/useTheme";
 import projectsData from "../mockdata/projectsData.json";
+import { FaSquareGithub, FaUpRightFromSquare } from "react-icons/fa6";
+import BreadCrumb from "../components/BreadCrumb";
 
 const projects: Array<ProjectData> = [...projectsData];
 
@@ -29,7 +31,7 @@ const ProjectDetails: FunctionComponent = () => {
         const middleCardHeight = CardRect.height / 2;
         const angleY = -(x - middleCardWidth) / 10;
         const angleX = (y - middleCardHeight) / 10;
-        projectCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.5)`;
+        projectCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(2.5)`;
       });
       projectImage.addEventListener("mouseleave", () => {
         projectCard.style.transform = `rotateX(0) rotateY(0)`;
@@ -94,12 +96,13 @@ const ProjectDetails: FunctionComponent = () => {
         <h1 className="text-4xl tracking-wider secondary-color">
           {project.name}
         </h1>
-        <h2>{project.description}</h2>
-        {/* FAIRE : FIL D'ARIANNE => ACCUEIL / NOM DU PROJET */}
+        <h2 className="mt-2 mb-20">{project.description}</h2>
+
+        <BreadCrumb actualPath={project.name} />
 
         {/* Les problématiques rencontrées sur chaque projet et les outils pour les surmonter */}
-        <div className="project__page__content flex">
-          <div className="basis-1/2 flex flex-col justify-center px-2">
+        <div className="project__page__content flex items-start mt-24">
+          <div className="basis-1/2 flex flex-col px-2">
             <ul className="flex justify-evenly gap-4 flex-wrap">
               {project.technologies.map((technologie) => (
                 <li
@@ -112,33 +115,41 @@ const ProjectDetails: FunctionComponent = () => {
               ))}
             </ul>
             <div className="flex justify-evenly py-5">
-              {project.git === "private" ? <></> : <a
-                href={project.git}
-                target="_blank"
-                className="w-fit neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
-              >
-                Voir le projet github
-              </a>}
+              {project.git === "private" ? (
+                <></>
+              ) : (
+                <a
+                  href={project.git}
+                  target="_blank"
+                  className="w-fit neomorphism--light dark:neomorphism--dark flex items-center gap-2 p-3 rounded-lg"
+                >
+                  Voir le projet github
+                  <FaSquareGithub size="1.8em" />
+                </a>
+              )}
               <a
                 href={project.href}
                 target="_blank"
-                className="w-fit neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg"
+                className="w-fit neomorphism--light dark:neomorphism--dark flex items-center gap-2 p-3 rounded-lg"
               >
                 Voir le projet
+                <FaUpRightFromSquare size="1.3em" />
               </a>
             </div>
           </div>
-          <div className="basis-1/2 flex flex-row items-center gap-x-2 flex-wrap px-2">
+          <div className="basis-1/2 flex flex-row justify-evenly gap-x-4 gap-y-8 flex-wrap px-2">
             {project.images.map((image) => (
               <div
                 key={`${project.name} | ${image.alt}`}
-                className="basis-2/5 project__page__content__image neomorphism--light dark:neomorphism--dark"
+                className="basis-2/5 h-fit grow project__page__content__image neomorphism--light dark:neomorphism--dark"
               >
-                <img
-                  className="w-full aspect-video rounded-lg"
-                  src={image.src}
-                  alt={image.alt}
-                />
+                <div>
+                  <img
+                    className="w-full aspect-video object-cover rounded-lg"
+                    src={image.src}
+                    alt={image.alt}
+                  />
+                </div>
               </div>
             ))}
           </div>
