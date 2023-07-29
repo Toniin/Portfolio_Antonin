@@ -3,8 +3,8 @@ import { FaHouse } from "react-icons/fa6";
 
 function BreadCrumb({ actualPath }: BreadCrumbProps) {
   return (
-    <nav className="breadcrumb w-full" aria-label="Breadcrumb">
-      <ol className="flex">
+    <nav className="breadcrumb w-full h-full" aria-label="Breadcrumb">
+      <ol className="flex items-center text-sm sm:text-md">
         <li className="flex items-center">
           <Link
             to="/"

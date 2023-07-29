@@ -123,7 +123,7 @@ const ProjectDetails: FunctionComponent = () => {
           </div>
         </div>
       )}
-      <main className="project__page flex flex-col items-center justify-between">
+      <main className="project__page flex flex-col items-center justify-between px-2">
         <div className="flex flex-col items-center gap-2 mb-24">
           <h1 className="text-4xl tracking-wider secondary-color">
             {project.name}
@@ -145,13 +145,13 @@ const ProjectDetails: FunctionComponent = () => {
           )}
         </div>
 
-        <div className="project__page__content flex items-start mt-10">
-          <div className="basis-1/2 flex flex-col px-2">
+        <div className="project__page__content flex flex-col lg:flex-row items-start mt-10">
+          <div className="basis-1/2 flex flex-col">
             <ul className="flex justify-evenly gap-4 flex-wrap">
               {project.technologies.map((technologie) => (
                 <li
                   key={`${project.name} | ${technologie.name}`}
-                  className="glass basis-2/5 grow px-4 py-2"
+                  className="glass basis-full sm:basis-2/5 grow px-4 py-2"
                 >
                   <div className="flex items-center gap-x-4 py-2">
                     <h3 className="text-lg">{technologie.name}</h3>
@@ -184,7 +184,7 @@ const ProjectDetails: FunctionComponent = () => {
               </a>
             </div>
           </div>
-          <div className="basis-1/2 flex flex-row justify-evenly gap-x-4 gap-y-8 flex-wrap px-2">
+          <div className="lg:basis-1/2 flex flex-col lg:flex-row justify-evenly gap-x-4 gap-y-8 lg:flex-wrap pl-2 pb-4">
             {project.images.map((image) => (
               <div
                 key={`${project.name} | ${image.alt}`}
