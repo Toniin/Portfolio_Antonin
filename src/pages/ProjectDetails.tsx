@@ -1,10 +1,12 @@
 import { FunctionComponent, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { useTheme } from "../utils/Hook/useTheme";
 import projectsData from "../mockdata/projectsData.json";
 import {
   FaSquareGithub,
   FaUpRightFromSquare,
+  FaXmark,
   FaReact,
   FaGitAlt,
   FaSass,
@@ -131,7 +133,15 @@ const ProjectDetails: FunctionComponent = () => {
           <h2>{project.description}</h2>
         </div>
 
-        <BreadCrumb actualPath={project.name} />
+        <div className="w-full flex justify-between items-center">
+          <BreadCrumb actualPath={project.name} />
+          <Link
+            to="/#projects"
+            className="neomorphism--light dark:neomorphism--dark p-2 rounded-lg"
+          >
+            <FaXmark size="1.3em" />
+          </Link>
+        </div>
 
         <div className="mt-10 w-full flex flex-col gap-2">
           <h3 className="underline underline-offset-4">PROBLÉMATIQUE :</h3>
