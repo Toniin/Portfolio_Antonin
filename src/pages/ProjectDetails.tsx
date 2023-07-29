@@ -2,7 +2,16 @@ import { FunctionComponent, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTheme } from "../utils/Hook/useTheme";
 import projectsData from "../mockdata/projectsData.json";
-import { FaSquareGithub, FaUpRightFromSquare } from "react-icons/fa6";
+import {
+  FaSquareGithub,
+  FaUpRightFromSquare,
+  FaReact,
+  FaGitAlt,
+  FaSass,
+  FaAws,
+  FaMailchimp,
+} from "react-icons/fa6";
+import { SiGatsby, SiContentful } from "react-icons/si";
 import BreadCrumb from "../components/BreadCrumb";
 
 const projects: Array<ProjectData> = [...projectsData];
@@ -27,10 +36,10 @@ const ProjectDetails: FunctionComponent = () => {
         const CardRect = projectImage.getBoundingClientRect();
         const x = mouseEvent.clientX - CardRect.x;
         const y = mouseEvent.clientY - CardRect.y;
-        const middleCardWidth = CardRect.width / 2;
-        const middleCardHeight = CardRect.height / 2;
-        const angleY = -(x - middleCardWidth) / 10;
-        const angleX = (y - middleCardHeight) / 10;
+        const middleCardWidth = CardRect.width / 5;
+        const middleCardHeight = CardRect.height / 5;
+        const angleY = -(x - middleCardWidth) / 30;
+        const angleX = (y - middleCardHeight) / 25;
         projectCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(2.5)`;
       });
       projectImage.addEventListener("mouseleave", () => {
@@ -41,6 +50,28 @@ const ProjectDetails: FunctionComponent = () => {
       });
     });
   }, []);
+
+  const svgTechnologie = (technologie: string) => {
+    let svg;
+    const size = "2em";
+    if (technologie === "React") {
+      svg = <FaReact size={size} />;
+    } else if (technologie === "Gatsbyjs") {
+      svg = <SiGatsby size={size} />;
+    } else if (technologie === "SCSS") {
+      svg = <FaSass size={size} />;
+    } else if (technologie === "Contentful") {
+      svg = <SiContentful size={size} />;
+    } else if (technologie === "AWS") {
+      svg = <FaAws size={size} />;
+    } else if (technologie === "MailChimp") {
+      svg = <FaMailchimp size={size} />;
+    } else if (technologie === "Git") {
+      svg = <FaGitAlt size={size} />;
+    }
+
+    return svg;
+  };
 
   return (
     <>
@@ -114,15 +145,18 @@ const ProjectDetails: FunctionComponent = () => {
           )}
         </div>
 
-        <div className="project__page__content flex items-start mt-16">
+        <div className="project__page__content flex items-start mt-10">
           <div className="basis-1/2 flex flex-col px-2">
             <ul className="flex justify-evenly gap-4 flex-wrap">
               {project.technologies.map((technologie) => (
                 <li
                   key={`${project.name} | ${technologie.name}`}
-                  className="basis-2/5 grow border-t-2"
+                  className="glass basis-2/5 grow px-4 py-2"
                 >
-                  <h3 className="py-2">{technologie.name}</h3>
+                  <div className="flex items-center gap-x-4 py-2">
+                    <h3 className="text-lg">{technologie.name}</h3>
+                    {svgTechnologie(technologie.name)}
+                  </div>
                   <p>{technologie.description}</p>
                 </li>
               ))}

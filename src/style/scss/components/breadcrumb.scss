@@ -4,17 +4,17 @@
       -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
     );
 
-    &:last-child > div {
+    &:last-child {
       filter: none;
-      box-shadow: inset 5px 5px 10px
-          lighten(map-get($background-colors, dark), 80%),
-        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
     }
 
-    &:hover > a {
-      box-shadow: inset 5px 5px 10px
-          lighten(map-get($background-colors, dark), 80%),
-        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    &:hover {
+      filter: none;
+      & > a {
+        box-shadow: inset 5px 5px 10px
+            lighten(map-get($background-colors, dark), 80%),
+          inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+      }
     }
   }
 

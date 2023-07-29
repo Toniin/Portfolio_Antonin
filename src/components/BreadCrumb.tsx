@@ -23,7 +23,7 @@ function BreadCrumb({ actualPath }: BreadCrumbProps) {
           </Link>
         </li>
         <li className="flex justify-center items-center">
-          <div className="breadcrumb__actual-path bg-light dark:bg-dark">
+          <div className="glass breadcrumb__actual-path bg-light dark:bg-dark">
             {actualPath}
           </div>
         </li>
