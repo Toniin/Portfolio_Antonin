@@ -77,15 +77,15 @@ const Hero: FunctionComponent = () => {
           <p className="text-xl mb-5 text-center secondary-color">
             Développeur web front-end. Autodidacte.
           </p>
-          <button className="hero__neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg">
+          <button className="neomorphism--dark dark:neomorphism--light secondary-color dark:primary-color flex p-3 rounded-lg">
             <span className="flex items-center font-bold gap-4">
-              <FaRegFilePdf />
+              <FaRegFilePdf size="1.2em" />
               Télécharger le CV
-              <FaDownload />
+              <FaDownload size="1.2em" />
             </span>
           </button>
           <div className="flex justify-center gap-4">
-            <SocialLink />
+            <SocialLink background="hero"/>
           </div>
         </div>
         {horizontal === true || window.innerWidth >= 975 ? (

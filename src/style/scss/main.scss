@@ -142,37 +142,6 @@
     }
   }
 
-  .hero__neomorphism--light {
-    background: map-get($background-colors, light);
-
-    box-shadow: 2px 2px 10px darken(#0ea5e9, 15%);
-    &:hover {
-      box-shadow: inset 5px 5px 10px
-          lighten(map-get($background-colors, dark), 80%),
-        inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
-    }
-  }
-
-  .social-git__neomorphism--light {
-    background: map-get($social-colors, github);
-    box-shadow: 1px 1px 5px map-get($social-colors, github),
-      -1px -1px 5px lighten(map-get($background-colors, dark), 40%);
-    &:hover {
-      box-shadow: inset 1px 1px 5px map-get($social-colors, github),
-        inset -1px -1px 5px lighten(map-get($background-colors, dark), 40%);
-    }
-  }
-
-  .social-linkedin__neomorphism--light {
-    background: map-get($social-colors, linkedin);
-    box-shadow: 1px 1px 5px map-get($social-colors, linkedin),
-      -1px -1px 5px lighten(map-get($background-colors, dark), 20%);
-    &:hover {
-      box-shadow: inset 1px 1px 5px map-get($social-colors, linkedin),
-        inset -1px -1px 5px lighten(map-get($background-colors, dark), 50%);
-    }
-  }
-
   .neomorphism--dark {
     background: map-get($background-colors, dark);
     box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
@@ -181,6 +150,60 @@
       box-shadow: inset 5px 5px 10px
           darken(map-get($background-colors, dark), 80%),
         inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+    }
+  }
+
+  .neomorphism {
+    &__hero {
+      &--light {
+        background-color: #4287e3;
+        box-shadow: 4px 4px 10px darken(#4287e3, 30%), -4px -4px 10px #4287e3;
+        &:hover {
+          box-shadow: inset 4px 4px 10px darken(#4287e3, 30%),
+            inset -4px -4px 10px #4287e3;
+        }
+      }
+
+      &--dark {
+        background: map-get($background-colors, dark);
+        box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
+          -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+        &:hover {
+          box-shadow: inset 5px 5px 10px
+              darken(map-get($background-colors, dark), 80%),
+            inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+        }
+      }
+    }
+  }
+
+  .glass {
+    &--light {
+      background: map-get($background-colors, light);
+      box-shadow: 5px 5px 10px lighten(map-get($background-colors, dark), 80%),
+        -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+      &:hover {
+        box-shadow: inset 5px 5px 10px
+            lighten(map-get($background-colors, dark), 80%),
+          inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+      }
+      svg {
+        fill: $primary-color;
+      }
+    }
+
+    &--dark {
+      background: map-get($background-colors, dark);
+      box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
+        -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+      &:hover {
+        box-shadow: inset 5px 5px 10px
+            darken(map-get($background-colors, dark), 80%),
+          inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+      }
+      svg {
+        fill: $secondary-color;
+      }
     }
   }
 

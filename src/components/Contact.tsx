@@ -72,7 +72,7 @@ const Contact: FunctionComponent = () => {
             Ou bien sur mes réseaux sociaux 👇
           </p>
           <div className="flex justify-center gap-4 mt-6">
-            <SocialLink />
+            <SocialLink background="glass"/>
           </div>
         </div>
       </div>
