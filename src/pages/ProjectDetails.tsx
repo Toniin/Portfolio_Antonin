@@ -236,24 +236,3 @@ interface projectTechnologies {
   name: string;
   description: string;
 }
-
-
-// glass {
-//   background: linear-gradient(
-//     135deg,
-//     rgba(255, 255, 255, 0.1),
-//     rgba(255, 255, 255, 0)
-//   );
-//   backdrop-filter: blur(0.75em);
-//   -webkit-backdrop-filter: blur(0.75em);
-//   border-radius: 0.5rem;
-//   box-shadow: inset 5px 5px 10px
-//       lighten(map-get($background-colors, dark), 80%),
-//     inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
-// }
-
-// .glass--dark {
-//   box-shadow: inset 5px 5px 10px
-//       darken(map-get($background-colors, dark), 80%),
-//     inset -5px -5px 10px lighten(map-get($background-colors, dark), 6%);
-// }

@@ -14,20 +14,23 @@
     }
   }
 
-  // &--dark {
-  // filter: drop-shadow(
-  //   -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
-  // );
+  &--dark {
+    filter: drop-shadow(
+        5px 5px 10px darken(map-get($background-colors, dark), 80%)
+      )
+      drop-shadow(
+        -5px -3px 10px lighten(map-get($background-colors, dark), 10%)
+      );
 
-  // &:hover {
-  // filter: none;
-  //   & > a {
-  //     box-shadow: inset 5px 5px 10px
-  //           darken(map-get($background-colors, dark), 80%),
-  //         inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
-  //   }
-  // }
-  // }
+    &:hover {
+      filter: none;
+      & > a {
+        box-shadow: inset 5px 5px 10px
+            darken(map-get($background-colors, dark), 80%),
+          inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+      }
+    }
+  }
 
   &__home {
     clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
@@ -43,7 +46,6 @@
   &__actual-path {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
     padding: 0.5em 0.75em 0.5em 1.5em;
-
     border-radius: 0 0.5em 0.5em 0;
   }
 }
