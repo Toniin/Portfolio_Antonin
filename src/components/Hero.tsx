@@ -1,4 +1,5 @@
 import { FunctionComponent, useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FaRegFilePdf, FaDownload } from "react-icons/fa6";
 import { useTheme } from "../utils/Hook/useTheme";
 import SocialLink from "./SocialLink";
@@ -77,15 +78,20 @@ const Hero: FunctionComponent = () => {
           <p className="text-xl mb-5 text-center secondary-color">
             Développeur web front-end. Autodidacte.
           </p>
-          <button className="neomorphism--dark dark:neomorphism--light secondary-color dark:primary-color flex p-3 rounded-lg">
+          <Link
+            className="neomorphism--dark dark:neomorphism--light secondary-color dark:primary-color flex p-3 rounded-lg"
+            to="/CV_Antonin-CHAUDIERE.pdf"
+            target="_blank"
+            download
+          >
             <span className="flex items-center font-bold gap-4">
               <FaRegFilePdf size="1.2em" />
               Télécharger le CV
               <FaDownload size="1.2em" />
             </span>
-          </button>
+          </Link>
           <div className="flex justify-center gap-4">
-            <SocialLink background="hero"/>
+            <SocialLink background="hero" />
           </div>
         </div>
         {horizontal === true || window.innerWidth >= 975 ? (

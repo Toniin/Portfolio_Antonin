@@ -1,14 +1,15 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import {
   FaComments,
   FaEnvelope,
   FaPhoneFlip,
-    FaRegFilePdf,
+  FaRegFilePdf,
   FaDownload,
   FaRegPaste,
 } from "react-icons/fa6";
 import Timeline from "./Timeline";
-import Timeline3Branchs from './Timeline3Branchs';
+import Timeline3Branchs from "./Timeline3Branchs";
 import SocialLink from "./SocialLink";
 
 const Contact: FunctionComponent = () => {
@@ -62,9 +63,14 @@ const Contact: FunctionComponent = () => {
               {window.innerWidth >= 360 && <FaRegFilePdf size="1.2em" />}
               Télécharger le CV
             </span>
-            <button className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg">
+            <Link
+              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
+              to="/CV_Antonin-CHAUDIERE.pdf"
+              target="_blank"
+              download
+            >
               <FaDownload size="1.3em" />
-            </button>
+            </Link>
           </li>
         </ul>
         <div className="glass dark:glass--dark mt-6 p-7">
@@ -72,7 +78,7 @@ const Contact: FunctionComponent = () => {
             Ou bien sur mes réseaux sociaux 👇
           </p>
           <div className="flex justify-center gap-4 mt-6">
-            <SocialLink background="glass"/>
+            <SocialLink background="glass" />
           </div>
         </div>
       </div>

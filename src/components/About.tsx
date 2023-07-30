@@ -12,7 +12,7 @@ const About: FunctionComponent = () => {
       <div className="about__content w-full h-full flex flex-col items-center">
         <h2 className="text-2xl flex gap-4 items-center">
           <FaUserGraduate size="1.2em" />
-          EXPÉRIENCES
+          FORMATIONS
         </h2>
         <div className="flex flex-col mt-20 gap-7">
           {experiences.map((experience, index) => (
