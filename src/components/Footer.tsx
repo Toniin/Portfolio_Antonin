@@ -383,7 +383,7 @@ const Footer: FunctionComponent = () => {
           />
         </g>
       </svg>
-      <div className="flex gap-2 justify-center items-center text-lg sm:text-xl glass dark:glass--dark mt-6 p-4">
+      <div className="flex gap-2 justify-center items-center text-lg sm:text-xl glass--light glass--light--off dark:glass--dark dark:glass--dark--off mt-6 p-4 rounded-md">
         <FaQuoteLeft />
         <blockquote>
           Toutes les <span className="italic font-semibold">branch main</span> à

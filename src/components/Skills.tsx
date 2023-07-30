@@ -18,7 +18,7 @@ const Skills: FunctionComponent = () => {
           <FaCode size="1.2em"/>
           COMPÉTENCES
         </h2>
-        <ul className="skills__content__list glass dark:glass--dark flex flex-col sm:flex-row justify-center items-center mt-20 px-10 sm:px-5 gap-y-6 sm:gap-x-5 sm:gap-y-10 py-10 flex-wrap sm:after:content-[''] sm:after:basis-1/4">
+        <ul className="skills__content__list glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md flex flex-col sm:flex-row justify-center items-center mt-20 px-10 sm:px-5 gap-y-6 sm:gap-x-5 sm:gap-y-10 py-10 flex-wrap sm:after:content-[''] sm:after:basis-1/4">
           <li className="w-full flex flex-col sm:basis-1/4 sm:justify-center items-center justify-between">
             <FaHtml5 fill="#e06e3b" size="4em" />
             <p>HTML</p>

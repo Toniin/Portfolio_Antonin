@@ -161,7 +161,7 @@ const ProjectDetails: FunctionComponent = () => {
               {project.technologies.map((technologie) => (
                 <li
                   key={`${project.name} | ${technologie.name}`}
-                  className="glass basis-full sm:basis-2/5 grow px-4 py-2"
+                  className="glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md basis-full sm:basis-2/5 grow px-4 py-2"
                 >
                   <div className="flex items-center gap-x-4 py-2">
                     <h3 className="text-lg">{technologie.name}</h3>
@@ -236,3 +236,24 @@ interface projectTechnologies {
   name: string;
   description: string;
 }
+
+
+// glass {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(255, 255, 255, 0.1),
+//     rgba(255, 255, 255, 0)
+//   );
+//   backdrop-filter: blur(0.75em);
+//   -webkit-backdrop-filter: blur(0.75em);
+//   border-radius: 0.5rem;
+//   box-shadow: inset 5px 5px 10px
+//       lighten(map-get($background-colors, dark), 80%),
+//     inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+// }
+
+// .glass--dark {
+//   box-shadow: inset 5px 5px 10px
+//       darken(map-get($background-colors, dark), 80%),
+//     inset -5px -5px 10px lighten(map-get($background-colors, dark), 6%);
+// }

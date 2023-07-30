@@ -1,12 +1,8 @@
 .breadcrumb {
-  li {
+  &--light {
     filter: drop-shadow(
       -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
     );
-
-    &:last-child {
-      filter: none;
-    }
 
     &:hover {
       filter: none;
@@ -17,6 +13,21 @@
       }
     }
   }
+
+  // &--dark {
+  // filter: drop-shadow(
+  //   -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
+  // );
+
+  // &:hover {
+  // filter: none;
+  //   & > a {
+  //     box-shadow: inset 5px 5px 10px
+  //           darken(map-get($background-colors, dark), 80%),
+  //         inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+  //   }
+  // }
+  // }
 
   &__home {
     clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);

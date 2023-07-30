@@ -34,7 +34,7 @@ const Contact: FunctionComponent = () => {
         </h2>
 
         <ul className="flex w-full justify-evenly items-center flex-wrap mt-20 gap-5 lg:py-8 text-sm min-[300px]:text-base">
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md">
             <span className="flex items-center font-bold gap-2 pl-2">
               {window.innerWidth >= 360 && <FaEnvelope size="1.2em" />}
               {contact.email}
@@ -46,7 +46,7 @@ const Contact: FunctionComponent = () => {
               <FaRegPaste size="1.3em" />
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md">
             <span className="flex items-center font-bold gap-2 pl-2">
               {window.innerWidth >= 360 && <FaPhoneFlip size="1.2em" />}
               {contact.phone}
@@ -58,7 +58,7 @@ const Contact: FunctionComponent = () => {
               <FaRegPaste size="1.3em" />
             </button>
           </li>
-          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass dark:glass--dark">
+          <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md">
             <span className="flex items-center font-bold gap-2 pl-2">
               {window.innerWidth >= 360 && <FaRegFilePdf size="1.2em" />}
               Télécharger le CV
@@ -73,7 +73,7 @@ const Contact: FunctionComponent = () => {
             </Link>
           </li>
         </ul>
-        <div className="glass dark:glass--dark mt-6 p-7">
+        <div className="glass--light glass--light--off dark:glass--dark dark:glass--dark--off mt-6 p-7 rounded-md">
           <p className="text-lg text-center">
             Ou bien sur mes réseaux sociaux 👇
           </p>

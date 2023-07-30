@@ -18,7 +18,7 @@ const About: FunctionComponent = () => {
           {experiences.map((experience, index) => (
             <article
               key={`${experience.name} - ${index}}`}
-              className="about__content__xp glass dark:glass--dark mt-6 p-7"
+              className="about__content__xp glass--light glass--light--off dark:glass--dark dark:glass--dark--off mt-6 p-7 rounded-md"
             >
               <a href={experience.href} target="_blank">
                 <h3 className="text-xl underline underline-offset-4 hover:scale-105 duration-300 ease-out">
