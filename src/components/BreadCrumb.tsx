@@ -8,11 +8,7 @@ function BreadCrumb({ actualPath }: BreadCrumbProps) {
   return (
     <nav className="breadcrumb w-full h-full" aria-label="Breadcrumb">
       <ol className="flex items-center text-sm sm:text-md">
-        <li
-          className={
-            theme === "light" ? "breadcrumb--light" : "breadcrumb--dark"
-          }
-        >
+        <li className={`breadcrumb--${theme}`}>
           <Link
             to="/"
             className="flex gap-2 breadcrumb__home bg-light dark:bg-dark"
@@ -21,11 +17,7 @@ function BreadCrumb({ actualPath }: BreadCrumbProps) {
             Accueil
           </Link>
         </li>
-        <li
-          className={
-            theme === "light" ? "breadcrumb--light" : "breadcrumb--dark"
-          }
-        >
+        <li className={`breadcrumb--${theme}`}>
           <Link
             to="/#projects"
             className="flex items-center breadcrumb__projects bg-light dark:bg-dark"

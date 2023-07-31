@@ -1,29 +1,29 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 const SocialLink = ({ background }: SocialLinkProps) => {
-  let buttonStyles;
+  let socialStyle;
 
   if (background === "hero") {
-    buttonStyles =
+    socialStyle =
       "social neomorphism__hero--light dark:neomorphism--dark secondary-color z-0 duration-300 ease-out p-2 rounded-lg";
   }
 
   if (background === "glass") {
-    buttonStyles =
+    socialStyle =
       "social neomorphism--light dark:neomorphism--dark z-0 duration-300 ease-out p-2 rounded-lg";
   }
 
   return (
     <>
       <a
-        className={buttonStyles}
+        className={socialStyle}
         href="https://github.com/Toniin"
         target="_blank"
       >
         <FaGithub className="social__git" size="2em" />
       </a>
       <a
-        className={buttonStyles}
+        className={socialStyle}
         href="https://www.linkedin.com/in/antonin-chaudiere/"
         target="_blank"
       >
