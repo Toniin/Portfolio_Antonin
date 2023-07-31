@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa6";
 import { SiGatsby, SiContentful } from "react-icons/si";
 import BreadCrumb from "../components/BreadCrumb";
+import { Tooltip } from "@material-tailwind/react";
 
 const projects: Array<ProjectData> = [...projectsData];
 
@@ -141,12 +142,21 @@ const ProjectDetails: FunctionComponent = () => {
 
         <div className="w-full flex justify-between items-center">
           <BreadCrumb actualPath={project.name} />
-          <Link
-            to="/#projects"
-            className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-2 rounded-lg"
+          <Tooltip
+            className="tooltip tooltip--light dark:tooltip--dark"
+            content="Retourner à la liste des projets"
+            animate={{
+              mount: { scale: 1, y: -5 },
+              unmount: { scale: 0, y: 25 },
+            }}
           >
-            <FaXmark size="1.3em" />
-          </Link>
+            <Link
+              to="/#projects"
+              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-2 rounded-lg"
+            >
+              <FaXmark size="1.3em" />
+            </Link>
+          </Tooltip>
         </div>
 
         <div className="mt-10 w-full flex flex-col gap-2">

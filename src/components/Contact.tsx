@@ -41,9 +41,10 @@ const Contact: FunctionComponent = () => {
               {contact.email}
             </span>
             <Tooltip
+              className="tooltip tooltip--light dark:tooltip--dark"
               content="Copier"
               animate={{
-                mount: { scale: 1, y: 0 },
+                mount: { scale: 1, y: -5 },
                 unmount: { scale: 0, y: 25 },
               }}
             >
@@ -62,9 +63,10 @@ const Contact: FunctionComponent = () => {
             </span>
 
             <Tooltip
+              className="tooltip tooltip--light dark:tooltip--dark"
               content="Copier"
               animate={{
-                mount: { scale: 1, y: 0 },
+                mount: { scale: 1, y: -5 },
                 unmount: { scale: 0, y: 25 },
               }}
             >
@@ -82,9 +84,10 @@ const Contact: FunctionComponent = () => {
               Télécharger le CV
             </span>
             <Tooltip
+              className="tooltip tooltip--light dark:tooltip--dark"
               content="Téléchager"
               animate={{
-                mount: { scale: 1, y: 0 },
+                mount: { scale: 1, y: -5 },
                 unmount: { scale: 0, y: 25 },
               }}
             >

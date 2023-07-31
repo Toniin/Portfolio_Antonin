@@ -83,12 +83,13 @@ const Header: FunctionComponent = () => {
       </Link>
 
       <Tooltip
+        className="tooltip tooltip--light dark:tooltip--dark"
         content={`Changer pour le thème ${
           theme === "light" ? "sombre" : "clair"
         }`}
         animate={{
-          mount: { scale: 1, y: 0 },
-          unmount: { scale: 0, y: 25 },
+          mount: { scale: 1, y: 5 },
+          unmount: { scale: 0, y: -20 },
         }}
       >
         <button

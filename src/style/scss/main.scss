@@ -238,6 +238,25 @@
       }
     }
   }
+
+  .tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+    padding: 10px;
+
+    &--light {
+      background: map-get($background-colors, dark);
+      color: $secondary-color;
+    }
+
+    &--dark {
+      background: map-get($background-colors, light);
+      color: $primary-color;
+    }
+  }
 }
 
 @import "base/base";
