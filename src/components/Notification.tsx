@@ -9,7 +9,13 @@ const Notification = ({
     <>
       {showNotification && (
         <aside className="notification notification--light secondary-color dark:notification--dark dark:primary-color">
-          <button onClick={() => setShowNotification(false)}>{message}</button>
+          <button
+            onClick={() => {
+              setShowNotification(false);
+            }}
+          >
+            {message}
+          </button>
         </aside>
       )}
     </>
