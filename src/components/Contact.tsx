@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
+import { Tooltip } from "@material-tailwind/react";
 import {
   FaComments,
   FaEnvelope,
@@ -39,38 +40,63 @@ const Contact: FunctionComponent = () => {
               {window.innerWidth >= 360 && <FaEnvelope size="1.2em" />}
               {contact.email}
             </span>
-            <button
-              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
-              onClick={() => copyText(contact.email)}
+            <Tooltip
+              content="Copier"
+              animate={{
+                mount: { scale: 1, y: 0 },
+                unmount: { scale: 0, y: 25 },
+              }}
             >
-              <FaRegPaste size="1.3em" />
-            </button>
+              <button
+                className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
+                onClick={() => copyText(contact.phone)}
+              >
+                <FaRegPaste size="1.3em" />
+              </button>
+            </Tooltip>
           </li>
           <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md">
             <span className="flex items-center font-bold gap-2 pl-2">
               {window.innerWidth >= 360 && <FaPhoneFlip size="1.2em" />}
               {contact.phone}
             </span>
-            <button
-              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
-              onClick={() => copyText(contact.phone)}
+
+            <Tooltip
+              content="Copier"
+              animate={{
+                mount: { scale: 1, y: 0 },
+                unmount: { scale: 0, y: 25 },
+              }}
             >
-              <FaRegPaste size="1.3em" />
-            </button>
+              <button
+                className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
+                onClick={() => copyText(contact.phone)}
+              >
+                <FaRegPaste size="1.3em" />
+              </button>
+            </Tooltip>
           </li>
           <li className="flex basis-full lg:basis-auto justify-between items-center gap-4 md:px-52 lg:px-0 glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md">
             <span className="flex items-center font-bold gap-2 pl-2">
               {window.innerWidth >= 360 && <FaRegFilePdf size="1.2em" />}
               Télécharger le CV
             </span>
-            <Link
-              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
-              to="/CV_Antonin-CHAUDIERE.pdf"
-              target="_blank"
-              download
+            <Tooltip
+              content="Téléchager"
+              animate={{
+                mount: { scale: 1, y: 0 },
+                unmount: { scale: 0, y: 25 },
+              }}
             >
-              <FaDownload size="1.3em" />
-            </Link>
+              <Link
+                className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
+                to="/CV_Antonin-CHAUDIERE.pdf"
+                target="_blank"
+                download
+              >
+                <FaDownload size="1.3em" />
+              </Link>
+            </Tooltip>
           </li>
         </ul>
         <div className="glass--light glass--light--off dark:glass--dark dark:glass--dark--off mt-6 p-7 rounded-md">

@@ -2,6 +2,7 @@ import { FunctionComponent, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../utils/Hook/useTheme";
 import { FaSun, FaMoon } from "react-icons/fa6";
+import { Tooltip } from "@material-tailwind/react";
 
 const Header: FunctionComponent = () => {
   const { theme, toggleTheme } = useTheme();
@@ -81,18 +82,28 @@ const Header: FunctionComponent = () => {
         </svg>
       </Link>
 
-      <button
-        className={`${buttonThemeStyle} dark:neomorphism__secondary--dark p-3 rounded-lg`}
-        onClick={() => {
-          toggleTheme();
+      <Tooltip
+        content={`Changer pour le thème ${
+          theme === "light" ? "sombre" : "clair"
+        }`}
+        animate={{
+          mount: { scale: 1, y: 0 },
+          unmount: { scale: 0, y: 25 },
         }}
       >
-        {theme === "light" ? (
-          <FaSun className={svgThemeStyle} />
-        ) : (
-          <FaMoon className="secondary-color" />
-        )}
-      </button>
+        <button
+          className={`${buttonThemeStyle} dark:neomorphism__secondary--dark p-3 rounded-lg`}
+          onClick={() => {
+            toggleTheme();
+          }}
+        >
+          {theme === "light" ? (
+            <FaSun className={svgThemeStyle} />
+          ) : (
+            <FaMoon className="secondary-color" />
+          )}
+        </button>
+      </Tooltip>
     </header>
   );
 };
