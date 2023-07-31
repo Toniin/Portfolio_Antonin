@@ -26,6 +26,12 @@ const ProjectDetails: FunctionComponent = () => {
   const project = projects[indexProject - 1];
 
   useEffect(() => {
+    if (theme === "light") {
+      localStorage.setItem("hero__waves", "true");
+    } else {
+      localStorage.setItem("hero__waves", "false");
+    }
+
     const projectImages = document.querySelectorAll(
       ".project__page__content__image"
     );
@@ -51,7 +57,7 @@ const ProjectDetails: FunctionComponent = () => {
         projectCard.style.transform = `rotateX(0) rotateY(0)`;
       });
     });
-  }, []);
+  }, [theme]);
 
   const svgTechnologie = (technologie: string) => {
     let svg;
@@ -137,7 +143,7 @@ const ProjectDetails: FunctionComponent = () => {
           <BreadCrumb actualPath={project.name} />
           <Link
             to="/#projects"
-            className="neomorphism--light dark:neomorphism--dark p-2 rounded-lg"
+            className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-2 rounded-lg"
           >
             <FaXmark size="1.3em" />
           </Link>
@@ -178,7 +184,7 @@ const ProjectDetails: FunctionComponent = () => {
                 <a
                   href={project.git}
                   target="_blank"
-                  className="w-fit neomorphism--light dark:neomorphism--dark flex items-center gap-2 p-3 rounded-lg"
+                  className="w-fit neomorphism__secondary--light dark:neomorphism__secondary--dark flex items-center gap-2 p-3 rounded-lg"
                 >
                   Voir le projet github
                   <FaSquareGithub size="1.8em" />
@@ -187,7 +193,7 @@ const ProjectDetails: FunctionComponent = () => {
               <a
                 href={project.href}
                 target="_blank"
-                className="w-fit neomorphism--light dark:neomorphism--dark flex items-center gap-2 p-3 rounded-lg"
+                className="w-fit neomorphism__primary--light dark:neomorphism__primary--dark secondary-color dark:primary-color flex items-center gap-2 p-3 rounded-lg"
               >
                 Voir le projet
                 <FaUpRightFromSquare size="1.3em" />

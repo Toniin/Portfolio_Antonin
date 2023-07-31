@@ -13,153 +13,169 @@
     color: $secondary-color;
   }
 
-  .bg-light {
-    background: map-get($background-colors, light);
+  .bg {
+    &--light {
+      background: map-get($background-colors, light);
+    }
+
+    &--dark {
+      background: map-get($background-colors, dark);
+    }
   }
 
-  .bg-dark {
-    background: map-get($background-colors, dark);
+  .stroke {
+    &--light {
+      stroke: map-get($background-colors, light);
+    }
+
+    &--dark {
+      stroke: map-get($background-colors, dark);
+    }
   }
 
-  .stroke-light {
-    stroke: map-get($background-colors, light);
+  .first__branch {
+    &__stroke {
+      &--light {
+        stroke: map-get($branch-colors, first);
+      }
+
+      &--dark {
+        stroke: map-get($branch-colors, first--dark);
+      }
+    }
+
+    &__shadow {
+      &--light {
+        filter: drop-shadow(
+          0.1em 0 0.05em lighten(map-get($branch-colors, first), 50%)
+        );
+      }
+
+      &--dark {
+        filter: drop-shadow(
+          0 0 0.05em lighten(map-get($background-colors, dark), 60%)
+        );
+      }
+    }
   }
 
-  .stroke-dark {
-    stroke: map-get($background-colors, dark);
+  .second__branch {
+    &__fill {
+      fill: map-get($branch-colors, second);
+    }
+
+    &__stroke {
+      stroke: map-get($branch-colors, second);
+    }
+
+    &__shadow {
+      filter: drop-shadow(
+        0 0 0.05em lighten(map-get($branch-colors, second), 30%)
+      );
+    }
+
+    &__checkout {
+      &__shadow {
+        filter: drop-shadow(
+          0 0.1em 0.05em lighten(map-get($branch-colors, second), 30%)
+        );
+      }
+    }
   }
 
-  .fill-light {
-    fill: map-get($background-colors, light);
+  .animate__path {
+    &--light {
+      animation: animate__path-light 1.3s forwards ease-in;
+    }
+
+    &--dark {
+      animation: animate__path-dark 1.3s forwards ease-in;
+    }
+
+    &__inside {
+      &__hero {
+        &--light {
+          animation: animate__path__inside__hero-light 1.3s forwards ease-in;
+        }
+      }
+
+      &--light {
+        animation: animate__path__inside-light 1.3s forwards ease-in;
+      }
+
+      &--dark {
+        animation: animate__path__inside-dark 1.3s forwards ease-in;
+      }
+    }
   }
 
-  .fill-dark {
-    fill: map-get($background-colors, dark);
-  }
+  .animate__circle {
+    &--light {
+      animation: animate__circle-light 1.3s forwards ease-in;
+    }
 
-  .fill-branch-first-light {
-    fill: map-get($branch-colors, first);
-  }
-
-  .fill-branch-first-dark {
-    fill: map-get($branch-colors, first--dark);
-  }
-
-  .stroke-branch-first-light {
-    stroke: map-get($branch-colors, first);
-  }
-
-  .stroke-branch-first-dark {
-    stroke: map-get($branch-colors, first--dark);
-  }
-
-  .shadow-branch-first-light {
-    filter: drop-shadow(
-      0.1em 0 0.05em lighten(map-get($branch-colors, first), 50%)
-    );
-  }
-
-  .shadow-branch-first-dark {
-    filter: drop-shadow(
-      0 0 0.05em lighten(map-get($background-colors, dark), 60%)
-    );
-  }
-
-  .fill-branch-second-light {
-    fill: map-get($branch-colors, second);
-  }
-
-  .fill-branch-second-dark {
-    fill: map-get($branch-colors, second);
-  }
-
-  .stroke-branch-second-light {
-    stroke: map-get($branch-colors, second);
-  }
-
-  .stroke-branch-second-dark {
-    stroke: map-get($branch-colors, second);
-  }
-
-  .shadow-branch-second-light--checkout {
-    filter: drop-shadow(
-      0 0.1em 0.05em lighten(map-get($branch-colors, second), 30%)
-    );
-  }
-
-  .shadow-branch-second-dark--checkout {
-    filter: drop-shadow(
-      0 0 0.05em lighten(map-get($branch-colors, second), 10%)
-    );
-  }
-
-  .shadow-branch-second-light {
-    filter: drop-shadow(
-      0 0 0.05em lighten(map-get($branch-colors, second), 30%)
-    );
-  }
-
-  .shadow-branch-second-dark {
-    filter: drop-shadow(
-      0 0 0.05em lighten(map-get($branch-colors, second), 10%)
-    );
-  }
-
-  .animate-path-dark {
-    animation: animate-path-dark 1.3s forwards ease-in;
-  }
-
-  .animate-path-light {
-    animation: animate-path-light 1.3s forwards ease-in;
-  }
-
-  .animate-path-inside-dark {
-    animation: animate-path-inside-dark 1.3s forwards ease-in;
-  }
-
-  .animate-path-inside-light {
-    animation: animate-path-inside-light 1.3s forwards ease-in;
-  }
-
-  .animate-circle-dark {
-    animation: animate-circle-dark 1.3s forwards ease-in;
-  }
-
-  .animate-circle-light {
-    animation: animate-circle-light 1.3s forwards ease-in;
+    &--dark {
+      animation: animate__circle-dark 1.3s forwards ease-in;
+    }
   }
 }
 
 @layer components {
   .neomorphism {
     &__hero--light {
-      background-color: #4287e3;
-      box-shadow: 4px 4px 10px darken(#4287e3, 30%), -4px -4px 10px #4287e3;
+      background-color: #3c7bcd;
+      box-shadow: 4px 4px 10px darken(#4287e3, 35%), -4px -4px 10px #3c7bcd;
       &:hover {
-        box-shadow: inset 4px 4px 10px darken(#4287e3, 30%),
+        box-shadow: inset 4px 4px 10px darken(#4287e3, 35%),
           inset -4px -4px 10px #4287e3;
       }
     }
 
-    &--light {
-      background: map-get($background-colors, light);
-      box-shadow: 5px 5px 10px lighten(map-get($background-colors, dark), 80%),
-        -5px -5px 10px lighten(map-get($background-colors, light), 75%);
-      &:hover {
-        box-shadow: inset 5px 5px 10px
-            lighten(map-get($background-colors, dark), 80%),
-          inset -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+    &__primary {
+      &--light {
+        background: map-get($background-colors, dark);
+        box-shadow: 3px 3px 10px lighten(map-get($background-colors, dark), 10%),
+          -3px -3px 10px lighten(map-get($background-colors, dark), 60%);
+        &:hover {
+          box-shadow: inset 5px 5px 10px darken(#4287e3, 80%),
+            inset -5px -5px 10px lighten(map-get($background-colors, dark), 35%);
+        }
+      }
+
+      &--dark {
+        background: map-get($background-colors, light);
+        box-shadow: 3px 3px 10px lighten(map-get($background-colors, dark), 20%),
+          -3px -3px 10px lighten(map-get($background-colors, dark), 35%);
+        &:hover {
+          box-shadow: inset 3px 3px 7px
+              lighten(map-get($background-colors, dark), 70%),
+            inset -3px -3px 10px lighten(map-get($background-colors, dark), 30%);
+        }
       }
     }
 
-    &--dark {
-      background: map-get($background-colors, dark);
-      box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
-        -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
-      &:hover {
-        box-shadow: inset 5px 5px 10px
-            darken(map-get($background-colors, dark), 80%),
-          inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+    &__secondary {
+      &--light {
+        background: map-get($background-colors, light);
+        box-shadow: 5px 5px 10px lighten(map-get($background-colors, dark), 80%),
+          -5px -5px 10px lighten(map-get($background-colors, light), 75%);
+        &:hover {
+          box-shadow: inset 5px 5px 10px
+              lighten(map-get($background-colors, dark), 80%),
+            inset -5px -5px 10px
+              lighten(map-get($background-colors, light), 75%);
+        }
+      }
+
+      &--dark {
+        background: map-get($background-colors, dark);
+        box-shadow: 5px 5px 10px darken(map-get($background-colors, dark), 80%),
+          -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+        &:hover {
+          box-shadow: inset 5px 5px 10px
+              darken(map-get($background-colors, dark), 80%),
+            inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
+        }
       }
     }
   }
@@ -207,13 +223,6 @@
           inset -5px -5px 10px lighten(map-get($background-colors, dark), 10%);
       }
     }
-  }
-}
-
-@media (width < 500px) {
-  .glass {
-    margin-left: min(0.75em);
-    margin-right: min(0.75em);
   }
 }
 

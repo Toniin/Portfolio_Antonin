@@ -82,13 +82,13 @@ const Footer: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="footer__timeline__road stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+            className="footer__timeline__road first__branch__stroke--light dark:first__branch__stroke--dark first__branch__shadow--light dark:first__branch__shadow--dark"
             d="M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,57 C 60,65 67,45 74,59"
             fill="transparent"
             strokeWidth="0.75"
           />
           <circle
-            className="footer__timeline__dot fill-branch-second-light"
+            className="footer__timeline__dot second__branch__fill"
             cx="74"
             cy="59"
             r="1"
@@ -106,13 +106,13 @@ const Footer: FunctionComponent = () => {
           preserveAspectRatio="none"
         >
           <path
-            className="footer__timeline__road stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+            className="footer__timeline__road first__branch__stroke--light dark:first__branch__stroke--dark first__branch__shadow--light dark:first__branch__shadow--dark"
             d={`M10,0 C 10,20 20,10 30,40 C 40,65 40,40 55,50 C 60,55 65,50 74,${posRoma}`}
             fill="transparent"
             strokeWidth="1.5"
           />
           <circle
-            className="footer__timeline__dot fill-branch-second-light"
+            className="footer__timeline__dot second__branch__fill"
             cx="74"
             cy={`${posRoma}`}
             r="1.5"

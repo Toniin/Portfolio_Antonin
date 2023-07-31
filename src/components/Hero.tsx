@@ -12,6 +12,12 @@ const Hero: FunctionComponent = () => {
   const [horizontal, setHorizontal] = useState(false);
 
   useEffect(() => {
+    if (theme === "light") {
+      localStorage.setItem("hero__waves", "true");
+    } else {
+      localStorage.setItem("hero__waves", "false");
+    }
+
     if (
       heroTimeline.current &&
       heroTimeline.current.clientWidth > heroTimeline.current.clientHeight
@@ -20,7 +26,7 @@ const Hero: FunctionComponent = () => {
     } else {
       setHorizontal(false);
     }
-  }, []);
+  }, [theme]);
 
   return (
     <>
@@ -79,7 +85,7 @@ const Hero: FunctionComponent = () => {
             Développeur web front-end. Autodidacte.
           </p>
           <Link
-            className="neomorphism--dark dark:neomorphism--light secondary-color dark:primary-color flex p-3 rounded-lg"
+            className="neomorphism__primary--light dark:neomorphism__primary--dark secondary-color dark:primary-color flex p-3 rounded-lg"
             to="/CV_Antonin-CHAUDIERE.pdf"
             target="_blank"
             download
@@ -105,7 +111,7 @@ const Hero: FunctionComponent = () => {
             preserveAspectRatio="none"
           >
             <path
-              className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+              className="first__branch__stroke--light dark:first__branch__stroke--dark first__branch__shadow--light dark:first__branch__shadow--dark"
               d="M10,120 L 10,150"
               fill="transparent"
               strokeWidth="0.75"
@@ -233,7 +239,7 @@ const Hero: FunctionComponent = () => {
             preserveAspectRatio="none"
           >
             <path
-              className="stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+              className="first__branch__stroke--light dark:first__branch__stroke--dark first__branch__shadow--light dark:first__branch__shadow--dark"
               d="M10,120 L 10,150"
               fill="transparent"
               strokeWidth="1.5"

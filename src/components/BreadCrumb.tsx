@@ -11,7 +11,7 @@ function BreadCrumb({ actualPath }: BreadCrumbProps) {
         <li className={`breadcrumb--${theme}`}>
           <Link
             to="/"
-            className="flex gap-2 breadcrumb__home bg-light dark:bg-dark"
+            className="flex gap-2 breadcrumb__home bg--light dark:bg--dark"
           >
             <FaHouse size="1.2em" />
             Accueil
@@ -20,13 +20,13 @@ function BreadCrumb({ actualPath }: BreadCrumbProps) {
         <li className={`breadcrumb--${theme}`}>
           <Link
             to="/#projects"
-            className="flex items-center breadcrumb__projects bg-light dark:bg-dark"
+            className="flex items-center breadcrumb__projects bg--light dark:bg--dark"
           >
             Projets
           </Link>
         </li>
         <li className="flex justify-center items-center">
-          <div className="glass breadcrumb__actual-path glass--light glass--light--off dark:glass--dark dark:glass--dark--off bg-light dark:bg-dark">
+          <div className="glass breadcrumb__actual-path glass--light glass--light--off dark:glass--dark dark:glass--dark--off bg--light dark:bg--dark">
             {actualPath}
           </div>
         </li>

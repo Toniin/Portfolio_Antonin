@@ -55,7 +55,7 @@ const Projects: FunctionComponent = () => {
                   src={project.images[0].src}
                   alt={project.images[0].alt}
                 />
-                <div className="p-2 bg-light dark:primary-color shadow-inner">
+                <div className="p-2 bg--light dark:primary-color shadow-inner">
                   <h3 className="text-lg text-center">{project.name}</h3>
                   <p className="text-base font-semibold">
                     {project.description}

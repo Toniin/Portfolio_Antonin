@@ -176,13 +176,13 @@ const Timeline3Branchs: FunctionComponent = () => {
         preserveAspectRatio="none"
       >
         <path
-          className="timeline__main timeline__main--merge stroke-branch-first-light dark:stroke-branch-first-dark shadow-branch-first-light dark:shadow-branch-first-dark"
+          className="timeline__main timeline__main--merge first__branch__stroke--light dark:first__branch__stroke--dark first__branch__shadow--light dark:first__branch__shadow--dark"
           d="M10,0 L 10,150"
           fill="transparent"
           strokeWidth="0.75"
         />
         <path
-          className="timeline__main timeline__main--checkout stroke-branch-second-light shadow-branch-second-light--checkout dark:shadow-branch-second-dark--checkout"
+          className="timeline__main timeline__main--checkout second__branch__stroke second__branch__checkout__shadow"
           d="M10,15 C 10,35 15,35 75,37"
           fill="transparent"
           strokeWidth="0.75"
@@ -194,27 +194,26 @@ const Timeline3Branchs: FunctionComponent = () => {
             d="M10,14 C 12,35 15,35 75,37"
             fill="transparent"
           />
-          <text className="timeline__text fill-branch-second-light">
+          <text className="timeline__text second__branch__fill">
             <textPath href="#main--checkout" startOffset="10%">
               Checkout
             </textPath>
           </text>
         </g>
         <path
-          className="timeline__secondary timeline__secondary--first stroke-branch-second-light shadow-branch-second-light dark:shadow-branch-second-dark"
+          className="timeline__secondary timeline__secondary--first second__branch__stroke second__branch__shadow"
           d="M75,37 C 75,45 25,37 25,50 L 25,90 C 25,100 40,105 75,110"
           fill="transparent"
           strokeWidth="0.75"
-          stroke="red"
         />
         <path
-          className="timeline__secondary timeline__secondary--second stroke-branch-second-light shadow-branch-second-light dark:shadow-branch-second-dark"
+          className="timeline__secondary timeline__secondary--second second__branch__stroke second__branch__shadow"
           d="M75,37 L 75,120 C 75,130 50,135 10,140"
           fill="transparent"
           strokeWidth="0.75"
         />
         <path
-          className="timeline__secondary timeline__secondary--third stroke-branch-second-light shadow-branch-second-light dark:shadow-branch-second-dark"
+          className="timeline__secondary timeline__secondary--third second__branch__stroke second__branch__shadow"
           d="M75,37 C 75,45 125,37 125,50 L 125,100 C 125,110 110,115 75,120"
           fill="transparent"
           strokeWidth="0.75"
@@ -226,7 +225,7 @@ const Timeline3Branchs: FunctionComponent = () => {
             d="M10,139 C 10,139 50,134 75,129"
             fill="transparent"
           />
-          <text className="timeline__text fill-branch-second-light">
+          <text className="timeline__text second__branch__fill">
             <textPath href="#main--merge" startOffset="5%">
               Merge
             </textPath>
@@ -234,35 +233,35 @@ const Timeline3Branchs: FunctionComponent = () => {
         </g>
 
         <circle
-          className="timeline__dot timeline__dot--branch fill-branch-second-light"
+          className="timeline__dot timeline__dot--branch second__branch__fill"
           cx="10"
           cy="15"
           r="1.25"
           fill="transparent"
         />
         <circle
-          className="timeline__dot timeline__dot--checkout fill-branch-second-light"
+          className="timeline__dot timeline__dot--checkout second__branch__fill"
           cx="75"
           cy="37"
           r="1.25"
           fill="transparent"
         />
         <circle
-          className="timeline__dot timeline__dot__first_branch--merge fill-branch-second-light"
+          className="timeline__dot timeline__dot__first_branch--merge second__branch__fill"
           cx="75"
           cy="110"
           r="1.25"
           fill="transparent"
         />
         <circle
-          className="timeline__dot timeline__dot__third_branch--merge fill-branch-second-light"
+          className="timeline__dot timeline__dot__third_branch--merge second__branch__fill"
           cx="75"
           cy="120"
           r="1.25"
           fill="transparent"
         />
         <circle
-          className="timeline__dot timeline__dot__second_branch--merge fill-branch-second-light"
+          className="timeline__dot timeline__dot__second_branch--merge second__branch__fill"
           cx="10"
           cy="140"
           r="1.25"

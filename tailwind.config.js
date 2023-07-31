@@ -12,23 +12,8 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
-    // extend: {
-      // colors: {
-        // primary: { ...colors.violet, DEFAULT: "#161616" },
-        //   "secondary-color": "#fff",
-        //   "bg-dark-color": "#161616",
-        //   "bg-light-color": "#fff",
-        // },
-        // fontFamily: {
-          //   sans: ["Graphik", "sans-serif"],
-          //   serif: ["Merriweather", "serif"],
-      //   },
-      // }
   },
   plugins: [
     tailwindcssAspectRatio,
-    // function ({ addVariant }) {
-      // addVariant("hover>*", "&:hover > *");
-    // },
   ],
 };

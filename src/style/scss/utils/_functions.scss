@@ -15,7 +15,7 @@
 }
 
 // LOGO - LIGHT THEME
-@keyframes animate-path-light {
+@keyframes animate__path-light {
   0% {
     stroke-dashoffset: 700px;
   }
@@ -29,18 +29,27 @@
   }
 }
 
-@keyframes animate-path-inside-light {
+@keyframes animate__path__inside__hero-light {
   0% {
     stroke-dashoffset: 700px;
-    fill: #0ea5e9;
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #0ea5e9;
+    fill: #4287e3;
   }
 }
 
-@keyframes animate-circle-light {
+@keyframes animate__path__inside-light {
+  0% {
+    stroke-dashoffset: 700px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $secondary-color;
+  }
+}
+
+@keyframes animate__circle-light {
   0% {
     stroke-dashoffset: 150px;
   }
@@ -55,7 +64,7 @@
 }
 
 // LOGO - DARK THEME
-@keyframes animate-path-dark {
+@keyframes animate__path-dark {
   0% {
     stroke-dashoffset: 700px;
   }
@@ -69,7 +78,7 @@
   }
 }
 
-@keyframes animate-path-inside-dark {
+@keyframes animate__path__inside-dark {
   0% {
     stroke-dashoffset: 700px;
     fill: map-get($background-colors, dark);
@@ -80,7 +89,7 @@
   }
 }
 
-@keyframes animate-circle-dark {
+@keyframes animate__circle-dark {
   0% {
     stroke-dashoffset: 150px;
   }

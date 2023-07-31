@@ -15,6 +15,26 @@
     stroke-dasharray: 700px;
     stroke-dashoffset: 700px;
 
+    &--hero {
+      filter: drop-shadow(5px 5px 10px darken(#4287e3, 20%))
+        drop-shadow(-5px -3px 10px lighten(#4287e3, 10%));
+    }
+
+    &--light {
+      filter: drop-shadow(
+        -1px 6px 3px lighten(map-get($background-colors, dark), 80%)
+      );
+    }
+
+    &--dark {
+      filter: drop-shadow(
+          5px 5px 10px darken(map-get($background-colors, dark), 80%)
+        )
+        drop-shadow(
+          -5px -3px 10px lighten(map-get($background-colors, dark), 20%)
+        );
+    }
+
     circle {
       stroke-dasharray: 150px;
       stroke-dashoffset: 150px;

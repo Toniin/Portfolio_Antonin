@@ -40,7 +40,7 @@ const Contact: FunctionComponent = () => {
               {contact.email}
             </span>
             <button
-              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
+              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
               onClick={() => copyText(contact.email)}
             >
               <FaRegPaste size="1.3em" />
@@ -52,7 +52,7 @@ const Contact: FunctionComponent = () => {
               {contact.phone}
             </span>
             <button
-              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
+              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
               onClick={() => copyText(contact.phone)}
             >
               <FaRegPaste size="1.3em" />
@@ -64,7 +64,7 @@ const Contact: FunctionComponent = () => {
               Télécharger le CV
             </span>
             <Link
-              className="neomorphism--light dark:neomorphism--dark p-3 rounded-lg"
+              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-3 rounded-lg"
               to="/CV_Antonin-CHAUDIERE.pdf"
               target="_blank"
               download

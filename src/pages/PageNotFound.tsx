@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
 const ErrorPage: FunctionComponent = () => {
+  localStorage.setItem("hero__waves", "false");
+
   return (
     <>
       <Header />
@@ -15,7 +17,7 @@ const ErrorPage: FunctionComponent = () => {
         <div className="mt-10 flex items-center gap-x-6">
           <Link
             to="/"
-            className="neomorphism--light dark:neomorphism--dark flex p-3 rounded-lg font-bold"
+            className="neomorphism__primary--light dark:neomorphism__primary--dark secondary-color dark:primary-color flex p-3 rounded-lg font-bold"
           >
             Retour à la page d'accueil
           </Link>

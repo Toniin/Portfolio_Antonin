@@ -5,12 +5,12 @@ const SocialLink = ({ background }: SocialLinkProps) => {
 
   if (background === "hero") {
     socialStyle =
-      "social neomorphism__hero--light dark:neomorphism--dark secondary-color z-0 duration-300 ease-out p-2 rounded-lg";
+      "social neomorphism__hero--light dark:neomorphism__secondary--dark secondary-color z-0 duration-300 ease-out p-2 rounded-lg";
   }
 
   if (background === "glass") {
     socialStyle =
-      "social neomorphism--light dark:neomorphism--dark z-0 duration-300 ease-out p-2 rounded-lg";
+      "social neomorphism__secondary--light dark:neomorphism__secondary--dark z-0 duration-300 ease-out p-2 rounded-lg";
   }
 
   return (
