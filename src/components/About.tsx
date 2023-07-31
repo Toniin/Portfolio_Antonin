@@ -10,7 +10,7 @@ const About: FunctionComponent = () => {
     <section className="about items-center min-h-screen">
       <Timeline />
       <div className="about__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl flex gap-4 items-center">
+        <h2 className="text__shadow--dark dark:text__shadow--light text-2xl flex gap-4 items-center">
           <FaUserGraduate size="1.2em" />
           FORMATIONS
         </h2>

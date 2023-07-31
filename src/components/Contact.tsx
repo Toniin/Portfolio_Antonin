@@ -28,7 +28,7 @@ const Contact: FunctionComponent = () => {
     <section className="contact flex flex-col items-center min-h-screen">
       {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
       <div className="contact__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl flex gap-4 items-center">
+        <h2 className="text__shadow--dark dark:text__shadow--light text-2xl flex gap-4 items-center">
           <FaComments size="1.2em" />
           CONTACT
         </h2>

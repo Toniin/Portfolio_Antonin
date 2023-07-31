@@ -14,7 +14,7 @@ const Skills: FunctionComponent = () => {
     <section className="skills flex flex-col items-center min-h-screen">
       <Timeline />
       <div className="skills__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl flex gap-4 items-center">
+        <h2 className="text__shadow--dark dark:text__shadow--light text-2xl flex gap-4 items-center">
           <FaCode size="1.2em"/>
           COMPÉTENCES
         </h2>

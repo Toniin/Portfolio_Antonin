@@ -38,7 +38,7 @@ const Projects: FunctionComponent = () => {
     <section id="projects" className="projects min-h-screen">
       {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
       <div className="projects__content w-full h-full flex flex-col items-center">
-        <h2 className="text-2xl flex gap-4 items-center">
+        <h2 className="text__shadow--dark dark:text__shadow--light text-2xl flex gap-4 items-center">
           <FaFileCode size="1.2em" />
           PROJETS
         </h2>

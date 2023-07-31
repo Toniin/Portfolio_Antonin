@@ -133,10 +133,10 @@ const ProjectDetails: FunctionComponent = () => {
       )}
       <main className="project__page flex flex-col items-center justify-between px-2">
         <div className="flex flex-col items-center gap-2 mb-24">
-          <h1 className="text-4xl tracking-wider secondary-color">
+          <h1 className="text__shadow--light text-4xl tracking-wider secondary-color">
             {project.name}
           </h1>
-          <h2>{project.description}</h2>
+          <h2 className="text__shadow--dark">{project.description}</h2>
         </div>
 
         <div className="w-full flex justify-between items-center">

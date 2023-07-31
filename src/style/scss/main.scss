@@ -13,6 +13,20 @@
     color: $secondary-color;
   }
 
+  .text__shadow {
+    &--light {
+      filter: drop-shadow(
+        -2px 2px 3px lighten(map-get($background-colors, dark), 40%)
+      );
+    }
+
+    &--dark {
+      filter: drop-shadow(
+        -2px 2px 3px lighten(map-get($background-colors, dark), 60%)
+      );
+    }
+  }
+
   .bg {
     &--light {
       background: map-get($background-colors, light);
@@ -135,21 +149,21 @@
       &--light {
         background: map-get($background-colors, dark);
         box-shadow: 3px 3px 10px lighten(map-get($background-colors, dark), 10%),
-          -3px -3px 10px lighten(map-get($background-colors, dark), 60%);
+          -3px -3px 10px lighten(map-get($background-colors, dark), 50%);
         &:hover {
           box-shadow: inset 5px 5px 10px darken(#4287e3, 80%),
-            inset -5px -5px 10px lighten(map-get($background-colors, dark), 35%);
+            inset -5px -5px 10px lighten(map-get($background-colors, dark), 25%);
         }
       }
 
       &--dark {
         background: map-get($background-colors, light);
-        box-shadow: 3px 3px 10px lighten(map-get($background-colors, dark), 20%),
-          -3px -3px 10px lighten(map-get($background-colors, dark), 35%);
+        box-shadow: 3px 3px 10px lighten(map-get($background-colors, dark), 15%),
+          -3px -3px 10px lighten(map-get($background-colors, dark), 30%);
         &:hover {
-          box-shadow: inset 3px 3px 7px
-              lighten(map-get($background-colors, dark), 70%),
-            inset -3px -3px 10px lighten(map-get($background-colors, dark), 30%);
+          box-shadow: inset 3px 3px 5px
+              lighten(map-get($background-colors, dark), 25%),
+            inset -3px -3px 10px lighten(map-get($background-colors, dark), 60%);
         }
       }
     }
