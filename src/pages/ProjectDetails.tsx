@@ -173,6 +173,7 @@ const ProjectDetails: FunctionComponent = () => {
 
         <div className="project__page__content flex flex-col lg:flex-row items-start mt-10">
           <div className="basis-1/2 flex flex-col">
+            {/* TECHNOLOGIES */}
             <ul className="flex justify-evenly gap-4 flex-wrap">
               {project.technologies.map((technologie) => (
                 <li
@@ -187,6 +188,7 @@ const ProjectDetails: FunctionComponent = () => {
                 </li>
               ))}
             </ul>
+            {/* BUTTON GIT / BUTTON VISIT PROJECT */}
             <div className="flex justify-evenly py-5">
               {project.git === "private" ? (
                 <></>
@@ -210,11 +212,12 @@ const ProjectDetails: FunctionComponent = () => {
               </a>
             </div>
           </div>
+          {/* IMAGES */}
           <div className="lg:basis-1/2 flex flex-col lg:flex-row justify-evenly gap-x-4 gap-y-8 lg:flex-wrap pl-2 pb-4">
             {project.images.map((image) => (
               <div
                 key={`${project.name} | ${image.alt}`}
-                className="basis-2/5 h-fit grow project__page__content__image neomorphism--light dark:neomorphism--dark"
+                className="basis-2/5 h-fit grow project__page__content__image neomorphism__secondary--light dark:neomorphism__secondary--dark"
               >
                 <div>
                   <img
