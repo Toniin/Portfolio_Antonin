@@ -23,15 +23,15 @@
     "technologies": [
       {
         "name": "React",
-        "description": "Pour la construction des composants de page | librairie javascript"
+        "description": "Pour la construction des composants de page (librairie javascript)"
       },
       {
         "name": "Gatsbyjs",
-        "description": "Ajoute des fonctionnalités à React | librarie React"
+        "description": "Ajoute des fonctionnalités à React (framework React)"
       },
       {
         "name": "SCSS",
-        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+        "description": "Pour modifier le design du site, l'embellir (préprocesseur CSS)"
       },
       {
         "name": "Contentful",
@@ -60,33 +60,77 @@
       {
         "src": "/assets/projects/skribe/skribe.png",
         "alt": "Hero du site de résumé de livre Skribe."
+      },
+      {
+        "src": "/assets/projects/skribe/post_skribe.png",
+        "alt": "Article du blog Skribe."
+      },
+      {
+        "src": "/assets/projects/skribe/posts_skribe.png",
+        "alt": "Liste des articles du blog Skribe."
+      },
+      {
+        "src": "/assets/projects/skribe/contact_page_skribe.png",
+        "alt": "Page de contact du blog Skribe"
       }
     ],
     "technologies": [
       {
+        "name": "React",
+        "description": "Pour la construction des composants de page (librairie javascript)"
+      },
+      {
+        "name": "Gatsbyjs",
+        "description": "Ajoute des fonctionnalités à React (framework React)"
+      },
+      {
         "name": "SCSS",
-        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+        "description": "Pour modifier le design du site, l'embellir (préprocesseur CSS)"
+      },
+      {
+        "name": "Git",
+        "description": "Pour héberger le code sur GitHub"
       }
     ],
     "href": "https://skribe.fr",
     "git": "private"
   },
   {
-    "name": "Booki",
-    "description": "Site d'annonces de location courte durée.",
+    "name": "Kasa",
+    "description": "Site d'annonces de location d'appartements.",
     "images": [
       {
-        "src": "/assets/projects/booki/booki.png",
-        "alt": "Hero du site d'annonces Booki"
+        "src": "/assets/projects/kasa/hero_kasa.png",
+        "alt": "Hero du site d'annonces Kasa"
+      },
+      {
+        "src": "/assets/projects/kasa/apartment_page_kasa.png",
+        "alt": "Page détaillée d'un appartement sur Kasa"
+      },
+      {
+        "src": "/assets/projects/kasa/about_kasa.png",
+        "alt": "Page à propos du site Kasa avec une liste déroulante"
+      },
+      {
+        "src": "/assets/projects/kasa/error_page_kasa.png",
+        "alt": "Page d'erreur 404 du site Kasa"
       }
     ],
     "technologies": [
       {
+        "name": "React",
+        "description": "Pour la construction des composants de page (librairie javascript)"
+      },
+      {
         "name": "SCSS",
-        "description": "Pour modifier le design du site, l'embellir | préprocesseur CSS"
+        "description": "Pour modifier le design du site, l'embellir (préprocesseur CSS)"
+      },
+      {
+        "name": "Git",
+        "description": "Pour héberger le code sur GitHub"
       }
     ],
-    "href": "https://toniin.github.io/OpenClassrooms-P2/",
-    "git": "https://github.com/Toniin/OpenClassrooms-P2"
+    "href": "https://open-classrooms-p6.vercel.app",
+    "git": "https://github.com/Toniin/OpenClassrooms-P6"
   }
 ]
