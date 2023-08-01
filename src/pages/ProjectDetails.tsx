@@ -163,10 +163,26 @@ const ProjectDetails: FunctionComponent = () => {
           <h3 className="underline underline-offset-4">PROBLÉMATIQUE :</h3>
           {project.name === "Racine Éclairée" && (
             <p>
-              Blog où les utilisateurs peuvent lire les{" "}
-              <strong>articles</strong>, écrire des{" "}
-              <strong>commentaires</strong> et{" "}
-              <strong>contacter le support</strong>.
+              Blog où les utilisateurs peuvent lire les
+              <strong> articles</strong>, écrire des
+              <strong> commentaires </strong>et
+              <strong> contacter le support</strong>.
+            </p>
+          )}
+          {project.name === "Skribe" && (
+            <p>
+              Blog où les utilisateurs peuvent lire les
+              <strong> résumé de livres </strong>et
+              <strong> contacter le support</strong>.
+            </p>
+          )}
+          {project.name === "Kasa" && (
+            <p>
+              Site où les utilisateurs peuvent accéder à des
+              <strong> appartements en location </strong>, voir les
+              <strong> informations détaillées </strong>pour chaque appartement
+              et lire les
+              <strong> conditions de Kasa</strong>.
             </p>
           )}
         </div>
