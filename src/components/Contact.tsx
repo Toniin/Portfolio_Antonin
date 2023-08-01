@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import { Tooltip } from "@material-tailwind/react";
 import {
@@ -12,12 +12,10 @@ import {
 import Timeline from "./Timeline";
 import Timeline3Branchs from "./Timeline3Branchs";
 import SocialLink from "./SocialLink";
-import Notification from "./Notification";
+import { toast as notification } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: FunctionComponent = () => {
-  const [messageNotification, setMessageNotification] = useState("");
-  const [openNotification, setOpenNotification] = useState(false);
-
   const contact = {
     email: "antonin.chaudiere@hotmail.fr",
     phone: "0660361110",
@@ -25,19 +23,13 @@ const Contact: FunctionComponent = () => {
 
   const copyText: (text: string) => void = (text) => {
     navigator.clipboard.writeText(text).then(function () {
-      setMessageNotification("Copié dans le presse papier !");
-      setOpenNotification(true);
+      notification.success("Copié dans le presse papier !");
     });
   };
 
   return (
     <section className="contact flex flex-col items-center min-h-screen">
       {window.innerWidth <= 975 ? <Timeline /> : <Timeline3Branchs />}
-      <Notification
-        message={messageNotification}
-        showNotification={openNotification}
-        setShowNotification={setOpenNotification}
-      />
       <div className="contact__content w-full h-full flex flex-col items-center">
         <h2 className="text__shadow--dark dark:text__shadow--light text-2xl flex gap-4 items-center">
           <FaComments size="1.2em" />
@@ -105,10 +97,7 @@ const Contact: FunctionComponent = () => {
                 target="_blank"
                 download
                 onClick={() => {
-                  setMessageNotification(
-                    "Le PDF est en cours de téléchargement ..."
-                  );
-                  setOpenNotification(true);
+                  notification.success("Le PDF est en cours de téléchargement ...");
                 }}
               >
                 <FaDownload size="1.3em" />

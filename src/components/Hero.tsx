@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaRegFilePdf, FaDownload } from "react-icons/fa6";
 import { useTheme } from "../utils/Hook/useTheme";
 import SocialLink from "./SocialLink";
-import Notification from "./Notification";
+import { toast as notification } from "react-toastify";
 
 const Hero: FunctionComponent = () => {
   const heroTimeline: React.RefObject<HTMLDivElement> =
@@ -11,8 +11,6 @@ const Hero: FunctionComponent = () => {
 
   const { theme } = useTheme();
   const [horizontal, setHorizontal] = useState(false);
-  const [messageNotification, setMessageNotification] = useState("");
-  const [openNotification, setOpenNotification] = useState(false);
 
   useEffect(() => {
     if (theme === "light") {
@@ -81,11 +79,6 @@ const Hero: FunctionComponent = () => {
           </div>
         </div>
       )}
-      <Notification
-        message={messageNotification}
-        showNotification={openNotification}
-        setShowNotification={setOpenNotification}
-      />
       <section ref={heroTimeline} className="hero flex items-center h-screen">
         <div className="hero__content flex flex-col items-center justify-center gap-y-5">
           <h1 className="text__shadow--light text-5xl tracking-wider secondary-color">
@@ -100,10 +93,7 @@ const Hero: FunctionComponent = () => {
             target="_blank"
             download
             onClick={() => {
-              setMessageNotification(
-                "Le PDF est en cours de téléchargement ..."
-              );
-              setOpenNotification(true);
+              notification.success("Le PDF est en cours de téléchargement ...");
             }}
           >
             <span className="flex items-center font-bold gap-4">
