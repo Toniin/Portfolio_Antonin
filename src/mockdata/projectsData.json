@@ -1,5 +1,59 @@
 [
   {
+    "name": "RendezView",
+    "description": "Calendriers collaboratifs, vous êtes à un calendrier de vous retrouver.",
+    "images": [
+      {
+        "src": "/assets/projects/rendezview/calendar_page_rendezview.png",
+        "alt": "Page du calendrier de demo"
+      },
+      {
+        "src": "/assets/projects/rendezview/settings_calendar_rendezview.png",
+        "alt": "Modal de paramètres du calendrier pour ajouter ou modifier les utilisateurs"
+      },
+      {
+        "src": "/assets/projects/rendezview/register_page_rendezview.png",
+        "alt": "Page d'inscription du site RendezView"
+      },
+      {
+        "src": "/assets/projects/rendezview/error_page_rendezview.png",
+        "alt": "Page d'erreur 404 du site RendezView"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "NextJS",
+        "description": "Framework React, pour la construction des composants de page, l'authentification, l'API"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Pour faciliter le design du site, l'embellir"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Base de donnée pour stocker les données utilisateurs, les calendriers et les évènements"
+      },
+      {
+        "name": "Prisma",
+        "description": "ORM pour faciliter l'écriture de requêtes SQL"
+      },
+      {
+        "name": "Resend",
+        "description": "Pour gérer les mails (confirmation, invitation)"
+      },
+      {
+        "name": "Stripe",
+        "description": "Système de payement pour l'abonnement premium"
+      },
+      {
+        "name": "Git",
+        "description": "Pour héberger le code sur GitHub"
+      }
+    ],
+    "href": "https://rendezview.fr",
+    "git": "private"
+  },
+  {
     "name": "Racine Éclairée",
     "description": "Blog sur le bien-être physique et mental.",
     "images": [
@@ -94,43 +148,5 @@
     ],
     "href": "https://skribe.fr",
     "git": "private"
-  },
-  {
-    "name": "Kasa",
-    "description": "Site d'annonces de location d'appartements.",
-    "images": [
-      {
-        "src": "/assets/projects/kasa/hero_kasa.png",
-        "alt": "Hero du site d'annonces Kasa"
-      },
-      {
-        "src": "/assets/projects/kasa/apartment_page_kasa.png",
-        "alt": "Page détaillée d'un appartement sur Kasa"
-      },
-      {
-        "src": "/assets/projects/kasa/about_kasa.png",
-        "alt": "Page à propos du site Kasa avec une liste déroulante"
-      },
-      {
-        "src": "/assets/projects/kasa/error_page_kasa.png",
-        "alt": "Page d'erreur 404 du site Kasa"
-      }
-    ],
-    "technologies": [
-      {
-        "name": "React",
-        "description": "Pour la construction des composants de page (librairie javascript)"
-      },
-      {
-        "name": "SCSS",
-        "description": "Pour modifier le design du site, l'embellir (préprocesseur CSS)"
-      },
-      {
-        "name": "Git",
-        "description": "Pour héberger le code sur GitHub"
-      }
-    ],
-    "href": "https://open-classrooms-p6.vercel.app",
-    "git": "https://github.com/Toniin/OpenClassrooms-P6"
   }
 ]

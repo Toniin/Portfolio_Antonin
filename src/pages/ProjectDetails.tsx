@@ -12,8 +12,10 @@ import {
   FaSass,
   FaAws,
   FaMailchimp,
+  FaStripe
 } from "react-icons/fa6";
-import { SiGatsby, SiContentful } from "react-icons/si";
+import { SiGatsby, SiContentful, SiTailwindcss, SiNextdotjs, SiPostgresql, SiPrisma,  } from "react-icons/si";
+import { CiMail } from "react-icons/ci";
 import BreadCrumb from "../components/BreadCrumb";
 import { Tooltip } from "@material-tailwind/react";
 
@@ -65,6 +67,18 @@ const ProjectDetails: FunctionComponent = () => {
     const size = "2em";
     if (technologie === "React") {
       svg = <FaReact size={size} />;
+    } else if (technologie === "NextJS") {
+      svg = <SiNextdotjs size={size} />;
+    } else if (technologie === "Tailwind CSS") {
+      svg = <SiTailwindcss size={size} />;
+    } else if (technologie === "PostgreSQL") {
+      svg = <SiPostgresql size={size} />;
+    } else if (technologie === "Prisma") {
+      svg = <SiPrisma size={size} />;
+    } else if (technologie === "Resend") {
+      svg = <CiMail size={size} />;
+    } else if (technologie === "Stripe") {
+      svg = <FaStripe size={size} />;
     } else if (technologie === "Gatsbyjs") {
       svg = <SiGatsby size={size} />;
     } else if (technologie === "SCSS") {
@@ -132,15 +146,15 @@ const ProjectDetails: FunctionComponent = () => {
           </div>
         </div>
       )}
-      <main className="project__page flex flex-col items-center justify-between px-2">
+      <main className="flex flex-col items-center justify-between px-2 project__page">
         <div className="flex flex-col items-center gap-2 mb-24">
-          <h1 className="text__shadow--light text-4xl tracking-wider secondary-color">
+          <h1 className="text-4xl tracking-wider text__shadow--light secondary-color">
             {project.name}
           </h1>
           <h2 className="text__shadow--dark">{project.description}</h2>
         </div>
 
-        <div className="w-full flex justify-between items-center">
+        <div className="flex items-center justify-between w-full">
           <BreadCrumb actualPath={project.name} />
           <Tooltip
             className="tooltip tooltip--light dark:tooltip--dark"
@@ -152,51 +166,50 @@ const ProjectDetails: FunctionComponent = () => {
           >
             <Link
               to="/#projects"
-              className="neomorphism__secondary--light dark:neomorphism__secondary--dark p-2 rounded-lg"
+              className="p-2 rounded-lg neomorphism__secondary--light dark:neomorphism__secondary--dark"
             >
               <FaXmark size="1.3em" />
             </Link>
           </Tooltip>
         </div>
 
-        <div className="mt-10 w-full flex flex-col gap-2">
+        <div className="flex flex-col w-full gap-2 mt-10">
           <h3 className="underline underline-offset-4">PROBLÉMATIQUE :</h3>
           {project.name === "Racine Éclairée" && (
             <p>
               Blog où les utilisateurs peuvent lire les
               <strong> articles</strong>, écrire des
               <strong> commentaires </strong>et
-              <strong> contacter le support</strong>.
+              <strong> contacter le support </strong>.
             </p>
           )}
           {project.name === "Skribe" && (
             <p>
               Blog où les utilisateurs peuvent lire les
               <strong> résumé de livres </strong>et
-              <strong> contacter le support</strong>.
+              <strong> contacter le support </strong>.
             </p>
           )}
-          {project.name === "Kasa" && (
+          {project.name === "RendezView" && (
             <p>
-              Site où les utilisateurs peuvent accéder à des
-              <strong> appartements en location </strong>, voir les
-              <strong> informations détaillées </strong>pour chaque appartement
-              et lire les
-              <strong> conditions de Kasa</strong>.
+              Site où les utilisateurs peuvent partager des
+              <strong> calendriers </strong> et permettre de voir les
+              <strong> disponibilités </strong> des partenaires pour
+              <strong> se retrouver </strong>.
             </p>
           )}
         </div>
 
-        <div className="project__page__content flex flex-col lg:flex-row items-start mt-10">
-          <div className="basis-1/2 flex flex-col">
+        <div className="flex flex-col items-start mt-10 project__page__content lg:flex-row">
+          <div className="flex flex-col basis-1/2">
             {/* TECHNOLOGIES */}
-            <ul className="flex justify-evenly gap-4 flex-wrap">
+            <ul className="flex flex-wrap gap-4 justify-evenly">
               {project.technologies.map((technologie) => (
                 <li
                   key={`${project.name} | ${technologie.name}`}
-                  className="glass--light glass--light--off dark:glass--dark dark:glass--dark--off rounded-md basis-full sm:basis-2/5 grow px-4 py-2"
+                  className="px-4 py-2 rounded-md glass--light glass--light--off dark:glass--dark dark:glass--dark--off basis-full sm:basis-2/5 grow"
                 >
-                  <div className="flex items-center gap-x-4 py-2">
+                  <div className="flex items-center py-2 gap-x-4">
                     <h3 className="text-lg">{technologie.name}</h3>
                     {svgTechnologie(technologie.name)}
                   </div>
@@ -205,14 +218,14 @@ const ProjectDetails: FunctionComponent = () => {
               ))}
             </ul>
             {/* BUTTON GIT / BUTTON VISIT PROJECT */}
-            <div className="flex justify-evenly py-5">
+            <div className="flex py-5 justify-evenly">
               {project.git === "private" ? (
                 <></>
               ) : (
                 <a
                   href={project.git}
                   target="_blank"
-                  className="w-fit neomorphism__secondary--light dark:neomorphism__secondary--dark flex items-center gap-2 p-3 rounded-lg"
+                  className="flex items-center gap-2 p-3 rounded-lg w-fit neomorphism__secondary--light dark:neomorphism__secondary--dark"
                 >
                   Voir le projet github
                   <FaSquareGithub size="1.8em" />
@@ -221,7 +234,7 @@ const ProjectDetails: FunctionComponent = () => {
               <a
                 href={project.href}
                 target="_blank"
-                className="w-fit neomorphism__primary--light dark:neomorphism__primary--dark secondary-color dark:primary-color flex items-center gap-2 p-3 rounded-lg"
+                className="flex items-center gap-2 p-3 rounded-lg w-fit neomorphism__primary--light dark:neomorphism__primary--dark secondary-color dark:primary-color"
               >
                 Voir le projet
                 <FaUpRightFromSquare size="1.3em" />
@@ -229,7 +242,7 @@ const ProjectDetails: FunctionComponent = () => {
             </div>
           </div>
           {/* IMAGES */}
-          <div className="lg:basis-1/2 flex flex-col lg:flex-row justify-evenly gap-x-4 gap-y-8 lg:flex-wrap pl-2 pb-4">
+          <div className="flex flex-col pb-4 pl-2 lg:basis-1/2 lg:flex-row justify-evenly gap-x-4 gap-y-8 lg:flex-wrap">
             {project.images.map((image) => (
               <div
                 key={`${project.name} | ${image.alt}`}
@@ -237,7 +250,7 @@ const ProjectDetails: FunctionComponent = () => {
               >
                 <div>
                   <img
-                    className="w-full aspect-video object-cover rounded-lg"
+                    className="object-cover w-full rounded-lg aspect-video"
                     src={image.src}
                     alt={image.alt}
                   />
